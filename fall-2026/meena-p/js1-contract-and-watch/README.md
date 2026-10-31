@@ -1,6 +1,10 @@
+INFO7375 — Job-Search Agent 1: The Contract and the Watch. Student: Meena Periasamy. Submitted 2026-10-31.
+
 # the_contract_watch — Job-Search Agent 1 (contract and watch)
 
 Watches one public Greenhouse job board (`cloudflare`) for new postings, identified by `id`, and judges each new posting for one fictional persona (Priya Nair) two ways: a deterministic rule (RECORD) and a Claude judgment (JUDGMENT, model output, not fact). Everything is implemented against [CONTRACT.md](CONTRACT.md). Hand labels follow [LABELING.md](LABELING.md). Reports are in [reports/](reports/), evidence in [evidence/](evidence/), and authorship in [SOURCES.md](SOURCES.md).
+
+**Submission location:** the course repo copy lives at `fall-2026/meena-p/js1-contract-and-watch/`. The Canvas assignment specifies that folder name exactly, and it overrides the `assignment-XX/` convention in the course repo's `ASSESSMENT.md` and `prerequisites/github-submission.md`.
 
 ## Language and toolchain
 Recorded on 2026-10-31 on the machine that produced the evidence:
@@ -70,10 +74,10 @@ PYTHONPATH=. .venv/bin/python scripts/make_labeling_sheet.py evidence/raw/202610
 # reports from saved evidence (no Claude calls)
 PYTHONPATH=. .venv/bin/python scripts/dev_reports.py render     # rewrites reports/SAMPLING.md and the top of reports/EXPERIMENT.md
 PYTHONPATH=. .venv/bin/python scripts/heldout_eval.py render    # re-renders the results and Limits block of EXPERIMENT.md
-git diff reports/            # only hand-written sections show as removed
+git diff reports/            # see the warning below for what changes
 git checkout -- reports/     # restore them
 ```
-**Warning:** `dev_reports.py render` regenerates the two reports from scratch, so it removes hand-written sections (Meena's "The one change I chose and why", and "My conclusion" once written). Checked on 2026-10-31: after both renders, the only diff was the 14 lines of Meena's section in `EXPERIMENT.md`. `reports/ACTION-SURFACE.md` has no generator.
+**Warning:** `dev_reports.py render` regenerates the two reports from scratch, so it removes hand-written sections (Meena's "The one change I chose and why", and "My conclusion" once written). `heldout_eval.py render` also re-creates the generated results and Limits block, which is not in the current `EXPERIMENT.md`: Meena's commit `03d92dd` removed it, and it is still in `70aab50`. Checked on 2026-10-31 at `6a9e851`: after both renders, `EXPERIMENT.md` changes by 68 lines (Meena's 2 section lines removed, 66 generated lines added), and `SAMPLING.md` is unchanged. `reports/ACTION-SURFACE.md` has no generator.
 
 Re-making the Claude calls behind the reports (`scripts/dev_reports.py run`, `scripts/heldout_eval.py run`, `scripts/surface_file_read.py`) produces new model outputs, which may differ from the saved ones, and appends to the call log.
 
@@ -103,6 +107,7 @@ Both two-run pairs (original and post-fix) are **SEEDED**. Both runs happened on
 | `evidence/runs/20261031T182105Z_live-vs-SEEDED-baseline.json` | Run 2 against the real live response, diffed against the **SEEDED** baseline state: 5 new, exactly the 5 removed ids. |
 | `evidence/runs/20261031T182105Z_live-vs-SEEDED-baseline_verdicts.json` | Rule and Claude verdicts for those 5, from `--rejudge` at 18:39Z. |
 | `evidence/runs/post-fix/` | **SEEDED** two-run re-done after the three fixes (commits `baffe7f`, `c809e8e`, `9b6aa2a`), with its own state file `SEEDED_seen_ids.json`: same 5 new ids, judged. |
+| `evidence/runs/SEEDED-state-snapshots/` | **SEEDED** two-run reproduced at 20:53:33Z from the saved files (`--no-judge`, no fetch, no Claude calls) to preserve the state after each run, which the original runs overwrote: `SEEDED_state_after_run1_baseline.json` (459 ids, = the ids in `SEEDED_earlier.json`) and `SEEDED_state_after_run2.json` (464 ids, identical to `state/seen_ids.json` and `post-fix/SEEDED_seen_ids.json`). These are reproductions, not the original runs' files. |
 | `evidence/runs/20261031T191349Z_sampling_dev.json`, `..._experiment_v1_dev.json`, `20261031T192603Z_v2_eval.json` | Sampling and prompt-experiment results (dev, then held-out). |
 | `evidence/claude_calls.jsonl` | Every Claude judge call (70 lines). The first 5 (18:39Z) have no `system_prompt_file`: they ran while the system prompt was still hard-coded with the same text now in `prompts/system_v1.txt`. |
 | `evidence/surface_chat_prompt.txt`, `evidence/surface_chat_2026-10-31.txt` | Meena's manual claude.ai run; model and time fields are unfilled placeholders. |
@@ -133,11 +138,34 @@ Meena's manual claude.ai chat run on 8335469 is recorded in `evidence/surface_ch
 **The board did not match the persona.** In the live response, 0 of 464 postings have "Boston" in `posting.location.name`, and the contract's rule judges 0 of 464 relevant. Every judge verdict in the evidence (rule, v1, v2) is `not_relevant`, and so is every one of Meena's 20 hand labels.
 
 ## Sign-off — Job-Search Agent 1
-Checked: ____
-How: ____
-Not checked: 1. ____ 2. ____ 3. ____
-Not claiming: ____
-Signed or withheld: ____ (name, date)
+
+**Checked:**
+- New postings are found by id, not title: `test_new_is_by_id_not_title`, `test_check_catches_new_by_title` (wrong version 3). The live board had two postings with the same title and different ids (8335468, 8335469).
+- Justifications cite only fields that exist: `test_validator_catches_bad_citations[*]` (wrong version 2), including the indexed-path case after its fix.
+- Verdicts stay paired with their own posting: `test_alignment_catches_off_by_one`, `test_alignment_catches_verdict_paired_with_next_id` (wrong version 1).
+- The three gaps Claude Code found (redirects off the allow-list, state written before judging, made-up indexed paths) each have a failing-test commit followed by a fix commit.
+- Baseline reports 0 new; the second run reports exactly the 5 ids removed from the SEEDED file, before and after the fixes.
+- Full suite: 95 passed, run by me on 2026-10-31.
+
+**How:** Claude Code wrote the code and the tests. I checked each test name against the wrong versions in my contract by hand, read the verdicts and justifications, and ran pytest myself. I wrote the contract before any code, but I did not write tests before reading Claude's code. I hand-labeled all 20 postings using LABELING.md.
+
+**Not checked:**
+1. Any posting I labeled relevant. There were none, so false negatives were never tested, and v1, v2 and a constant "not_relevant" judge all scored 10/10.
+2. Any board other than cloudflare, or a second calendar day. Both two-run pairs are SEEDED.
+3. Case-sensitivity of rule clauses 2 and 3. The contract only says case-insensitive for clause 1, so a lowercase "senior" or "remote" is not caught.
+4. Whether `dontAsk` blocks a read outside the temp directory in the file-read surface.
+5. Agreement with any second labeler. I am the only labeler.
+
+**Not claiming:** that this agent finds good jobs for this persona; that judge_v2 is better than judge_v1; that the Claude judge is accurate. I only claim that it repeated the same verdict on easy negatives.
+
+**Signed:** Meena Periasamy, 2026-10-31, subject to the Not checked list above.
 ## Driver's seat
-| Part of the task | What Claude did | What I did | Why it stays mine | Evidence (commit / file / line) |
+| Part of the task | What Claude did | What I did | Why it stays mine | Evidence |
 |---|---|---|---|---|
+| Contract and rule | Drafted a template (claude.ai); Claude Code refused to build until placeholders were filled | Chose the rule, fields, wrong versions and failure sentence; filled and committed them before code | The rule decides what "relevant" means for me; a TA must be able to apply it by hand | 56f30ea, 1ce1af0, 94f5ede (all before d138c84) |
+| Code and tests | Wrote the agent, both judges, the validator and the tests | Checked test names against my wrong versions; ran pytest myself; made it move a hidden system prompt into prompts/ | I answer for what the tests prove, not Claude | 7cc4199; my pytest runs |
+| Hand labels | None; it was told not to suggest labels | Labeled all 20 postings against LABELING.md | If Claude labels, the experiment grades itself | c3732b9 |
+| The one prompt change | Ran v1/v2 on dev, then held-out | Chose the Clause 2 change after the dev results and wrote its rationale | Choosing what to change is the experiment's decision | EXPERIMENT.md section; 8cbaad6 before the first held-out call |
+| Security gaps | Found the redirect, state-timing and indexed-path gaps while comparing surfaces | Decided to fix them test-first rather than only document them | Deciding what ships is my call | bdd8f18/9b6aa2a, 96abd18/c809e8e, 6632159/baffe7f |
+| Least autonomy | Drafted a version marked DRAFT | Rewrote it, citing the chat surface's justification that cited no résumé field | The autonomy choice is the judgment the assignment grades | ad6cb7b |
+| Course repo folder | Proposed renaming it to assignment-01 | Cancelled the rename; kept js1-contract-and-watch/ as Canvas specifies | Submission format is my responsibility | course repo info-7375-prompt-engineering-for-generative-ai: b275073 (folder js1-contract-and-watch); rename cancelled before commit; this repo: d36ea95 |

@@ -130,7 +130,7 @@ def test_persona_rejects_non_example_email(priya):
 
 def test_persona_rejects_non_555_phone(priya):
     bad = copy.deepcopy(priya)
-    bad["personal"]["phone"] = "(617) 432-0163"
+    bad["personal"]["phone"] = "(555) 432-0163"
     with pytest.raises(persona.PersonaError, match="phone"):
         persona.validate_persona(bad)
 
@@ -163,7 +163,7 @@ def test_refusal_message_does_not_leak_values(priya):
 
 def test_run_refuses_bad_persona_before_fetch(priya, tmp_path, monkeypatch):
     bad = copy.deepcopy(priya)
-    bad["personal"]["phone"] = "617-432-0163"
+    bad["personal"]["phone"] = "555-432-0163"
     pp = _write(tmp_path, "p.json", bad)
     monkeypatch.setattr(fetch, "fetch_board",
                         lambda *a, **k: pytest.fail("fetched with invalid persona"))

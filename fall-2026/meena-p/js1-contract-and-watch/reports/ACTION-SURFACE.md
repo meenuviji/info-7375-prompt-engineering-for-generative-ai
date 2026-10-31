@@ -8,11 +8,11 @@ Date: 2026-10-31. Posting 8335469 is "Territory Account Executive, Saskatchewan 
 | 2 | **File read**: `claude -p` with a read-only tool, run by `scripts/surface_file_read.py` | `evidence/surface_file_posting.json`, `evidence/surface_file_prompt.txt`, `evidence/surface_file_output.json` |
 | 3 | **Agent**: the full pipeline in `agent/run.py` | `evidence/runs/20261031T182105Z_live-vs-SEEDED-baseline_verdicts.json`, `evidence/claude_calls.jsonl` |
 
-After the three fixes below, the SEEDED two-run was re-run from the saved files (no live fetch) into `evidence/runs/post-fix/`, with its own SEEDED state file. Run 2 again reported exactly 8332361, 8335069, 8335468, 8335469 and 8338018 as new, and its verdicts on 8335469 are unchanged (rule and Claude both `not_relevant`). The agent was not re-run for this report. Its verdicts on 8335469 are the ones it produced on 2026-10-31 at 18:39Z (`--rejudge` of run 2). A fresh agent run would fetch the live board and overwrite `state/seen_ids.json`.
+After the three fixes below, the SEEDED two-run was re-run from the saved files (no live fetch) into `evidence/runs/post-fix/`, with its own SEEDED state file. Run 2 again reported exactly 8332361, 8335069, 8335468, 8335469 and 8338018 as new, and its verdicts on 8335469 are unchanged (rule and Claude both `not_relevant`). The agent verdicts in the tables below are the ones it produced on 2026-10-31 at 18:39Z (`--rejudge` of run 2), before the fixes; the post-fix re-run did not change them. The agent was never run against the live board for this report, since a live run would fetch the board again and overwrite `state/seen_ids.json`.
 
 ## 1. Chat paste
 
-The prompt contains the contract's rule text, `resume.personal.location = "Boston, MA"`, and three posting fields typed in by hand: `posting.id`, `posting.title`, `posting.location.name`. The response file records: `claude.ai fresh chat, 2026-10-31, <3.43 pm>, model: <what the selector showed>`. The time and model fields still contain those placeholders, so the model used is **not recorded**.
+The prompt contains the contract's rule text, `resume.personal.location = "Boston, MA"`, and three posting fields typed in by hand: `posting.id`, `posting.title`, `posting.location.name`. The response file records: `claude.ai fresh chat, 2026-10-31, 3:43 PM EDT, model: not recorded`. The model used is **not recorded**.
 
 | | |
 |---|---|

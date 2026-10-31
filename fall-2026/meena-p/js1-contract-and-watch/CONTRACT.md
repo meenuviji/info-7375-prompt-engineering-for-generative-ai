@@ -1,6 +1,6 @@
 # CONTRACT — Job-Search Agent 1
 
-Written by Meena on 2026-10-31, before any code was generated. Placeholders resolved on 2026-10-31, still before any code was generated, after Claude Code flagged them as unimplementable.
+Written by Meena on 2026-10-31, before any code was generated. Placeholders for fields, rule keywords, wrong version 3 and the failure sentence were resolved before any code (94f5ede). The board token (cloudflare) and persona city (Boston) were filled in after the first code commit (9c8c20a, after d138c84); neither changed a rule, since the code already used cloudflare and the city was read from resume.personal.location.
 
 ## In
 - Board: Greenhouse board token `cloudflare`, fetched from host `boards-api.greenhouse.io` (the only host on the allow-list).

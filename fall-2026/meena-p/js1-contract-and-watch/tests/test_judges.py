@@ -10,6 +10,7 @@ from agent import claude_judge, rule_judge
 from agent.run import run
 from agent.validate import check_alignment, validate_justification
 from agent.validator import validate_claude_output
+from agent.persona import get_path
 
 ROOT = Path(__file__).resolve().parent.parent
 PERSONA = json.loads((ROOT / "resume/persona.json").read_text())
@@ -322,3 +323,19 @@ def test_state_updated_after_judging_succeeds(tmp_path):
     run("a", p1, st, persona_path, runs)
     run("b", p2, st, persona_path, runs, judge=True, claude_call=fake_call([VALID]))
     assert json.loads(st.read_text()) == {"seen_ids": [1, 4242]}
+
+
+# Audit row 2: a posting with no location name must not cite posting.location.name ------
+
+@pytest.mark.parametrize("posting", [
+    {"id": 91, "title": "Data Engineer"},                          # no location key
+    {"id": 92, "title": "Data Engineer", "location": None},       # null location
+    {"id": 93, "title": "Data Engineer", "location": {}},         # location without name
+])
+def test_rule_without_location_cites_only_existing_fields(posting):
+    r = rule_judge.judge(posting, PERSONA)
+    assert r["verdict"] == "not_relevant" and "clause 2 failed" in r["justification"]
+    assert validate_justification(r["justification"], PERSONA, posting) == []
+    for path in r["cited_posting_fields"] + r["cited_resume_fields"]:
+        root, _, rest = path.partition(".")
+        get_path({"posting": posting, "resume": PERSONA}[root], rest)  # raises if missing

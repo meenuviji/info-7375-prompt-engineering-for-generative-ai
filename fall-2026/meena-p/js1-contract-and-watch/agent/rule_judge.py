@@ -26,10 +26,13 @@ def judge(posting: dict, persona: dict) -> dict:
     c3 = not senior
 
     kw = ", ".join(f'"{k}"' for k in TITLE_KEYWORDS)
+    # Cite posting.location.name only if it exists; a posting without one fails clause 2.
+    has_loc = bool((posting.get("location") or {}).get("name"))
+    clause2_subject = f'`posting.location.name` "{loc}" ' if has_loc else "the posting has no location name and "
     parts = [
         f'Clause 1 {"PASSED" if c1 else "FAILED"}: `posting.title` "{title}" '
         + (f'contains {", ".join(repr(h) for h in hits)}' if c1 else f"contains none of {kw}"),
-        f'Clause 2 {"PASSED" if c2 else "FAILED"}: `posting.location.name` "{loc}" '
+        f'Clause 2 {"PASSED" if c2 else "FAILED"}: {clause2_subject}'
         + (f'contains "{c2_match[0]}"' if c2 else f'contains neither "{city}" nor "Remote"')
         + f' (city "{city}" from `resume.personal.location`)',
         f'Clause 3 {"PASSED" if c3 else "FAILED"}: `posting.title` '
@@ -47,6 +50,6 @@ def judge(posting: dict, persona: dict) -> dict:
         "verdict": "relevant" if relevant else "not_relevant",
         "justification": head + " " + "; ".join(parts) + ".",
         "cited_resume_fields": ["resume.personal.location"],
-        "cited_posting_fields": ["posting.title", "posting.location.name"],
+        "cited_posting_fields": ["posting.title"] + (["posting.location.name"] if has_loc else []),
         "kind": "RECORD",
     }

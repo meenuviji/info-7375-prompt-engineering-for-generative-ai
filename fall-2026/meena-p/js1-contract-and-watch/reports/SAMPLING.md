@@ -27,3 +27,5 @@
 - All 10 dev labels are `not_relevant`, so this sample only measures agreement on postings labeled negative.
 
 ## My conclusion
+
+Across 4 fresh calls on each of 5 dev postings, the Claude judge returned not_relevant all 20 times, matching my hand label every time, and the validator rejected 0 of 20 outputs. That shows the verdict repeated on these five postings; it does not show the judge is correct, and 4 samples per posting are too few to estimate how often it would vary. All five were postings I labeled not_relevant, so the judge was never tested on a posting that should come back relevant. Saying anything about accuracy would need postings I would label relevant, and this board had none for a Boston-based early-career persona.

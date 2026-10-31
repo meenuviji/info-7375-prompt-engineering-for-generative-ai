@@ -1,0 +1,37 @@
+{
+  "label": "live-vs-SEEDED-baseline",
+  "source": "evidence/raw/20261031T182100Z_live.json",
+  "fetched_live": false,
+  "run_at_utc": "20261031T205333Z",
+  "baseline": false,
+  "previous_state_count": 459,
+  "postings_in_response": 464,
+  "new_count": 5,
+  "new_postings": [
+    {
+      "id": 8332361,
+      "title": "Client Executive, SLED",
+      "location": "Hybrid"
+    },
+    {
+      "id": 8335069,
+      "title": "Senior Customer Engineer, Strategic - Seattle, WA",
+      "location": "Distributed"
+    },
+    {
+      "id": 8335468,
+      "title": "Territory Account Executive, Saskatchewan / Manitoba",
+      "location": "Distributed"
+    },
+    {
+      "id": 8335469,
+      "title": "Territory Account Executive, Saskatchewan / Manitoba",
+      "location": "Remote"
+    },
+    {
+      "id": 8338018,
+      "title": "Senior Systems Engineer, SDKs, Terraform, & Code Generation",
+      "location": "Hybrid"
+    }
+  ]
+}

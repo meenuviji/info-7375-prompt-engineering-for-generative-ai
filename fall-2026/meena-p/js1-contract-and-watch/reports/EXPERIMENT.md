@@ -56,6 +56,9 @@ This is one clause, but it changes two behaviors: a missing experience requireme
 
 **What I expect, stated before running held-out.** I expect v2 to be at least as conservative as v1. On this data that cannot show improvement: with all-negative dev labels, a stricter prompt can only tie v1 on dev. The held-out run tests whether v2 wrongly rejects any posting I labeled relevant. If held-out also has no relevant labels, this experiment cannot distinguish v1, v2, and a constant judge, and I will report that.
 
+- **The change:** In `prompts/judge_v2.txt`, I tightened Clause 2 to explicitly mandate an automatic `not_relevant` verdict if the posting requires 3+ years of professional experience or contains senior-level scope, preventing the model from falsely accepting mid-level roles that omit seniority markers from the title.
+- **What I expect:** I expect `judge_v2` to maintain the 10/10 pass rate on dev while establishing an explicit numerical boundary against mid-level roles that lack senior keywords in the title, preventing false positive matches on postings with high experience requirements.
+- **Outcome:** The held-out split had 0 relevant labels, so `judge_v1`, `judge_v2`, and the constant `not_relevant` judge all scored 10/10, and this experiment cannot show whether the change to Clause 2 helped or hurt.
 ## Results: v2 on dev, v1 and v2 on held-out
 
 - Date (UTC): 2026-10-31; v2-dev and held-out run `20261031T192603Z`. v1-dev run `20261031T191349Z` (above).
