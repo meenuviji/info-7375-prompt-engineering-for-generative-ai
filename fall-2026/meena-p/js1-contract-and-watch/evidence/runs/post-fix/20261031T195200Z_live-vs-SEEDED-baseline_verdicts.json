@@ -1,0 +1,256 @@
+{
+  "run": "20261031T195200Z_live-vs-SEEDED-baseline.json",
+  "source": "evidence/raw/20261031T182100Z_live.json",
+  "judge_model": "claude-sonnet-5-5",
+  "judge_model_source": "default (JUDGE_MODEL not set)",
+  "prompt_file": "judge_v1.txt",
+  "system_prompt_file": "system_v1.txt",
+  "rule_kind": "RECORD",
+  "claude_kind": "JUDGMENT (model output, not fact)",
+  "alignment_errors": [],
+  "verdicts": [
+    {
+      "posting_id": 8332361,
+      "title": "Client Executive, SLED",
+      "rule_verdict": "not_relevant",
+      "rule_justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Client Executive, SLED\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+      "claude_verdict": "not_relevant",
+      "claude_justification": "The posting titled \"Client Executive, SLED\" is a senior public-sector sales role in posting.content requiring 12+ years of experience, not an AI/ML/Data Engineer track. It lists none of the Python or SQL skills in resume.skills.languages, so the target role, experience level, and tech match criteria all fail.",
+      "rule": {
+        "posting_id": 8332361,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Client Executive, SLED\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "claude": {
+        "posting_id": 8332361,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting titled \"Client Executive, SLED\" is a senior public-sector sales role in posting.content requiring 12+ years of experience, not an AI/ML/Data Engineer track. It lists none of the Python or SQL skills in resume.skills.languages, so the target role, experience level, and tech match criteria all fail.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8335069,
+      "title": "Senior Customer Engineer, Strategic - Seattle, WA",
+      "rule_verdict": "not_relevant",
+      "rule_justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Customer Engineer, Strategic - Seattle, WA\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Distributed\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+      "claude_verdict": "not_relevant",
+      "claude_justification": "The posting \"Senior Customer Engineer, Strategic - Seattle, WA\" is a senior, quota-carrying pre-sales/customer engineering role in the Sales department (posting.content), not an entry-level AI/ML or Data Engineer track matching resume.experience.0.title. Python appears only as one optional scripting language (posting.content), so the core tech match with resume.skills.languages is weak, and the senior level fails the 0-2 years requirement.",
+      "rule": {
+        "posting_id": 8335069,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Customer Engineer, Strategic - Seattle, WA\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Distributed\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "claude": {
+        "posting_id": 8335069,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting \"Senior Customer Engineer, Strategic - Seattle, WA\" is a senior, quota-carrying pre-sales/customer engineering role in the Sales department (posting.content), not an entry-level AI/ML or Data Engineer track matching resume.experience.0.title. Python appears only as one optional scripting language (posting.content), so the core tech match with resume.skills.languages is weak, and the senior level fails the 0-2 years requirement.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.metadata.1.value"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8335468,
+      "title": "Territory Account Executive, Saskatchewan / Manitoba",
+      "rule_verdict": "not_relevant",
+      "rule_justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Territory Account Executive, Saskatchewan / Manitoba\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Distributed\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+      "claude_verdict": "not_relevant",
+      "claude_justification": "The posting titled \"Territory Account Executive, Saskatchewan / Manitoba\" is a sales role (posting.metadata lists Career Site Department as Sales) rather than an AI/ML or Data Engineer track, and posting.content requires a minimum of 5 years of technical sales experience. It is also located in Winnipeg, Canada, and does not list Python or SQL, which are in resume.skills.languages.",
+      "rule": {
+        "posting_id": 8335468,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Territory Account Executive, Saskatchewan / Manitoba\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Distributed\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "claude": {
+        "posting_id": 8335468,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting titled \"Territory Account Executive, Saskatchewan / Manitoba\" is a sales role (posting.metadata lists Career Site Department as Sales) rather than an AI/ML or Data Engineer track, and posting.content requires a minimum of 5 years of technical sales experience. It is also located in Winnipeg, Canada, and does not list Python or SQL, which are in resume.skills.languages.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.metadata"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8335469,
+      "title": "Territory Account Executive, Saskatchewan / Manitoba",
+      "rule_verdict": "not_relevant",
+      "rule_justification": "NOT RELEVANT: clause 1 failed. Clause 1 FAILED: `posting.title` \"Territory Account Executive, Saskatchewan / Manitoba\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 PASSED: `posting.location.name` \"Remote\" contains \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+      "claude_verdict": "not_relevant",
+      "claude_justification": "The posting titled \"Territory Account Executive, Saskatchewan / Manitoba\" is a sales role (posting.content) requiring 3+ years of technical sales experience and remote work from Canada, which does not match the AI/ML/Data Engineer track, the 0-2 years level, or the US/remote location criteria. It also lists none of the persona's skills such as Python or SQL (resume.skills.languages, resume.skills.data_bi).",
+      "rule": {
+        "posting_id": 8335469,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1 failed. Clause 1 FAILED: `posting.title` \"Territory Account Executive, Saskatchewan / Manitoba\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 PASSED: `posting.location.name` \"Remote\" contains \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "claude": {
+        "posting_id": 8335469,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting titled \"Territory Account Executive, Saskatchewan / Manitoba\" is a sales role (posting.content) requiring 3+ years of technical sales experience and remote work from Canada, which does not match the AI/ML/Data Engineer track, the 0-2 years level, or the US/remote location criteria. It also lists none of the persona's skills such as Python or SQL (resume.skills.languages, resume.skills.data_bi).",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.skills.data_bi"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.location.name"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8338018,
+      "title": "Senior Systems Engineer, SDKs, Terraform, & Code Generation",
+      "rule_verdict": "not_relevant",
+      "rule_justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Systems Engineer, SDKs, Terraform, & Code Generation\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+      "claude_verdict": "not_relevant",
+      "claude_justification": "The title \"Senior Systems Engineer, SDKs, Terraform, & Code Generation\" is a senior software/systems role, not an AI/ML or Data Engineer track, and posting.content asks for 5+ years of experience and Go expertise, far beyond the early-career level of resume.experience.0.title (an AI Engineer co-op). Only Python overlaps with resume.skills.languages, so the core tech match also fails.",
+      "rule": {
+        "posting_id": 8338018,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Systems Engineer, SDKs, Terraform, & Code Generation\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "claude": {
+        "posting_id": 8338018,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The title \"Senior Systems Engineer, SDKs, Terraform, & Code Generation\" is a senior software/systems role, not an AI/ML or Data Engineer track, and posting.content asks for 5+ years of experience and Go expertise, far beyond the early-career level of resume.experience.0.title (an AI Engineer co-op). Only Python overlaps with resume.skills.languages, so the core tech match also fails.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    }
+  ]
+}

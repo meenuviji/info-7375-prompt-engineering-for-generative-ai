@@ -1,0 +1,5 @@
+claude.ai fresh chat, 2026-10-31, <3.43 pm>, model: <what the selector showed>,
+
+Verdict: not_relevant
+
+Justification: Posting 8335469 fails clause 1. posting.title (“Territory Account Executive, Saskatchewan / Manitoba”) contains none of “AI Engineer”, “ML Engineer”, “Machine Learning”, or “Data Engineer”, even case-insensitive.

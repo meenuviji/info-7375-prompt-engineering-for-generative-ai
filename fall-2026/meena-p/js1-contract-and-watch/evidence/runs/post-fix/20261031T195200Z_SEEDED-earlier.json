@@ -1,0 +1,11 @@
+{
+  "label": "SEEDED-earlier",
+  "source": "evidence/raw/SEEDED_earlier.json",
+  "fetched_live": false,
+  "run_at_utc": "20261031T195200Z",
+  "baseline": true,
+  "previous_state_count": null,
+  "postings_in_response": 459,
+  "new_count": 0,
+  "new_postings": []
+}

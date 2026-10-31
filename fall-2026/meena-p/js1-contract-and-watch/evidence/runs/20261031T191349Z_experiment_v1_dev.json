@@ -1,0 +1,500 @@
+{
+  "run_at_utc": "20261031T191349Z",
+  "source": "evidence/raw/20261031T182100Z_live.json",
+  "sheet": "labels/postings_20.csv",
+  "judge_model": "claude-sonnet-5-5",
+  "judge_model_source": "default (JUDGE_MODEL not set)",
+  "prompt_file": "judge_v1.txt",
+  "system_prompt_file": "system_v1.txt",
+  "label_counts": {
+    "dev": {
+      "relevant": 0,
+      "not_relevant": 10
+    },
+    "heldout": {
+      "relevant": 0,
+      "not_relevant": 10
+    }
+  },
+  "postings": [
+    {
+      "posting_id": 7572075,
+      "selection_group": "other",
+      "title": "Forward Deployed Engineer (FDE)",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 7572075,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Forward Deployed Engineer (FDE)\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 7572075,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The \"Forward Deployed Engineer (FDE)\" role in posting.content requires 10+ years of customer-facing experience and focuses on application security, Terraform, and networking, which is a senior customer-facing track and not an entry-level AI/ML or Data Engineer role. It also lists none of the Python, SQL, or BI skills in resume.skills.languages as requirements, so the core tech match fails.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8043974,
+      "selection_group": "clause1_pass",
+      "title": "Senior Machine Learning Engineer",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8043974,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 2, 3 failed. Clause 1 PASSED: `posting.title` \"Senior Machine Learning Engineer\" contains 'Machine Learning'; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8043974,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The title \"Senior Machine Learning Engineer\" (posting.title) is a senior role that includes mentoring and leading complex projects in posting.content, which conflicts with the early-career persona (resume.experience.0.title is a co-op). Although Python in resume.skills.languages matches posting.content, the seniority requirement fails the early-career criterion.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.location.name"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8050813,
+      "selection_group": "data_adjacent",
+      "title": "Systems Engineer, Data Intelligence & Analytics Team",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8050813,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Systems Engineer, Data Intelligence & Analytics Team\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"In-Office\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8050813,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "unsure: \"Systems Engineer, Data Intelligence & Analytics Team\" is a Go/React/Clickhouse platform tooling role (posting.content) rather than an AI/ML or Data Engineer track, and posting.content gives no years-of-experience level or sponsorship terms, only a note that offers may be conditioned on export-control authorization. Although resume.skills.languages (Python, SQL) overlaps with the desirable skills, the target-role fit and H-1B eligibility are unclear.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.skills.data_bi"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.offices.0.location"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8158617,
+      "selection_group": "other",
+      "title": "Senior Customer Engineer, Digital Native Business, Indonesia ",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8158617,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Customer Engineer, Digital Native Business, Indonesia \" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8158617,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting \"Senior Customer Engineer, Digital Native Business, Indonesia \" is a senior, quota-carrying sales-engineering role requiring 7+ years (posting.content), which conflicts with the early-career track in resume.experience.0.title (AI Engineer Co-op). It is also located in Singapore (posting.metadata.1.value, posting.offices.0.location), not the US or remote, and only mentions Python (resume.skills.languages) as one optional scripting language.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.metadata.1.value",
+          "posting.offices.0.location"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8184169,
+      "selection_group": "other",
+      "title": "Senior Forward Deployed Engineer",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8184169,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Forward Deployed Engineer\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8184169,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The title \"Senior Forward Deployed Engineer\" is a senior customer-facing role requiring 7+ years of experience per posting.content, far above the early-career 0-2 year range. It is also located in London, UK (posting.offices.0.name) rather than the US or remote, and posting.content lists TypeScript, Rust, and Go rather than the Python/SQL in resume.skills.languages.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.personal.location",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.offices.0.name",
+          "posting.metadata.1.value"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8204353,
+      "selection_group": "data_adjacent",
+      "title": "Workday Analyst, People Operations",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8204353,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Workday Analyst, People Operations\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid; In-Office\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8204353,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The \"Workday Analyst, People Operations\" role is an HRIS/HR operations support position, not an AI/ML, Data Engineer, Data Scientist, or BI Analyst track, and posting.content requires 2–4 years of hands-on Workday experience. It also lists no Python, SQL, or other skills matching resume.skills.languages or resume.skills.data_bi, so the target role, experience, and core tech criteria fail.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.skills.data_bi",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.location.name"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8221248,
+      "selection_group": "clause1_pass",
+      "title": "Senior Oracle Security and AI Engineer",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8221248,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 2, 3 failed. Clause 1 PASSED: `posting.title` \"Senior Oracle Security and AI Engineer\" contains 'AI Engineer'; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8221248,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The title \"Senior Oracle Security and AI Engineer\" (posting.title) is a senior role, and posting.content requires 8+ years of Oracle administration and 4+ years of security role design, far beyond the early-career level of resume.experience.0.title (an AI Engineer Co-op). It also lists no Python or SQL in its requirements, so it does not match resume.skills.languages.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.experience.0.title",
+          "resume.skills.database_cloud"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.content",
+          "posting.location.name"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8223736,
+      "selection_group": "other",
+      "title": "Senior Customer Engineer, Named - Vancouver, BC ",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8223736,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2, 3 failed. Clause 1 FAILED: `posting.title` \"Senior Customer Engineer, Named - Vancouver, BC \" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 FAILED: `posting.title` contains 'Senior'.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8223736,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting \"Senior Customer Engineer, Named - Vancouver, BC \" is a senior, quota-carrying sales-engineering role rather than an entry-level AI/ML or Data Engineer track (resume.experience.0.title is AI Engineer Co-op). It is located in Vancouver, Canada per posting.metadata and posting.offices, not the US or remote, and posting.content lists only Python among resume.skills.languages, so the core tech match is weak.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.personal.location",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.metadata",
+          "posting.content",
+          "posting.offices"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8248907,
+      "selection_group": "data_adjacent",
+      "title": "Deal Intelligence Analyst",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8248907,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Deal Intelligence Analyst\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8248907,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The \"Deal Intelligence Analyst\" role is located in Lisbon, Portugal (posting.offices, posting.metadata), which is neither US nor remote, while resume.personal.location is Boston, MA. It also requires \"3-5+ years of professional experience\" in posting.content, exceeding the 0-2 year early-career range, even though resume.skills.languages (Python, SQL) would otherwise match.",
+        "resume_fields": [
+          "resume.personal.location",
+          "resume.skills.languages"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.offices",
+          "posting.metadata",
+          "posting.content"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    },
+    {
+      "posting_id": 8311376,
+      "selection_group": "other",
+      "title": "Data Center Network Operations Engineer",
+      "my_label": "not_relevant",
+      "rule": {
+        "posting_id": 8311376,
+        "verdict": "not_relevant",
+        "justification": "NOT RELEVANT: clause 1, 2 failed. Clause 1 FAILED: `posting.title` \"Data Center Network Operations Engineer\" contains none of \"AI Engineer\", \"ML Engineer\", \"Machine Learning\", \"Data Engineer\"; Clause 2 FAILED: `posting.location.name` \"Hybrid\" contains neither \"Boston\" nor \"Remote\" (city \"Boston\" from `resume.personal.location`); Clause 3 PASSED: `posting.title` contains no seniority word.",
+        "cited_resume_fields": [
+          "resume.personal.location"
+        ],
+        "cited_posting_fields": [
+          "posting.title",
+          "posting.location.name"
+        ],
+        "kind": "RECORD"
+      },
+      "v1": {
+        "posting_id": 8311376,
+        "kind": "JUDGMENT",
+        "label": "JUDGMENT (model output, not fact)",
+        "model": "claude-sonnet-5-5",
+        "model_source": "default (JUDGE_MODEL not set)",
+        "backend": "claude-cli",
+        "prompt_file": "judge_v1.txt",
+        "system_prompt_file": "system_v1.txt",
+        "attempts": 1,
+        "model_reported": [
+          "claude-sonnet-5-5"
+        ],
+        "verdict": "not_relevant",
+        "justification": "The posting \"Data Center Network Operations Engineer\" (posting.title) is an infrastructure/network operations role, not an AI/ML or Data Engineer track, and posting.content requires a minimum of 4 years of Linux systems administration. It is located in Singapore or Sydney (posting.offices), outside the US, and only mentions Python as a bonus, so it does not match resume.skills.languages or resume.personal.location.",
+        "resume_fields": [
+          "resume.skills.languages",
+          "resume.personal.location",
+          "resume.experience.0.title"
+        ],
+        "posting_fields": [
+          "posting.title",
+          "posting.location.name",
+          "posting.offices",
+          "posting.content"
+        ],
+        "validator_errors": [
+          []
+        ]
+      }
+    }
+  ]
+}

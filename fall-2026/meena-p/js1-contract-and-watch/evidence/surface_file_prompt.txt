@@ -1,0 +1,14 @@
+Apply this rule to the posting below. Reply with a verdict (relevant or not_relevant) and a justification naming the posting and resume fields you used.
+
+## The rule (a TA can apply this by hand)
+A posting is RELEVANT if and only if all three hold:
+1. `posting.title` contains, case-insensitive, at least one of: "AI Engineer", "ML Engineer", "Machine Learning", "Data Engineer".
+2. `posting.location.name` contains "Boston" (the city in `resume.personal.location`) or the word "Remote".
+3. `posting.title` does not contain Senior, Sr., Staff, Principal, Lead, Director, Head, or Manager.
+
+Otherwise NOT RELEVANT. The justification names which clause failed, or all three that passed. Clause 1 cites `posting.title`; clause 2 cites `posting.location.name` and `resume.personal.location`; clause 3 cites `posting.title`.
+
+
+resume.personal.location = "Boston, MA"
+
+The posting is the JSON file surface_file_posting.json in the current directory. Read it from there.
