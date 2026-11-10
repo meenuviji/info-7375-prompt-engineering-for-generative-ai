@@ -100,14 +100,17 @@ class ExitStatuses(SandboxTest):
         self.assertIn("HTTP_404", report["error"]["message"])
         self.assertEqual(self.sb.transport.calls, [])
 
-    def test_fatal_exit_1_when_a_policy_validator_refuses(self):
+    def test_fatal_exit_1_when_the_policy_refuses_a_loop_file_write(self):
+        # GATE.md 9.10: denying a file operation the loop itself needs is loop-level (exit 1).
+        # (A denied network request is a board failure instead: test_boundary_17.)
         class Refuse(SecurityPolicy):
-            def validate_network_request(self, method, u):
-                raise PolicyViolation("refused for test")
+            def validate_file_write(self, path):
+                raise PolicyViolation("refused for test", "test.refuse-writes")
 
-        report = self.sb.run(REAL_OK, policy=Refuse())
+        report = self.sb.run(REAL_OK, policy=Refuse(self.sb.root))
         self.assertEqual(report["exit_code"], 1)
         self.assertEqual(report["error"]["subsystem"], "security_policy")
+        self.assertEqual(report["error"]["denied_rule"], "test.refuse-writes")
         self.assertEqual(self.sb.transport.calls, [])
 
     def test_cli_argument_error_exits_1_not_argparse_2(self):
@@ -479,7 +482,7 @@ class IORouting(SandboxTest):
             def validate_file_write(self, path):
                 events.append(("write", Path(path).resolve()))
 
-        self.sb.run(dict(REAL_OK, **{CF: [ok("html_challenge.html")]}), policy=Recording())
+        self.sb.run(dict(REAL_OK, **{CF: [ok("html_challenge.html")]}), policy=Recording(self.sb.root))
         nets = [u for kind, u in events if kind == "net"]
         self.assertEqual(nets, [u for u, _ in self.sb.transport.calls])
         written = {p for kind, p in events if kind == "write"}
