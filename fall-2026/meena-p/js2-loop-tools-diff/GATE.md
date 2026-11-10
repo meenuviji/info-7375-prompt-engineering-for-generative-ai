@@ -46,3 +46,66 @@ A response is flagged as `TRUNCATED_RESPONSE` under either of two conditions:
 Per-board state is stored at:
 ```text
 output/states/{board_token}.json
+```
+
+### 5.2. Schema: Unified Ledger + ID Snapshot
+State files contain both the current verified ID set and historical audit run metadata:
+```json
+{
+  "board_token": "cloudflare",
+  "last_updated_at": "2026-11-09T20:25:00Z",
+  "last_status": "SUCCESS",
+  "active_job_ids": ["1001", "1002", "1005"],
+  "ledger": [
+    {
+      "timestamp": "2026-11-09T20:25:00Z",
+      "status": "SUCCESS",
+      "added_count": 1,
+      "unchanged_count": 2,
+      "removed_count": 0
+    }
+  ]
+}
+```
+
+### 5.3. Diff Evaluation Rules
+- **Diff Computation:** Compare incoming active IDs with `active_job_ids` from the prior state.
+  - `added`: $ID_{new} \setminus ID_{old}$
+  - `unchanged`: $ID_{new} \cap ID_{old}$
+  - `removed`: $ID_{old} \setminus ID_{new}$
+- **Failed Boards:** If a board fails verification or network fetch, **do not overwrite `active_job_ids`**. Append a run record to `ledger` indicating failure (`status: "FAILED"`, `error_type: "..."`) leaving existing job snapshot intact for future diff comparisons.
+
+---
+
+## 6. Checkpoints & Trace Immutability
+- **Immutable Traces:** Run execution traces are strictly append-only and written to timestamped files:
+  ```text
+  traces/trace_{timestamp}.json
+  ```
+- **Frozen Checkpoint Pointer:** A copy or atomic update of the latest run state is written to:
+  ```text
+  traces/checkpoint.json
+  ```
+  *(Overwriting `traces/checkpoint.json` is permitted strictly as the designated pointer to the latest checkpoint; individual session traces under `traces/trace_*.json` MUST never be overwritten).*
+
+---
+
+## 7. File System Access Boundaries
+The agent is explicitly authorized to interact with the following directory scopes:
+- `output/` — Read/Write (`output/states/{board_token}.json`, `output/diffs/`, `output/jobs/`).
+- `traces/` — Read/Write (`traces/trace_*.json`, `traces/checkpoint.json`).
+- `config/` — Read-only.
+- `personas/` — Read-only.
+
+---
+
+## 8. Board Configuration Suite (5 Boards)
+Execution runs against a 5-board target matrix:
+
+| Slot | Board Token | ATS Type | Purpose | Expected Outcome |
+| :---: | :--- | :--- | :--- | :--- |
+| **1** | `cloudflare` | Greenhouse | Real Active Board | Returns valid active jobs |
+| **2** | `datadog` | Greenhouse / Custom | Real Active Board | Returns valid active jobs |
+| **3** | `automattic` | Lever | Real Active Board | Returns valid active jobs |
+| **4** | `empty-verified` | Mock / Test ATS | Verified Empty | Valid HTTP 200, 0 jobs (`meta.total: 0`) |
+| **5** | `fail-timeout` | Mock / Network Inject | Deliberate Failure | Forced timeout (0.001s or 504 Gateway Timeout) |
