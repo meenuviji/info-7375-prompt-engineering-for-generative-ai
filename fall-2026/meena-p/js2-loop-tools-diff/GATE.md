@@ -300,3 +300,10 @@ The code's names are adopted:
 
 **Moved to the permission-policy step (items 20–23)**
 - Not sending `~/.netrc` or proxy-environment credentials, the `--approve-config-write` flag, policy denials, and restricting `--config` to `config/` are implemented and tested in the permission-policy step. Each gets a prediction written before the code.
+
+### 9.10. Policy denials (decided 2026-11-09, before the policy was implemented)
+
+- A board whose URL fails the network policy (host off the allow-list, not HTTPS, or not GET) is a board failure: error code `POLICY_DENIED`, no request sent, a `null` count, `active_job_ids` untouched. The run continues and ends at best `PARTIAL_SUCCESS` (exit 2). Reason: failure isolation, as in 9.4; one bad config line must not hide the other boards.
+- A denial of a file operation the loop itself needs (reading the config, writing a trace or state file) is loop-level: exit `1`.
+- Every denial is recorded in the trace with the rule that denied it, when a trace exists. A denial that happens before the trace exists goes to stderr, as in 9.8.
+- Note: this section was meant to be committed with my boundary predictions in fd0e047, but the append had not been run. It is added here, still before any policy code.
