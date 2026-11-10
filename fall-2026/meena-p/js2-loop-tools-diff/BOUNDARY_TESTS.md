@@ -41,3 +41,5 @@ I would leave the Actual and Match? columns pending until the implementation is 
 ### Row 17 outcome
 
 Row 17: that board fails with POLICY_DENIED, no request is sent, and the run continues to the other boards, ending PARTIAL_SUCCESS (exit 2). My reason: one bad line in the config should not hide the other boards (GATE.md 9.10).
+
+Note on row 17 (added after implementation): the test uses a test-only provider pointing at example.com, because a real config builds every URL from the Greenhouse or Lever template and cannot reach a disallowed host. See GATE.md 9.11.

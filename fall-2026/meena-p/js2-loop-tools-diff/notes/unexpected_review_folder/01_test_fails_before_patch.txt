@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- /Users/meenu/info-7375-prompt-engineering-for-generative-ai/fall-2026/meena-p/js2-loop-tools-diff/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/meenu/info-7375-prompt-engineering-for-generative-ai/fall-2026/meena-p/js2-loop-tools-diff
+collecting ... ERROR: file or directory not found: tests/test_review_no_credentials.py
+
+collected 0 items
+
+============================ no tests ran in 0.00s =============================

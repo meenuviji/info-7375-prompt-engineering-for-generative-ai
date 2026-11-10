@@ -307,3 +307,18 @@ The code's names are adopted:
 - A denial of a file operation the loop itself needs (reading the config, writing a trace or state file) is loop-level: exit `1`.
 - Every denial is recorded in the trace with the rule that denied it, when a trace exists. A denial that happens before the trace exists goes to stderr, as in 9.8.
 - Note: this section was meant to be committed with my boundary predictions in fd0e047, but the append had not been run. It is added here, still before any policy code.
+
+### 9.11. Decisions made while implementing the policy (2026-11-10)
+
+*Drafted by Claude (claude.ai chat) from Claude Code's policy-step report; reviewed and accepted by Meena Periasamy. These were made by Claude Code during implementation, after my boundary predictions (fd0e047), and are ratified here.*
+
+| Decision | Ratified? | Reason |
+| :--- | :---: | :--- |
+| A URL with a port other than 443 is denied (rule `net.port-not-443`) | Accepted | Stricter than 9.5 and consistent with HTTPS only. |
+| An existing file under `traces/` can be written only if this run created it; `traces/checkpoint.json` is the one exception | Accepted | Enforces section 6 (traces are never overwritten) in code, not only in the file-naming scheme. |
+| A board denied by the network policy uses no request budget | Accepted | No request is sent (9.10), so nothing is spent. |
+
+**Known gaps (listed under Not checked in my sign-off)**
+- A URL with credentials embedded in it (`https://user:pw@host/…`) passes the host check. Every URL is built from fixed provider templates that contain no credentials, so today's configs cannot produce one, but the policy itself does not reject it.
+- Redirects are refused only by `allow_redirects=False` in `src/fetch.py`, not by the policy layer.
+- Boundary test 17 uses a test-only provider pointing at `example.com`, because a real config builds every URL from the Greenhouse or Lever template and cannot reach a disallowed host. The check is a safety net that real configs never trigger.
