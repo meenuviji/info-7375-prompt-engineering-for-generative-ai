@@ -109,3 +109,141 @@ Execution runs against a 5-board target matrix:
 | **3** | `automattic` | Lever | Real Active Board | Returns valid active jobs |
 | **4** | `empty-verified` | Mock / Test ATS | Verified Empty | Valid HTTP 200, 0 jobs (`meta.total: 0`) |
 | **5** | `fail-timeout` | Mock / Network Inject | Deliberate Failure | Forced timeout (0.001s or 504 Gateway Timeout) |
+
+---
+
+## 9. Amendment — 2026-11-09 (after the build)
+
+*Drafted by Claude (claude.ai chat) on 2026-11-09, from my earlier gate sections, Claude Code's build report (notes/build_report_2026-11-09.md), and checks I ran by hand. Reviewed and accepted by Meena Periasamy. Sections 1–8 were written before any code (commits 667e5e7, 0218bbd). This section was written after the loop was built (d9590a3). Where this section and sections 1–8 disagree, this section wins.*
+
+### 9.1. Run statuses in the assignment's terms
+
+| Exit code | My status | Assignment term | When | What the run reports |
+| :---: | :--- | :--- | :--- | :--- |
+| `0` | `SUCCESS` | finished | Every board in the config returned a verified observation. | Per-board job counts and diffs, the trace path, elapsed seconds, requests used. |
+| `1` | `FATAL_SYSTEM_ERROR` | error | The loop cannot keep its own contract: config unreadable, a state file corrupt, a trace or state file cannot be written, a duplicate board token, or a bad command-line argument. | The error and its traceback. No job counts. |
+| `2` | `PARTIAL_SUCCESS` | incomplete | Every reachable board was visited, but at least one did not produce a verified observation. | Verified boards as for `0`. Each failed board listed with its error type and a job count of `null`. |
+| `3` | `BUDGET_EXCEEDED` | budget-exhausted | A budget in 9.2 ran out before every board was visited. | What was observed before the limit, plus the list of boards never visited. |
+
+- A run that stops is not a run that succeeded. Exit `0` is allowed only when every board is verified.
+- The `deliberate: true` flag on a board is a label in the trace. It never changes a run's status. A run that includes the deliberate failures always ends `PARTIAL_SUCCESS`.
+- Python's argparse exits with 2 by default on a bad argument, which would be misreported as `PARTIAL_SUCCESS`. The runner must catch argument errors and exit `1`.
+
+### 9.2. Budgets (replaces section 3)
+
+| Budget | Limit | Reason |
+| :--- | :--- | :--- |
+| Boards per run | 5 | 3 real boards and 2 deliberate failures (9.7). |
+| HTTP requests per run | 12 | Worst case is 9: 3 real boards × 2 attempts, the 404 board × 1, the timeout board × 2. That leaves headroom without letting a retry loop run away. |
+| Wall-clock seconds per run | 60 | Enough for a normal run. A slow network can still exhaust it, and the run must then say `BUDGET_EXCEEDED`, not fake success. |
+| Per-request timeout | 10 s, never more than the seconds left | One slow board can't use up the whole run. |
+| Deliberate timeout board | 0.001 s | Forces a timeout on purpose. |
+
+- **Who may change a budget:** only I may, by editing this section in a commit whose message gives the reason. The agent cannot change budgets: config is read-only to it (9.5), and the code's budget constants must equal this table. A test checks that they match.
+- A request is never started if its timeout plus any backoff would run past the remaining seconds. The run ends `BUDGET_EXCEEDED` instead.
+- The line in section 3 about "idempotent repeated status checks" is withdrawn. The repeat rule is 9.3.
+
+### 9.3. Repeat rule
+
+- **The same action** means a request with the same provider, board token, HTTP method, and normalized URL (lowercased host, query parameters sorted), within one run.
+- **What the loop does:** it does not send the repeat. It records `REPEAT_BLOCKED` in the trace, and the blocked repeat does not use the request budget.
+- **Retries are the one exception:** a retry that the error policy (9.4) authorizes is allowed through. It is capped by 9.4's retry count and counts against the request budget.
+- The attempt number is **not** part of the "same action" key. If it were, any bug that increased the counter would bypass the rule.
+- The repeat record lasts one run only. Fetching the same board again on the next run is the point of a watcher.
+
+### 9.4. Error policy (replaces the retry wording in section 3)
+
+A failure belongs to its board. The loop records it and moves on to the next board. Only the loop-level failures in 9.1 (exit `1`) stop the run.
+
+| Failure | Error type | Retry? | Why | Then |
+| :--- | :--- | :---: | :--- | :--- |
+| Timeout | `TIMEOUT` | Once, after 1.5 s | Usually transient. A second failure is information, not bad luck. | Board failed. |
+| Connection error or DNS failure | `CONNECTION_ERROR` | Once, after 1.5 s | Same reasoning as a timeout. | Board failed. |
+| HTTP 5xx or 429 | `SERVER_ERROR` / `RATE_LIMITED` | Once, after 2.0 s | Server-side and often transient. One retry, not repeated backoff, so the request budget stays predictable. | Board failed. |
+| HTTP 404 or 410 | `NOT_FOUND` | No | Permanent. Retrying a wrong board name only spends budget. | Board failed. |
+| Other 4xx | `CLIENT_ERROR` | No | The request itself is wrong, so sending it again won't help. | Board failed. |
+| 3xx redirect | `REDIRECT_REFUSED` | No | A redirect could lead to a host off the allow-list (9.5). Redirects are never followed. | Board failed. |
+| Malformed JSON or truncated body | `TRUNCATED_RESPONSE` | No | The same server is likely to return the same body again. | Board failed. Raw body saved. |
+| `meta.total > len(jobs)` | `TRUNCATED_RESPONSE` | No | As section 4.2. | Board failed. |
+| Empty list without metadata proving 0 | `SUSPICIOUS_PAYLOAD` | No | As section 4.1. | Board failed. |
+| Wrong shape, missing `id`, or the count mismatches listed in 9.8 | `PARSE_SCHEMA_MISMATCH` | No | A structural problem, not a transient one. | Board failed. |
+
+**What "board failed" means, every time:**
+- The job count is `null`. A failure is never turned into a value such as 0.
+- `active_job_ids` is not overwritten, as in section 5.3.
+- A `FAILED` ledger entry is added with its error type.
+- The raw response is saved if there was one.
+- The run ends `PARTIAL_SUCCESS` at best.
+
+**Escalation:** the agent never contacts anyone (9.5). Escalation means the failure is in the run's status, the run report, and the trace, and I review it.
+
+### 9.5. Permission policy (extends section 7)
+
+Enforced in code, in `src/policy.py`, through `SecurityPolicy.validate_network_request`, `validate_file_read`, and `validate_file_write`. Every check is **default deny**. Every denial is recorded in the trace with the rule that denied it. A prompt is not enforcement.
+
+**Network**
+- Allowed hosts, matched exactly after the URL is parsed, never by substring or prefix: `boards-api.greenhouse.io` and `api.lever.co`.
+- HTTPS only. GET only. Redirects are never followed.
+- No credentials, cookies, or authorization headers are ever sent.
+
+**Files**
+- Every path is resolved to a real absolute path, following `..` and symlinks, before it is checked. Whether a path is inside an allowed folder is decided by comparing path components, never by string prefix. So `output-evil/` is not inside `output/`.
+- Read is allowed in `config/`, `output/`, and `traces/`.
+- Write is allowed in `output/` and `traces/`.
+- Existing trace files under `traces/` are never overwritten, as in section 6. `traces/checkpoint.json` is the only file there that may be replaced.
+- **Approval-required write:** a write to `config/` (which holds the board list) needs my approval, given by running with `--approve-config-write`. Without that flag it is denied. No test ever prompts for approval interactively.
+- Any write outside `output/`, `traces/`, and `config/` is denied, **even with approval**.
+- `personas/` is removed from section 7. JS2 does not use personas; they stayed in JS1.
+
+**Never, under any input**
+- Apply to a job, submit a form, email, message, or log in.
+- Send any request other than GET.
+- Contact a host that isn't on the allow-list.
+
+### 9.6. Wrong versions my tests must catch
+
+1. A host check by substring or prefix, which lets `boards-api.greenhouse.io.evil.com` through.
+2. A path check by string prefix, which lets `output-evil/` through.
+3. A path check that doesn't resolve symlinks, so a link inside `output/` escapes.
+4. A path check that doesn't normalize `..`.
+5. The attempt number added to the repeat key, which lets retries bypass the repeat rule.
+6. Retrying a 404.
+7. A failed board reported with a job count of 0.
+8. A failed board overwriting `active_job_ids`.
+9. A run with a failed board exiting `0`.
+10. Emptiness judged by response size instead of structure and metadata.
+11. A bad command-line argument exiting `2`, and so reported as partial success.
+12. A request budget counted per board, or retries left out of the count.
+13. A truncated response (`meta.total > len(jobs)`) accepted as complete.
+14. The `deliberate` flag changing a run's status.
+15. A trace overwritten by a second run in the same second.
+16. Paths resolved against the current directory instead of the project root.
+
+### 9.7. Boards (replaces section 8)
+
+| Slot | Board token | ATS | Purpose | Expected outcome | Checked |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| 1 | `cloudflare` | Greenhouse | Real board | Verified jobs | Used in JS1 |
+| 2 | `palantir` | Lever | Real board (the second ATS) | Verified jobs | By hand, 2026-11-09: HTTP 200, list of 304 jobs |
+| 3 | `datadog` | Greenhouse | Real board | Verified jobs | **Pending.** I check it by hand before the real run. If the check fails, this board is replaced by a further amendment. |
+| 4 | `fail-notfound` | Greenhouse | Deliberate failure (permanent) | `NOT_FOUND`, no retry | Invented token, on purpose |
+| 5 | `fail-timeout` | Greenhouse | Deliberate failure (transient) | `TIMEOUT` after one retry | Invented token, 0.001 s timeout |
+
+- `automattic` is removed. When I checked by hand, `api.lever.co/v0/postings/automattic` returned 404.
+- `empty-verified` is removed from the live boards. It's an invented token that would return 404, not a verified 0. The verified-zero path in section 4.1 is covered by an offline fixture test only.
+- `config/boards.json` holds slots 1–3. `config/boards_with_failures.json` holds all five.
+
+### 9.8. Decisions the build made that sections 1–8 did not cover
+
+Claude Code made these during the build (notes/build_report_2026-11-09.md). Each one is now a gate decision.
+
+| Decision | Ratified? | Reason |
+| :--- | :---: | :--- |
+| `meta.total < len(jobs)` is `PARSE_SCHEMA_MISMATCH` | Accepted | More jobs than the board advertises means the count can't be trusted. |
+| A Greenhouse response with no `meta.total` is `PARSE_SCHEMA_MISMATCH` | Accepted | Without the total, the truncation check in 4.2 can't run. |
+| An empty Lever list is always `SUSPICIOUS_PAYLOAD`, never a verified 0 | Accepted | Lever sends no count, so section 4.1's metadata proof is impossible. |
+| State files are named by board token only. The same token under two providers is a config error (exit `1`). | Accepted | Matches section 5.1, and two boards can never share one state file. |
+| A board's first run is a baseline, with diff `null` | Accepted | Without earlier ids, every posting would otherwise count as "added". |
+| A board cut off by a budget writes no state | Accepted | Same reasoning as a failed board in 5.3. |
+| Trace file is `traces/trace_<run_id>.jsonl`, one JSON line per event (replaces section 6's `trace_{timestamp}.json`) | Accepted | One line per event can be appended as the run goes. The run id prevents same-second collisions (9.6 #15). |
+| A fatal error before the trace exists leaves no files; the report goes to stdout/stderr only | Accepted | If the trace can't be created, there's nowhere safe to write. Listed under "Not checked" in the sign-off. |
