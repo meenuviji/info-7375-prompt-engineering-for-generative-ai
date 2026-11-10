@@ -46,6 +46,16 @@ def safe_label(label: str) -> str:
     return label
 
 
+def _no_auth(request):
+    """Explicit no-op auth (GATE.md 9.5: no credentials are ever sent).
+
+    requests looks up netrc credentials only when no auth is given
+    (requests/sessions.py, Session.prepare_request). Passing this stops that lookup;
+    it returns the request unchanged and adds no header itself.
+    """
+    return request
+
+
 class RequestsTransport:
     """Live HTTP transport. Only reached when the agent is run from the CLI."""
 
@@ -53,7 +63,7 @@ class RequestsTransport:
         import requests  # imported here so tests never load the live transport
 
         try:
-            resp = requests.get(url, timeout=timeout, allow_redirects=False)
+            resp = requests.get(url, timeout=timeout, allow_redirects=False, auth=_no_auth)
             return Response(resp.status_code, resp.content, dict(resp.headers))
         except requests.Timeout as e:  # ConnectTimeout and ReadTimeout; checked before ConnectionError
             raise TransportError("TIMEOUT", repr(e)) from e

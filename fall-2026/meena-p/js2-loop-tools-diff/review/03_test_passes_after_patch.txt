@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- /Users/meenu/info-7375-prompt-engineering-for-generative-ai/fall-2026/meena-p/js2-loop-tools-diff/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/meenu/info-7375-prompt-engineering-for-generative-ai/fall-2026/meena-p/js2-loop-tools-diff
+collecting ... collected 1 item
+
+tests/test_review_no_credentials.py::test_no_credentials_sent_from_netrc PASSED [100%]
+
+============================== 1 passed in 0.06s ===============================
