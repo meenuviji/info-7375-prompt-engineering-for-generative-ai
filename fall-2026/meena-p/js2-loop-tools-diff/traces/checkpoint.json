@@ -1,0 +1,28 @@
+{
+  "run_id": "20261110T203921572430Z",
+  "status": "SUCCESS",
+  "exit_code": 0,
+  "trace": "traces/trace_20261110T203921572430Z.jsonl",
+  "completed_boards": [
+    {
+      "board": "cloudflare",
+      "outcome": "verified",
+      "cache_hit": false
+    },
+    {
+      "board": "palantir",
+      "outcome": "verified",
+      "cache_hit": false
+    },
+    {
+      "board": "datadog",
+      "outcome": "verified",
+      "cache_hit": false
+    }
+  ],
+  "interrupted_board": null,
+  "unvisited_boards": [],
+  "requests_used": 3,
+  "elapsed_seconds": 2.465,
+  "budget_tripped": null
+}

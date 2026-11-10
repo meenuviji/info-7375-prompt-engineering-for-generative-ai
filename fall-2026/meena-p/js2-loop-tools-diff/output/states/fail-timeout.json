@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "board_token": "fail-timeout",
+  "provider": "greenhouse",
+  "active_job_ids": null,
+  "ledger": [
+    {
+      "run_id": "20261110T203826744076Z",
+      "timestamp": "2026-11-10T20:38:30+00:00",
+      "status": "failed",
+      "job_count": null,
+      "error_code": "TIMEOUT_EXHAUSTED",
+      "http_status": null,
+      "response_sha256": null,
+      "observations": {},
+      "diff": null
+    }
+  ]
+}
