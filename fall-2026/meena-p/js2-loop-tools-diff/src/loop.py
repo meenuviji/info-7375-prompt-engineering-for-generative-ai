@@ -63,7 +63,7 @@ _BOARD_FIELDS = {"provider", "token", "deliberate", "timeout"}
 
 def load_boards(io: GuardedIO, path: Path) -> list[Board]:
     try:
-        raw = io.read_bytes(path)
+        raw = io.read_config(path)  # must resolve inside config/ (GATE.md 9.10); a denial is loop-level
     except OSError as e:
         raise ConfigError(f"cannot read config {path}: {e}") from e
     try:
@@ -211,16 +211,22 @@ class Run:
 
     # --- one request -------------------------------------------------------
     def dispatch(self, board: Board, timeout: float):
-        """(response, kind, detail). Every transport failure becomes a recorded kind."""
+        """(response, kind, detail, denied_rule). Every transport failure becomes a recorded kind."""
         try:
-            return self.io.send(self.transport, "GET", board.url, timeout), None, None
-        except PolicyViolation:
-            raise  # a policy refusal is loop-level, never a board outcome
+            return self.io.send(self.transport, "GET", board.url, timeout,
+                                on_authorized=self._count_request), None, None, None
+        except PolicyViolation as e:  # GATE.md 9.10: a board failure, no request sent
+            return None, "POLICY_DENIED", str(e), e.rule
         except TransportError as e:
             kind = e.kind if e.kind in self.error_policy else "TRANSPORT_EXCEPTION"
-            return None, kind, e.detail
+            return None, kind, e.detail, None
         except Exception as e:  # recorded as a board failure with its type; never turned into a value
-            return None, "TRANSPORT_EXCEPTION", f"{type(e).__name__}: {e}"
+            return None, "TRANSPORT_EXCEPTION", f"{type(e).__name__}: {e}", None
+
+    def _count_request(self) -> None:
+        """Called by GuardedIO.send after the policy allows the request and before it is sent."""
+        self.requests_used += 1
+        self._request_sent = True
 
     # --- one board ---------------------------------------------------------
     def process_board(self, board: Board) -> dict:
@@ -235,8 +241,8 @@ class Run:
             wanted = board.timeout if board.timeout is not None else cfg.REQUEST_TIMEOUT_SECONDS
             timeout = min(wanted, remaining)  # never longer than the budget left
 
-            self.requests_used += 1
-            resp, kind, detail = self.dispatch(board, timeout)
+            self._request_sent = False
+            resp, kind, detail, denied_rule = self.dispatch(board, timeout)
             http_status = resp.status if resp is not None else None
             raw_path = sha = None
             if resp is not None:
@@ -256,7 +262,8 @@ class Run:
             line = dict(event="ATTEMPT", **board.label(), attempt=attempt, timeout_seconds=round(timeout, 6),
                         http_status=http_status, error_kind=kind, detail=detail,
                         observations=verdict.observations if verdict else {},
-                        raw_path=raw_path, malformed_path=malformed_path)
+                        raw_path=raw_path, malformed_path=malformed_path,
+                        request_sent=self._request_sent, denied_rule=denied_rule)
             result = dict(index=board.index, **board.label(), attempts=attempt, http_status=http_status,
                           observations=verdict.observations if verdict else {}, response_sha256=sha,
                           cache_hit=False, diff=None)
@@ -439,15 +446,17 @@ class Run:
     def fatal(self, exc: BaseException) -> dict:
         subsystem = {ConfigError: "config", StateError: "state", PolicyViolation: "security_policy"}.get(
             type(exc), "filesystem" if isinstance(exc, OSError) else "runtime")
+        rule = getattr(exc, "rule", None)  # set for a policy denial
         report = self.report("FATAL_SYSTEM_ERROR", None, None, [], extra={
             "error": {"type": type(exc).__name__, "message": str(exc), "subsystem": subsystem,
-                      "traceback": traceback.format_exception(exc)},
+                      "denied_rule": rule, "traceback": traceback.format_exception(exc)},
         })
         # Only record into this run's own trace, and only once it exists (never an older file).
         if self.trace_created:
             notes = []
             try:
-                self.trace(event="FATAL_SYSTEM_ERROR", subsystem=subsystem, error=f"{type(exc).__name__}: {exc}",
+                self.trace(event="FATAL_SYSTEM_ERROR", subsystem=subsystem, denied_rule=rule,
+                           error=f"{type(exc).__name__}: {exc}",
                            budget_remaining=self.budget_remaining())
             except Exception as e:
                 notes.append(f"could not write trace line: {e!r}")
@@ -462,13 +471,14 @@ class Run:
 
 def run_agent(*, root: Path = cfg.PROJECT_ROOT, config_path=cfg.DEFAULT_CONFIG, transport=None,
               policy: SecurityPolicy | None = None, clock=time.monotonic, sleep=time.sleep, now_iso=_utc_iso,
-              run_id: str | None = None, error_policy=cfg.ERROR_POLICY, budgets=cfg.BUDGETS) -> dict:
+              run_id: str | None = None, error_policy=cfg.ERROR_POLICY, budgets=cfg.BUDGETS,
+              approve_config_write: bool = False) -> dict:
     root = Path(root).resolve()
     config_path = Path(config_path)
     if not config_path.is_absolute():
         config_path = root / config_path  # against the project root, never the current directory
     run = Run(root=root, config_path=config_path, transport=transport or RequestsTransport(),
-              policy=policy or SecurityPolicy(), clock=clock, sleep=sleep, now_iso=now_iso,
+              policy=policy or SecurityPolicy(root, approve_config_write=approve_config_write), clock=clock, sleep=sleep, now_iso=now_iso,
               run_id=run_id or utc_timestamp(), error_policy=error_policy, budgets=budgets)
     try:
         return run.execute()
@@ -489,12 +499,14 @@ def main(argv=None) -> int:
     parser = _Parser(prog="python -m src.loop", description="JS2 bounded job-board loop (contract: GATE.md)")
     parser.add_argument("--config", default=cfg.DEFAULT_CONFIG,
                         help="board config, relative to the project root (default: %(default)s)")
+    parser.add_argument("--approve-config-write", action="store_true",
+                        help="allow writes to config/ (GATE.md 9.5); never prompts")
     try:
         args = parser.parse_args(argv)
     except _ArgumentError as e:
         print(f"argument error: {e}", file=sys.stderr)
         return cfg.EXIT_CODES["FATAL_SYSTEM_ERROR"]
-    report = run_agent(config_path=args.config)
+    report = run_agent(config_path=args.config, approve_config_write=args.approve_config_write)
     print(json.dumps(report, indent=2))
     if report["status"] == "FATAL_SYSTEM_ERROR":
         print("".join(report["error"]["traceback"]), file=sys.stderr)

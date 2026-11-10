@@ -1,0 +1,34 @@
+......................................................F............. [ 94%]
+....                                                                     [100%]
+=================================== FAILURES ===================================
+_______________ IORouting.test_all_io_passes_through_the_policy ________________
+
+self = <tests.test_loop.IORouting testMethod=test_all_io_passes_through_the_policy>
+
+    def test_all_io_passes_through_the_policy(self):
+        events = []
+    
+        class Recording(SecurityPolicy):
+            def validate_network_request(self, method, u):
+                events.append(("net", u))
+    
+            def validate_file_read(self, path):
+                events.append(("read", Path(path).resolve()))
+    
+            def validate_file_write(self, path):
+                events.append(("write", Path(path).resolve()))
+    
+        self.sb.run(dict(REAL_OK, **{CF: [ok("html_challenge.html")]}), policy=Recording())
+        nets = [u for kind, u in events if kind == "net"]
+        self.assertEqual(nets, [u for u, _ in self.sb.transport.calls])
+        written = {p for kind, p in events if kind == "write"}
+        for top in ("output", "traces"):
+            for path in (self.sb.root / top).rglob("*"):
+                self.assertIn(path.resolve(), written, f"{path} was written without validate_file_write")
+>       self.assertIn(("read", (self.sb.root / self.sb.config).resolve()), events)
+E       AssertionError: ('read', PosixPath('/private/var/folders/f0/x9qtdn0x7h1crxz_qntznbmr0000gn/T/js2-test-1jnuddaa/config/boards.json')) not found in []
+
+tests/test_loop.py:489: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_loop.py::IORouting::test_all_io_passes_through_the_policy
+1 failed, 71 passed, 4 subtests passed in 0.21s

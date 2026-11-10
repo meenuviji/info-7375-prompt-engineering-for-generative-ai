@@ -66,6 +66,8 @@ ERROR_POLICY = MappingProxyType({
     "SUSPICIOUS_PAYLOAD":    {"retry": False, "code": "SUSPICIOUS_PAYLOAD"},
     "TRUNCATED_RESPONSE":    {"retry": False, "code": "TRUNCATED_RESPONSE"},
     "PARSE_SCHEMA_MISMATCH": {"retry": False, "code": "PARSE_SCHEMA_MISMATCH"},
+    # GATE.md 9.10: the URL failed the network policy; no request was sent.
+    "POLICY_DENIED":         {"retry": False, "code": "POLICY_DENIED"},
 })
 
 REQUIRED_POLICY_KINDS = frozenset(ERROR_POLICY)
