@@ -1,0 +1,8 @@
+{
+  "description": "Real boards only (clarification 5).",
+  "boards": [
+    {"provider": "greenhouse", "token": "cloudflare"},
+    {"provider": "greenhouse", "token": "datadog"},
+    {"provider": "lever", "token": "automattic"}
+  ]
+}

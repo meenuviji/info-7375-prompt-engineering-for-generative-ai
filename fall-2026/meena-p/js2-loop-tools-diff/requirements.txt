@@ -1,0 +1,6 @@
+# Same pins as the_contract_watch (JS1). Only requests is used, and only by the live transport.
+requests==2.34.2
+certifi==2026.10.23
+charset-normalizer==3.5.2
+idna==3.20
+urllib3==2.8.0
