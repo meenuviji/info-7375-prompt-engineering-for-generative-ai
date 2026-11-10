@@ -247,3 +247,56 @@ Claude Code made these during the build (notes/build_report_2026-11-09.md). Each
 | A board cut off by a budget writes no state | Accepted | Same reasoning as a failed board in 5.3. |
 | Trace file is `traces/trace_<run_id>.jsonl`, one JSON line per event (replaces section 6's `trace_{timestamp}.json`) | Accepted | One line per event can be appended as the run goes. The run id prevents same-second collisions (9.6 #15). |
 | A fatal error before the trace exists leaves no files; the report goes to stdout/stderr only | Accepted | If the trace can't be created, there's nowhere safe to write. Listed under "Not checked" in the sign-off. |
+
+### 9.9. Corrections after comparing the code with section 9 (2026-11-09)
+
+*Drafted by Claude (claude.ai chat) from Claude Code's comparison (notes/gate_discrepancies_2026-11-09.md); reviewed and accepted by Meena Periasamy. Items 1, 6 and 10 of that report were contradictions in Claude's draft of section 9. Where 9.9 and earlier sections disagree, 9.9 wins.*
+
+**Duplicate boards and the repeat rule (report items 1, 10, 11)**
+- Only the same token listed under two different providers is a config error (exit `1`), as 9.8 says. The rule in 9.1 is narrowed to that case.
+- The same provider and token listed twice is allowed. The second one is a repeat under 9.3. It is not sent, it is recorded as `IDEMPOTENT_CACHE_HIT` with decision `REUSE_OBSERVATION`, and it reuses the first observation. A repeat can never make the run's status better or worse than the first observation already made it.
+
+**Statuses (items 2, 3)**
+- An `error` report may list boards verified before the fatal error, with their counts. They are real observations. The `error` status means the run as a whole cannot be trusted.
+- Exit `3` applies whenever any budget was exceeded, even if every board was visited.
+
+**Time left in the budget (item 6)**
+- When less time is left than the normal 10 s request timeout, the request is sent with its timeout shortened to the time left. The 9.2 bullet saying never to start such a request is withdrawn.
+- Known weakness: if a shortened request times out, the trace records the board as `TIMEOUT_EXHAUSTED`, although the budget may be the real cause. This is listed under Not checked in my sign-off.
+
+**Repeat key (item 8)**
+- The repeat key uses the URL exactly as built from the provider's template, not a normalized URL. Every URL is built from fixed templates, so the same board always gives the same string. URL normalization is not implemented, and it is listed under Not checked.
+
+**Error types and retries (items 12–18)**
+
+The code's names are adopted:
+
+| Failure | Error type | Retry? |
+| :--- | :--- | :---: |
+| Timeout | `TIMEOUT_EXHAUSTED` | Once, after 1.5 s |
+| HTTP 5xx | `UPSTREAM_5XX_ERROR` | Once, after 2.0 s |
+| HTTP 429 | `RATE_LIMITED_EXHAUSTED` | Once, after 2.0 s |
+| HTTP 404 | `BOARD_NOT_FOUND` | No |
+| HTTP 410, other 4xx, non-200 2xx, 1xx, or a status above 599 | `HTTP_ERROR` / `HTTP_OTHER` | No |
+| Connection error or DNS failure | `NETWORK_ERROR` | **No.** Changed from 9.4. A refused connection or failed DNS lookup rarely clears in 1.5 s, and timeouts already cover the transient case. |
+| Other `requests` error, or an unexpected transport error | `REQUEST_ERROR` / `TRANSPORT_EXCEPTION` | No |
+| JSON cut off mid-structure, or `meta.total > len(jobs)` | `TRUNCATED_RESPONSE` | No |
+| A body that isn't JSON (an HTML page, non-UTF-8, empty), wrong shape, missing `id`, or the count cases in 9.8 | `PARSE_SCHEMA_MISMATCH` | No |
+
+- With one retry, each wait is a single fixed 1.5 s or 2.0 s, not repeated backoff.
+- Every failure in this table still means everything "board failed" means in 9.4: a `null` count, `active_job_ids` untouched, a failed ledger entry, and the run at best `PARTIAL_SUCCESS`.
+
+**Field names and state schema (items 4, 17, 32)**
+- Failed boards and ledger entries use the field `error_code`, not "error type". Ledger status values are `verified` and `failed`, not `SUCCESS` and `FAILED`.
+- A state file holds `schema_version`, `board_token`, `provider`, `active_job_ids` and `ledger`. Each ledger entry carries a nested `diff` object instead of separate count fields. Section 5.2's example is illustrative only.
+- Ids keep their provider's type: integers for Greenhouse, strings for Lever.
+
+**Folders (item 33)**
+- The agent writes `output/states/`, `output/raw/`, `traces/` and `traces/malformed/`. Section 7's `output/diffs/` and `output/jobs/` are not used and are withdrawn.
+
+**Boards (items 28–30)**
+- Datadog was checked by hand on 2026-11-09: a Greenhouse board returning 400 jobs with `meta.total` 400. It is confirmed for slot 3 in 9.7.
+- Offline test fixtures may use invented tokens, such as `automattic`, as test names. Only the live configs must match 9.7.
+
+**Moved to the permission-policy step (items 20–23)**
+- Not sending `~/.netrc` or proxy-environment credentials, the `--approve-config-write` flag, policy denials, and restricting `--config` to `config/` are implemented and tested in the permission-policy step. Each gets a prediction written before the code.
