@@ -1,0 +1,8 @@
+fixture:              tests/fixtures/SEEDED_truncated_cloudflare.json
+trace:                output/demo/finished_wrong_trace.jsonl
+jobs in body:         450
+meta.total:           468
+count trace reported: 450
+trace error_code:     None
+run status (RUN_END): SUCCESS
+verdict: WRONG - the run reported 450 jobs as a verified count and ended SUCCESS, but the body advertises 468: 18 postings are missing from the response. A truncated response was accepted as complete.
