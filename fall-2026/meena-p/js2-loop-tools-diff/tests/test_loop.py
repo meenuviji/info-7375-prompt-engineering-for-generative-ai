@@ -8,9 +8,11 @@ import json
 import os
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
+from unittest import mock
 
-from src import config as cfg
+from src import config as cfg, fetch
 from src.loop import Board, main
 from src.policy import PolicyViolation, SecurityPolicy
 from tests.helpers import (Sandbox, boom, error, fixture, gh, lever, ok, status, timeout, url)
@@ -140,7 +142,10 @@ class ShippedConfigs(unittest.TestCase):
         full = load_boards(io, cfg.PROJECT_ROOT / "config/boards_with_failures.json")
         self.assertFalse(any(b.deliberate for b in real))
         self.assertEqual(len(full), cfg.MAX_BOARDS)
-        self.assertEqual({b.token for b in full if b.deliberate}, {"empty-verified", "fail-timeout"})
+        self.assertEqual([b.token for b in real], ["cloudflare", "palantir", "datadog"])
+        self.assertEqual([b.provider for b in real], ["greenhouse", "lever", "greenhouse"])
+        self.assertEqual({b.token for b in full if b.deliberate}, {"fail-notfound", "fail-timeout"})
+        self.assertIsNone(next(b.timeout for b in full if b.token == "fail-notfound"))  # normal 10 s timeout
         self.assertEqual(next(b.timeout for b in full if b.token == "fail-timeout"), 0.001)
 
 
@@ -204,6 +209,7 @@ class Budgets(SandboxTest):
 
     def test_current_constants_are_the_gate_values(self):
         self.assertEqual((cfg.MAX_SECONDS, cfg.MAX_REQUESTS, cfg.MAX_BOARDS), (60.0, 12, 5))
+        self.assertEqual(cfg.REQUEST_TIMEOUT_SECONDS, 10.0)
 
 
 # ============================================================ repeat rule
@@ -422,6 +428,18 @@ class Files(SandboxTest):
         self.assertEqual(report["exit_code"], 1)
         self.assertEqual(trace.read_text(), "earlier run\n")
         self.assertEqual(self.sb.transport.calls, [])
+
+    def test_two_run_ids_in_the_same_second_differ(self):
+        # GATE.md 9.6 #15: the run id (and so the trace name) must not repeat within one second.
+        same_second = [datetime(2026, 11, 9, 20, 0, 0, 1, tzinfo=timezone.utc),
+                       datetime(2026, 11, 9, 20, 0, 0, 2, tzinfo=timezone.utc)]
+        with mock.patch.object(fetch, "datetime") as fake:
+            fake.now.side_effect = same_second
+            first, second = fetch.utc_timestamp(), fetch.utc_timestamp()
+        self.assertEqual(first[:15], second[:15])  # same second: 20261109T200000
+        self.assertNotEqual(first, second)
+        # And two real ids generated back to back.
+        self.assertNotEqual(fetch.utc_timestamp(), fetch.utc_timestamp())
 
     def test_existing_raw_file_is_never_overwritten(self):
         raw = self.sb.root / "output/raw/TESTRUN/greenhouse_cloudflare_attempt1.body"

@@ -270,6 +270,8 @@ class Run:
             rule = self.error_policy[kind]
             retries_used = attempt - 1
             if rule["retry"] and retries_used < rule["max_retries"]:
+                # GATE.md 9.9: a single fixed wait. With max_retries = 1, retries_used is 0 here,
+                # so this is exactly base_wait; the multiplier is left unchanged (no behavior change).
                 wait = rule["base_wait"] * (2 ** retries_used)
                 if wait >= self.remaining_seconds():
                     self.trace(**line, job_count=None, error_code=None, decision="RETRY_BLOCKED_BY_BUDGET",

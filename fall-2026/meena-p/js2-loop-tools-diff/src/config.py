@@ -12,9 +12,9 @@ from types import MappingProxyType
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # --- Budgets -------------------------------------------------------------------
-MAX_SECONDS = 60.0   # GATE.md section 3
-MAX_REQUESTS = 12    # GATE.md section 3
-MAX_BOARDS = 5       # Not in GATE.md; from the 5-board set in clarification 5.
+MAX_SECONDS = 60.0   # GATE.md 9.2
+MAX_REQUESTS = 12    # GATE.md 9.2
+MAX_BOARDS = 5       # GATE.md 9.2 (boards in 9.7)
 
 BUDGETS = MappingProxyType({
     "max_seconds": MAX_SECONDS,
@@ -22,7 +22,7 @@ BUDGETS = MappingProxyType({
     "max_boards": MAX_BOARDS,
 })
 
-# Real boards: 10 s per request, capped at the seconds left in the budget.
+# Real boards: 10 s per request, shortened to the seconds left in the budget (GATE.md 9.2, 9.9).
 # A board may set its own "timeout" in the config (the deliberate timeout board uses 0.001).
 REQUEST_TIMEOUT_SECONDS = 10.0
 
@@ -50,9 +50,9 @@ CHECKPOINT_PATH = "traces/checkpoint.json"  # latest-run pointer, replaced atomi
 
 # --- Error policy -----------------------------------------------------------------
 # kind -> what the loop does. "code" is the error_code recorded when the board fails
-# (for retryable kinds, after the retries are used up). Retries use exponential
-# backoff: wait = base_wait * 2 ** retries_already_used. Every retry is a real request
-# and counts against max_requests.
+# (for retryable kinds, after the retries are used up). GATE.md 9.9: each retryable
+# kind is retried once, after a single fixed wait of base_wait seconds (1.5 s or 2.0 s),
+# not repeated backoff. Every retry is a real request and counts against max_requests.
 ERROR_POLICY = MappingProxyType({
     "TIMEOUT":               {"retry": True,  "max_retries": 1, "base_wait": 1.5, "code": "TIMEOUT_EXHAUSTED"},
     "HTTP_5XX":              {"retry": True,  "max_retries": 1, "base_wait": 2.0, "code": "UPSTREAM_5XX_ERROR"},

@@ -2,9 +2,9 @@
   "description": "Real boards plus the two test boards. 'deliberate' is a trace label only; it never changes a run's status.",
   "boards": [
     {"provider": "greenhouse", "token": "cloudflare"},
+    {"provider": "lever", "token": "palantir"},
     {"provider": "greenhouse", "token": "datadog"},
-    {"provider": "lever", "token": "automattic"},
-    {"provider": "greenhouse", "token": "empty-verified", "deliberate": true},
+    {"provider": "greenhouse", "token": "fail-notfound", "deliberate": true},
     {"provider": "greenhouse", "token": "fail-timeout", "deliberate": true, "timeout": 0.001}
   ]
 }
