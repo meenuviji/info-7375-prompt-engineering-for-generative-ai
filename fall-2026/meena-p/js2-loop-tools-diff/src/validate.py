@@ -89,9 +89,12 @@ def _greenhouse(data) -> Verdict:
         if total == 0:
             return Verdict(ok=True, job_ids=(), job_count=0, observations=obs)
         return _fail("SUSPICIOUS_PAYLOAD", f"empty jobs list but meta.total = {total}", **obs)
-    if total > len(jobs):
-        return _fail("TRUNCATED_RESPONSE", f"meta.total {total} > {len(jobs)} jobs in body",
-                     truncation="count", **obs)
+    # SEEDED REPRODUCTION (branch finished-wrong-demo only; never merge): the GATE.md 4.2
+    # count check (meta.total > len(jobs) -> TRUNCATED_RESPONSE) is disabled on purpose to
+    # show a finished-but-wrong run. See output/demo/FINISHED_WRONG.md.
+    # if total > len(jobs):
+    #     return _fail("TRUNCATED_RESPONSE", f"meta.total {total} > {len(jobs)} jobs in body",
+    #                  truncation="count", **obs)
     if total < len(jobs):
         return _fail("PARSE_SCHEMA_MISMATCH", f"meta.total {total} < {len(jobs)} jobs in body", **obs)
     return Verdict(ok=True, job_ids=tuple(ids), job_count=len(ids), observations=obs)
