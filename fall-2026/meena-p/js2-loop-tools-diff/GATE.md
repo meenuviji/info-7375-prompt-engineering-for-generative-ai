@@ -114,7 +114,7 @@ Execution runs against a 5-board target matrix:
 
 ## 9. Amendment — 2026-11-09 (after the build)
 
-*Drafted by Claude (claude.ai chat) on 2026-11-09, from my earlier gate sections, Claude Code's build report (notes/build_report_2026-11-09.md), and checks I ran by hand. Reviewed and accepted by Meena Periasamy. Sections 1–8 were written before any code (commits 667e5e7, 0218bbd). This section was written after the loop was built (d9590a3). Where this section and sections 1–8 disagree, this section wins.*
+*Drafted by Claude (claude.ai chat) on 2026-11-09, from my earlier gate sections, Claude Code's build report (notes/build_report_2026-11-09.md), and checks I ran by hand. Reviewed and accepted by Meena Periasamy. Before any code, the gate existed as 667e5e7 (my original full draft) and 0218bbd (my revised sections 1–5.1); sections 5.2–8 in their current form were committed in 3f48500, after the loop was built (d9590a3). Corrected on 2026-11-10: an audit found that the earlier wording of this line overstated what came first. This section was written after the loop was built (d9590a3). Where this section and sections 1–8 disagree, this section wins.*
 
 ### 9.1. Run statuses in the assignment's terms
 

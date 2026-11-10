@@ -1,0 +1,3 @@
+Run by me on 2026-11-10 17:38 with .venv/bin/python
+zsh: no matches found: [FIXTURE_PATH]
+exit: 1
