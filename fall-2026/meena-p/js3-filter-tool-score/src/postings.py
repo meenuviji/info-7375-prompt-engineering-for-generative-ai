@@ -106,13 +106,17 @@ def parse_lever(board: str, body: list) -> list[dict]:
     return out
 
 
-def records_to_postings(records, report: LoadReport) -> list[Posting]:
+def records_to_postings(records, report: LoadReport, keep_missing_title: bool = False) -> list[Posting]:
+    """keep_missing_title=True keeps title-less postings (FILTER.md 4923b21: CANNOT_TELL)
+    but still counts them in report.skipped_no_title; False skips them (old v1/v2)."""
     seen: set[tuple[str, str]] = set()
     postings = []
     for r in records:
-        if not r["title"]:
+        if not r["title"] and not keep_missing_title:
             report.skipped_no_title += 1
             continue
+        if not r["title"]:
+            report.skipped_no_title += 1  # counted; kept only because keep_missing_title is set
         key = (r["provider"], r["id"])
         if key in seen:
             report.duplicates_dropped += 1
@@ -124,7 +128,7 @@ def records_to_postings(records, report: LoadReport) -> list[Posting]:
     return postings
 
 
-def load_postings(raw_dir=None) -> tuple[list[Posting], LoadReport]:
+def load_postings(raw_dir=None, keep_missing_title: bool = False) -> tuple[list[Posting], LoadReport]:
     raw_dir = Path(raw_dir) if raw_dir is not None else cfg.PROJECT_ROOT / cfg.RAW_DIR
     records = []
     for path in sorted(raw_dir.glob("*.body")):
@@ -135,4 +139,4 @@ def load_postings(raw_dir=None) -> tuple[list[Posting], LoadReport]:
         body = json.loads(path.read_bytes())
         records += parse_greenhouse(board, body) if provider == "greenhouse" else parse_lever(board, body)
     report = LoadReport()
-    return records_to_postings(records, report), report
+    return records_to_postings(records, report, keep_missing_title), report

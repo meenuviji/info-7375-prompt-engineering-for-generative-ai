@@ -13,6 +13,18 @@ TOPIC_CAP = 4             # hand-set in FILTER.md v1: topic part capped at 4 poi
 KEEP_THRESHOLD = 5        # hand-set in FILTER.md v1: keep when score >= 5
 CLOSE_CALL_SCORES = frozenset({4, 5})  # hand-set in FILTER.md v1: close-call window, score 4 or 5
 
+# --- Filter numbers, rule set "v3" = FILTER.md as committed in 4923b21 (its header says v1) ----
+# hand-set in FILTER.md v1 (4923b21), section 1.4
+V3_CORE_ROLE_POINTS = 2      # hand-set in FILTER.md v1 (4923b21): 2 per R1-R4 rule matched
+V3_R5_POINT = 1              # hand-set in FILTER.md v1 (4923b21): +1 for R5, only with an R1-R4 match
+V3_TOPIC_POINT = 1           # hand-set in FILTER.md v1 (4923b21): +1 per T1-T5 rule matched (no cap stated)
+V3_KEEP_THRESHOLD = 5        # hand-set in FILTER.md v1 (4923b21): keep if score >= 5
+V3_CLOSE_CALL_SCORE = 4      # hand-set in FILTER.md v1 (4923b21): no exclusion and score 4
+V3_CLOSE_CALL_BOUNDARY_RULES = frozenset({"X3", "X5"})  # hand-set in FILTER.md v1 (4923b21): or score >= 5
+                                                        # rejected by a single X3 or X5
+# sha256 of the FILTER.md text v3 implements. The MCP tool refuses to score if FILTER.md changes.
+V3_FILTER_MD_SHA256 = "37feae45fdac8d2cab5f8e0fbd9e58bc0ec28d2132d6e30c532d78e5986d7f91"  # FILTER.md at commit 4923b21
+
 # --- Labeling-set sampling ----------------------------------------------------------
 # Set in the JS3 build instructions (2026-11-25), not in FILTER.md.
 SEED = 20261125

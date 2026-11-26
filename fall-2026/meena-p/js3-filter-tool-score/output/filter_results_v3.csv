@@ -1,0 +1,1168 @@
+provider,board,id,title,decision,score,rules_fired,close_call
+greenhouse,cloudflare,7695702,"Account Executive, FedCiv",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172582,"Account Executive, Indonesia",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8097321,AI Security Research & Red Team Engineer,REJECTED,1,T4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8287256,"Associate, Strategic Finance & Investor Relations",REJECTED,1,T5;X4;X5,false
+greenhouse,cloudflare,8288902,Business Development Representative,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,6696709,Business Development Representative - Arabic Speaking,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,6557318,Business Development Representative (BDR),REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8234270,"Business Development Representative (BDR), LATAM Portuguese Speaking",REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7991345,"Business Development Representative (BDR), LATAM Spanish Speaking",REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7657028,"Business Development Representative - Danish, Norwegian or Swedish Speaking",REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7883803,Business Development Representative - Dutch Speaking,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7504487,Business Development Representative - German Speaking,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7694407,Business Development Representative - Hebrew Speaking,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8275611,Business Development Representative - Korea,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,7772239,Business Development Representative - Turkish Speaking,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8250114,Business Operations Manager,REJECTED,1,T2;X1;X4,false
+greenhouse,cloudflare,8300518,Capacity Planning Engineer,REJECTED,3,T1;T2;T3;X5,false
+greenhouse,cloudflare,8076815,Chief of Staff to Chief Strategy Officer,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332361,"Client Executive, SLED",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8324315,"Commercial Sales Director, West",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8350836,Customer Engineer AI/ Start Up's,REJECTED,2,T1;T4;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8329370,"Customer Engineer, Enterprise - Austin/Dallas,TX or Raleigh, NC",REJECTED,2,T1;T4;X4,false
+greenhouse,cloudflare,8140643,"Customer Engineer, Korea",REJECTED,2,T1;T4;X3;X4,false
+greenhouse,cloudflare,7988072,Customer Experience Manager,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8300499,Customer Experience Manager - Dutch or Swedish Speaking,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8063946,Customer Experience Manager - French and Spanish or Portuguese Speaking,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,6629769,Customer Experience Manager - German Speaking,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8237119,Customer Experience Manager - Hebrew Speaking,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7241874,Customer Experience Manager - Russian Speaking,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8317751,Customer Reliability Engineer,REJECTED,3,T1;T2;T5;X3,false
+greenhouse,cloudflare,8311164,Customer Security Compliance Specialist,REJECTED,2,T1;T2;X5,false
+greenhouse,cloudflare,8220770,Customer Solutions Engineer,REJECTED,2,T1;T4;X3;X5,false
+greenhouse,cloudflare,8188498,Customer Solutions Strategy Lead,REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8109620,Data Analyst,REJECTED,5,R4;T1;T2;T3;X3,true
+greenhouse,cloudflare,8227832,Data Center Design Engineer,REJECTED,1,T1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7736431,Data Center Infrastructure Management (DCIM) Administrator - Infrastructure Operations,REJECTED,1,T2;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8311376,Data Center Network Operations Engineer,REJECTED,1,T1;X3;X4,false
+greenhouse,cloudflare,8369401,Data Center Operations Engineer,REJECTED,1,T1;X4,false
+greenhouse,cloudflare,8282124,Data Center Strategy - Edge,REJECTED,0,,false
+greenhouse,cloudflare,8275927,Data Scientist,REJECTED,7,R2;T1;T2;T3;T4;T5;X3,true
+greenhouse,cloudflare,8163023,DCSC Automation Specialist,REJECTED,1,T4,false
+greenhouse,cloudflare,8268432,Deal Desk Manager,REJECTED,0,X1,false
+greenhouse,cloudflare,8219758,"Deal Desk Manager, APAC",REJECTED,0,X1;X3,false
+greenhouse,cloudflare,7544182,"Deal Desk Manager, EMEA",REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8248907,Deal Intelligence Analyst,REJECTED,5,T1;T2;T3;T4;T5;X3;X5,false
+greenhouse,cloudflare,8191453,"Developer GTM Strategy Manager, Technical Programs",REJECTED,2,T2;T5;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8180715,Digital Natives Account Executive,REJECTED,1,T4;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7735836,Digital Natives Account Executive,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8238758,Digital Presales Customer Engineer,REJECTED,2,T1;T4;X3;X4,false
+greenhouse,cloudflare,8243255,"Director, Growth Sales (AI & Digital Natives)",REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8360480,"Director of Sales, Named (Toronto)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8287207,Director of Structured Finance,REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8036150,"Director, Strategic Finance & Investor Relations",REJECTED,1,T5;X1;X4;X5,false
+greenhouse,cloudflare,8242481,"Engineering Manager, Agentic Commerce",REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8143649,"Engineering Manager, Agentic Internet & Data Insights",REJECTED,1,T4;X1;X3,false
+greenhouse,cloudflare,8312215,"Engineering Manager, Bots & Fraud",REJECTED,3,T1;T3;T4;X1,false
+greenhouse,cloudflare,8293647,"Engineering Manager, Data Center Operations",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8331928,"Engineering Manager, Revenue Engineering",REJECTED,3,T2;T3;T4;X1,false
+greenhouse,cloudflare,8275944,"Engineering Manager, Stablecoins",REJECTED,0,X1,false
+greenhouse,cloudflare,8350645,Enterprise Account Executive Mexico,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332958,"Enterprise Account Executive, Philippines",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8304855,"Enterprise Account Executive, Thailand",REJECTED,1,T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332959,"Enterprise Account Executive, Vietnam",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8224347,Enterprise Systems Developer- Order to Cash,REJECTED,1,T4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8360491,Executive Assistant - Developer Platform,REJECTED,0,,false
+greenhouse,cloudflare,8324958,"Federal Account Executive, DHS",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8324955,"Federal Account Executive, HHS",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8324969,"Federal Account Executive, SSA",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8324952,"Federal Account Executive, Treasury",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8324972,"Federal Account Executive, USPS",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7997341,"Finance Business Partner, G&A",REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7572075,Forward Deployed Engineer (FDE),REJECTED,1,T4;X4,false
+greenhouse,cloudflare,8043305,"Forward Deployed Engineer, Professional Services",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8043339,"Forward Deployed Engineer, Professional Services",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8230670,Global Commercial Attorney (Public Sector),REJECTED,0,,false
+greenhouse,cloudflare,8328089,"Global Vendor Manager, Data Center Infrastructure",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8301509,"GTM Data Specialist, Consumption & Revenue Operations",REJECTED,2,T2;T5;X4,false
+greenhouse,cloudflare,8223480,Hardware Systems Engineer,REJECTED,1,T1;X3,false
+greenhouse,cloudflare,8325821,Hardware Systems Engineer,REJECTED,1,T1,false
+greenhouse,cloudflare,8325834,Hardware Systems Engineer - AI Hardware,REJECTED,3,T1;T4;T5,false
+greenhouse,cloudflare,8306486,"Hardware Systems Engineer, Hardware Tools / Firmware",REJECTED,1,T1,false
+greenhouse,cloudflare,7428796,"Head of GTM, AI Inference",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8354678,"HR Operations Specialist, Singapore (12-months contract)",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8157997,IAM Security Engineer,REJECTED,1,T1,false
+greenhouse,cloudflare,8278383,Infrastructure Business Operations Associate,REJECTED,1,T2;X4;X5,false
+greenhouse,cloudflare,8188468,Infrastructure Network & Supply Engineer,REJECTED,1,T5,false
+greenhouse,cloudflare,8317970,Inside Sales Representative,REJECTED,0,X3;X4;X5,false
+greenhouse,cloudflare,8317920,Inside Sales Representative,REJECTED,0,X3;X4;X5,false
+greenhouse,cloudflare,8046869,"Interconnection Manager, Network Strategy Americas",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8359926,Internal Audit Manager,REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8281074,IT Operations Specialist I,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8248563,Logistics Operations Specialist,REJECTED,2,T1;T4;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7552575,"Major Account Executive, France",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,7756883,"Manager, BDR - SAARC",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8140704,"Manager, Presales Customer Engineering",REJECTED,1,T5;X1;X3,false
+greenhouse,cloudflare,8043974,Member of Technical Staff - Workers AI Applied Research,REJECTED,2,T1;T4;X1,false
+greenhouse,cloudflare,8257165,Mid-Market Account Manager. Mexico and Central America.,REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8319231,"Model Operations Lead, AI Gateway",REJECTED,1,T1;X1;X4,false
+greenhouse,cloudflare,7868936,"Named Account Executive, FSI (Hong Kong)",REJECTED,1,T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332960,"Named Account Executive, Indonesia (Public Sector)",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8332956,"Named Account Executive, Philippines",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8155946,"Named Account Executive, Public Sector & Enterprise (Singapore)",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,7783835,"Named Account Executive, Thailand",REJECTED,1,T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332951,"Named Account Executive, Vietnam",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8231630,"Named Sales Director, East (Northern VA/DC Metro)",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8345213,"Named Sales Director, PacNW (Seattle)",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8099671,Network Deployment Engineer,REJECTED,1,T1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8088046,Network Deployment Engineer - APJC,REJECTED,1,T1;X3,false
+greenhouse,cloudflare,8081027,Network Security Engineer,REJECTED,2,T1;T2;X3,false
+greenhouse,cloudflare,8159206,Network Security Engineer,REJECTED,2,T1;T2;X3,false
+greenhouse,cloudflare,8304143,"Operations Manager, Strategic Partnerships",REJECTED,1,T4;X1;X4;X5,false
+greenhouse,cloudflare,8266408,"Partner Account Manager, Japan (Based in Tokyo)",REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8185854,"Partner Engineer, Spain",REJECTED,1,T4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8049820,"Partner Solutions Architect- Service Providers  Location New York/ New Jersey, Dallas, Denver or Seattle.",REJECTED,1,T4;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8354692,People Operations Specialist,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8354680,"People Operations Specialist, Singapore (12-months contract)",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8350166,"People Team Intern, HR Transformation (Winter 2027)",REJECTED,0,X2,false
+greenhouse,cloudflare,8214470,"Performance Engineer, Kernel and Memory",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8333371,Presales Customer Engineer,REJECTED,2,T1;T4;X3;X4,false
+greenhouse,cloudflare,8227192,Principal Campaign Manager,REJECTED,1,T5;X1,false
+greenhouse,cloudflare,7967144,"Principal Customer Engineer, Majors",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8188337,"Principal Customer Engineer -Majors, France",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8223319,Principal Customer Engineer - Toronto Canada,REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8358934,"Principal, Customer Storytelling & Advocacy",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8350481,"Principal, Customer Strategy & Storytelling",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8175615,"Principal Data Scientist, Detection",REJECTED,5,R2;T1;T2;T4;X1;X5,false
+greenhouse,cloudflare,8232768,"Principal, EMEA Sales Strategy and Operations",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8288769,Principal Engineer,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8054669,Principal Engineer - GTM Data Platform,REJECTED,2,T2;T3;X1;X4,false
+greenhouse,cloudflare,8306580,"Principal, GTM Automation, RevOps.",REJECTED,3,T1;T2;T4;X1;X4,false
+greenhouse,cloudflare,8328820,"Principal, GTM Business Operations Manager",REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8354632,Principal HR - APJC Benefits and Program Manager,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8157770,Principal Oracle Supply Chain Lead,REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8225546,"Principal Partner Engineer, ANZ",REJECTED,1,T4;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172554,"Principal Partner Engineer, Japan (Based in Tokyo)",REJECTED,1,T4;X1;X3,false
+greenhouse,cloudflare,8276299,"Principal Product Manager, Certificate Authority",REJECTED,0,X1,false
+greenhouse,cloudflare,8038898,"Principal Software Engineer: Distributed Systems (Config, Test, & Deployment)",REJECTED,0,X1,false
+greenhouse,cloudflare,8155495,"Principal Software Engineer, Enterprise Integrations",REJECTED,3,T1;T4;T5;X1,false
+greenhouse,cloudflare,8105716,Principal Software Engineer - Fintech,REJECTED,2,T2;T3;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8055320,"Principal Software Engineer, Workers Deploy & Config",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8179387,"Principal Solutions Architect, APJC (Developer Platform) - Mandarin Speaking",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8131824,"Principal Solutions Architect, Public Sector Federal",REJECTED,0,X1;X4,false
+greenhouse,cloudflare,8219990,Principal Solutions Architect - SAARC,REJECTED,0,X1;X3;X4;X5,false
+greenhouse,cloudflare,8305918,Product Cost Analyst,REJECTED,3,T1;T2;T3,false
+greenhouse,cloudflare,8274790,"Product Manager Intern (2027) - Austin, TX",REJECTED,0,X1;X2,false
+greenhouse,cloudflare,8332008,"Product Manager Intern (2027) - Lisbon, PT",REJECTED,0,X1;X2;X3,false
+greenhouse,cloudflare,8328914,"Product Manager Intern (2027) - London, UK",REJECTED,0,X1;X2;X3,false
+greenhouse,cloudflare,8079544,"Professional Services Consultant, Zero Trust",REJECTED,1,T1,false
+greenhouse,cloudflare,8279302,Program Lead Strategic CDN Accounts GTM,REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8331522,"Project Coordinator, Professional Services",REJECTED,0,X5,false
+greenhouse,cloudflare,8267826,Rack Integration Operations Engineer,REJECTED,3,T1;T4;T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8354857,Recruiting Coordinator (11-month contract),REJECTED,1,T5;X3,false
+greenhouse,cloudflare,8099018,Recruiting Coordinator (Contract),REJECTED,1,T5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8222732,Response Engineer - Cloudflare Managed Defense Center (CMDC),REJECTED,2,T1;T5;X3,false
+greenhouse,cloudflare,8222614,Sales Enablement Specialist - EMEA,REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8326749,"Sales Manager, Thailand & IndoChina",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8264695,"Security Engineer, Applied Research & Labs",REJECTED,2,T1;T4,false
+greenhouse,cloudflare,8124227,Security Engineer (IAM),REJECTED,1,T1;X3,false
+greenhouse,cloudflare,8317733,"Security Research Analyst, WAF Managed Rules",REJECTED,4,T1;T2;T4;T5,true
+greenhouse,cloudflare,8097869,"Senior Account Executive, Chile",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8097852,"Senior Account Executive, Colombia",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7421848,"Senior Account Executive, Digital Native",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8241905,"Senior Account Executive, SLED (DC Metro)",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8366762,"Senior Account Executive, SLED (IL/MO)",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332504,"Senior Account Executive, SLED (NJ/PA)",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8279967,"Senior Account Executive, SLED (PacNW)",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7681220,"Senior Account Executive, Startups (NY Metro)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8015719,"Senior Account Executive, Startups (San Francisco)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8130735,"Senior Account Executive, Startups (SoCal)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8275434,"Senior Account Executive, Startups (Southeast)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8275432,"Senior Account Executive, Startups (Southeast)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8220063,"Senior Account Executive, Strategic Pursuits, ANZ",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8220060,"Senior Account Executive, Strategic Pursuits - Aviation APAC (Based in Singapore)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8222299,"Senior Account Executive, Strategic Pursuits - FSI, SAARC (Based in Bangalore)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8263503,Senior Certificate Authority Architect,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7478874,Senior Commercial Account Executive,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8226000,"Senior Commercial Account Executive, MENA",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8303996,Senior Commercial Account Executive (San Francisco),REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8059775,Senior Customer Engagement Strategy Manager,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8274341,Senior Customer Engineer AI/ Start Up's,REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8174249,"Senior Customer Engineer, Bogotá, Colombia.",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7778747,"Senior Customer Engineer - Calgary, AB",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7978788,"Senior Customer Engineer, Central & Eastern Europe - Hebrew Speaking",REJECTED,2,T1;T4;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8312664,"Senior Customer Engineer, Central & Eastern Europe - Russian Speaking",REJECTED,2,T1;T4;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8158617,"Senior Customer Engineer, Digital Native Business, Indonesia",REJECTED,2,T1;T4;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8077614,"Senior Customer Engineer, Enterprise AI  - Bay Area",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8332012,"Senior Customer Engineer, Enterprise - San Francisco",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8126829,"Senior Customer Engineer, Enterprise - West",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8097947,"Senior Customer Engineer, Hong Kong (Pre-sales)",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8239175,"Senior Customer Engineer,Indonesia",REJECTED,2,T1;T4;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8146536,"Senior Customer Engineer, Japan",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8200786,"Senior Customer Engineer, Majors",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8300941,"Senior Customer Engineer, Majors - NE",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8357683,"Senior Customer Engineer, Majors - NE",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7980647,"Senior Customer Engineer, Majors - NYC",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8172153,"Senior Customer Engineer, Majors - Pittsburgh, PA",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,7864156,"Senior Customer Engineer, Majors, Raleigh, NC",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8172200,"Senior Customer Engineer, Majors - Southwest",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8268965,"Senior Customer Engineer, Majors - TOLA",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8335624,"Senior Customer Engineer - Montreal, QC",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7954702,"Senior Customer Engineer, Named - Cincinnati, OH",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172117,"Senior Customer Engineer, Named - Houston, TX",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8171942,"Senior Customer Engineer, Named - LA",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8121827,"Senior Customer Engineer, Named - Minnesota",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8247433,"Senior Customer Engineer, Named - New York City",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8268259,"Senior Customer Engineer, Named - Portland, OR",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8172023,"Senior Customer Engineer, Named - Seattle",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8223359,"Senior Customer Engineer, Named - Toronto Canada",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8147190,"Senior Customer Engineer (Pre-sales), East China",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7530475,"Senior Customer Engineer, Public Sector Federal",REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8131833,"Senior Customer Engineer, Public Sector Federal",REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8174368,"Senior Customer Engineer, (Santiago, Chile).",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8170564,"Senior Customer Engineer, Saudi Arabia",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8238015,"Senior Customer Engineer SLED TX (Austin, Dallas or Houston)",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8185549,"Senior Customer Engineer, Start Up AI",REJECTED,2,T1;T4;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8248554,"Senior Customer Engineer, Strategic Pursuits, APAC (Based in India)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8248543,"Senior Customer Engineer, Strategic Pursuits, APAC (Based in Singapore)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8246078,"Senior Customer Engineer, Strategic - San Francisco",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,8335069,"Senior Customer Engineer, Strategic - Seattle, WA",REJECTED,2,T1;T4;X1;X4,false
+greenhouse,cloudflare,7698880,"Senior Customer Engineer, Sub-Saharan Africa",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7610071,"Senior Customer Engineer, Sweden",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8226556,"Senior Customer Engineer - Toronto, Canada",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8170534,"Senior Customer Engineer, Turkey",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8327965,Senior Customer Engineer - Vancouver BC,REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8223736,"Senior Customer Engineer - Vancouver, BC",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8158620,"Senior Customer Engineer, Vietnam",REJECTED,2,T1;T4;X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8018536,Senior Customer Reliability Engineer,REJECTED,3,T1;T2;T5;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8331153,Senior Customer Reliability Engineer,REJECTED,3,T1;T2;T5;X1;X3,false
+greenhouse,cloudflare,8055118,Senior Data Engineer,REJECTED,6,R1;T1;T2;T3;T4;X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,6998777,Senior Design Engineer,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7272028,"Senior Digital Native  Account Executive, Spain",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8256872,Senior Digital Native Named Account Executive - Seattle,REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8237382,Senior Digital Native Named Account Executive (SF),REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8260956,"Senior Director Digital Native, Customer Engineering",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8152825,"Senior Director of Engineering, Billing Platform",REJECTED,1,T3;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8161890,"Senior Director, R&D HR Business Partnering",REJECTED,0,X1,false
+greenhouse,cloudflare,8083701,"Senior Engineering Manager, Cloudflare Network Interconnect",REJECTED,1,T1;X1,false
+greenhouse,cloudflare,8020472,Senior Engineering Manager - Cloudforce One,REJECTED,2,T2;T3;X1,false
+greenhouse,cloudflare,8143511,Senior Engineering Manager - Fintech,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8185723,Senior Engineering Manager — Network Connectivity,REJECTED,0,X1,false
+greenhouse,cloudflare,8185558,"Senior Engineering Manager, Observability",REJECTED,0,X1,false
+greenhouse,cloudflare,8223672,Senior Enterprise Systems Developer - Procurement Systems,REJECTED,1,T4;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8259113,Senior Events Manager,REJECTED,0,X1,false
+greenhouse,cloudflare,8206674,Senior Forward Deployed Engineer,REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8265704,Senior Forward Deployed Engineer,REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8160655,Senior Forward Deployed Engineer,REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8173707,Senior Forward Deployed Engineer,REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8256332,Senior Forward Deployed Infrastructure Engineer,REJECTED,1,T1;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8282783,Senior GTM Analytics Manager,REJECTED,3,T2;T3;T5;X1;X4,false
+greenhouse,cloudflare,8306604,"Senior GTM Technologist, RevOps",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7629805,"Senior Infrastructure Engineer, Storage Platform",REJECTED,1,T1;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8186255,Senior Lead Management Specialist,REJECTED,3,T1;T2;T3;X1;X5,false
+greenhouse,cloudflare,8042034,Senior Machine Learning Engineer,REJECTED,6,R3;T1;T2;T3;T4;X1,false
+greenhouse,cloudflare,8173393,"Senior, Majors Account Executive",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8274111,Senior Majors Account Executive (Apple) - San Francisco/Bay Area,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8099002,Senior Majors Account Executive - Chicago,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8084082,Senior Majors Account Executive - Dallas,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8241766,Senior Majors Account Executive (Google) - San Francisco/Bay Area,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8233692,"Senior Majors Account Executive (IBM), New York",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8274112,Senior Majors Account Executive (Meta) - San Francisco/Bay Area,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8239834,Senior Majors Account Executive - Minnesota,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7747326,"Senior Majors Account Executive, New York",REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8327958,Senior Majors Account Executive - Phoenix,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7361295,"Senior Majors Account Executive - San Francisco, Bay Area",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7474034,"Senior Majors Account Executive, Toronto",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8239900,Senior Majors Account Executive - Wisconsin,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8357803,"Senior Manager, APJC Outreach",REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8210019,"Senior Manager, BDR Japan",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8312693,"Senior Manager, Customer Engineering, Central Eastern Europe & Israel - Hebrew Speaking",REJECTED,1,T5;X1;X3,false
+greenhouse,cloudflare,8304438,"Senior Manager, Demand Marketing",REJECTED,0,X1,false
+greenhouse,cloudflare,8163076,"Senior Manager, Infrastructure Operations and Compliance",REJECTED,0,X1;X4,false
+greenhouse,cloudflare,8267396,"Senior Manager, Integrated Network Strategy",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8180521,Senior Named Account Executive,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8089141,Senior Named Account Executive (AI & Digital Natives),REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8169785,"Senior Named Account Executive, Ankara (Public Sector)",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,7866619,"Senior Named Account Executive, Benelux",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7405115,"Senior Named Account Executive, Bengaluru",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8201823,"Senior Named Account Executive, Buffalo",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7735965,"Senior Named Account Executive, Central Eastern Europe - Digital Natives",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,7799240,Senior Named Account Executive (Dallas ),REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8044712,"Senior Named Account Executive, Digital Native",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8109416,"Senior Named Account Executive, Federal Government (Ottawa)",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8121029,"Senior Named Account Executive (FedGov - Civilian Agencies), Canberra",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8122875,Senior Named Account Executive - High Tech (NY Metro),REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,7462504,"Senior Named Account Executive, Israel",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8207632,"Senior Named Account Executive, Israel - Digital Natives Enterprise",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,7421718,"Senior Named Account Executive, Japan",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8121020,"Senior Named Account Executive (Majors), Sydney",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8201404,"Senior Named Account Executive,  (MN )",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8127559,"Senior Named Account Executive, Mumbai",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8202120,"Senior Named Account Executive, New York",REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8179389,"Senior Named Account Executive, Northern Emirates",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8112200,Senior Named Account Executive ( Northern VA/DC Metro),REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8211796,Senior Named Account Executive- Phoenix,REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8258771,"Senior Named Account Executive, Saudi Arabia",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8045321,"Senior Named Account Executive, South Africa",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8227167,"Senior Named Account Executive, Toronto",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8179405,"Senior Named Account Executive, UAE (Public Sector)",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,7515882,"Senior Named Customer Engineer, UKI",REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,7992903,Senior Network Engineer,REJECTED,2,T1;T4;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7978887,Senior Oracle EPM Specialist,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8143957,Senior Oracle Fusion Engineer,REJECTED,0,X1,false
+greenhouse,cloudflare,8221248,Senior Oracle Security and AI Engineer,REJECTED,2,R3;X1;X5,false
+greenhouse,cloudflare,7981489,"Senior Partner Account Manager, Japan (Based in Tokyo)",REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8306651,"Senior Partner Account Manager, Southeast & MidAtlantic Region",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8260743,"Senior Practice Leader, Developer Platform for Professional Services, APAC",REJECTED,0,X1;X3;X5,false
+greenhouse,cloudflare,7956845,Senior Presales Customer Engineer (based in Canberra),REJECTED,2,T1;T4;X1;X3;X4,false
+greenhouse,cloudflare,8257533,"Senior Principal, GTM Data Operations",REJECTED,0,X1;X4;X5,false
+greenhouse,cloudflare,8153015,Senior Product Counsel,REJECTED,0,X1,false
+greenhouse,cloudflare,8336559,"Senior Product Manager, Agentic Search",REJECTED,2,T4;T5;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8166601,"Senior Product Manager, Cloudflare Workers",REJECTED,0,X1,false
+greenhouse,cloudflare,8173954,"Senior Product Manager, Email Security",REJECTED,1,T4;X1;X5,false
+greenhouse,cloudflare,8158527,"Senior Product Manager, Enterprise",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8349425,"Senior Product Manager, Signals & Data Products",REJECTED,0,X1,false
+greenhouse,cloudflare,8243552,Senior Product Manager - Threat Intel,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8346327,Senior Product Manager - Zero-Day Protection,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8025521,Senior Professional Services Engineer,REJECTED,1,T1;X1;X3;X5,false
+greenhouse,cloudflare,8187634,"Senior Program Manager, Data Center Delivery & Site Readiness",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172873,"Senior Revenue Operations Support Manager, Singapore",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,cloudflare,8219962,"Senior Sales Manager, Central Eastern Europe - Digital Natives",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7767743,"Senior Sales Manager, Digital Native, Japan (Based in Tokyo)",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,7534033,Senior SASE Sales Specialist,REJECTED,0,X1;X3;X4;X5,false
+greenhouse,cloudflare,8164694,Senior Software Engineer - Addressing Team,REJECTED,3,T1;T2;T3;X1,false
+greenhouse,cloudflare,8312254,"Senior Software Engineer, Agentic Commerce",REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8262000,"Senior Software Engineer, Agentic Discovery",REJECTED,2,T3;T4;X1;X3,false
+greenhouse,cloudflare,8328562,"Senior Software Engineer, AI & Infrastructure Planning",REJECTED,5,T1;T2;T3;T4;T5;X1,false
+greenhouse,cloudflare,8250155,"Senior Software Engineer, Cloudflare for SaaS",REJECTED,1,T2;X1;X5,false
+greenhouse,cloudflare,8016162,"Senior Software Engineer, Cloudflare Hyperdrive",REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8080780,"Senior Software Engineer, Cloudflare Queues",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8178593,"Senior Software Engineer, Deploy at Scale",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8269100,"Senior Software Engineer, Distributed Databases",REJECTED,1,T2;X1,false
+greenhouse,cloudflare,5390243,"Senior Software Engineer, Durable Objects (DO)",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,7463793,Senior Software Engineer - Egress (Go/Rust),REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8263016,Senior Software Engineer - Kubernetes platform,REJECTED,0,X1,false
+greenhouse,cloudflare,8212352,Senior Software Engineer - Load Balancing,REJECTED,2,T2;T3;X1,false
+greenhouse,cloudflare,7793013,Senior Software Engineer - Network Connectivity (Go/Rust),REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8164724,"Senior Software Engineer, Network On-Ramps",REJECTED,1,T3;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7541032,Senior Software Engineer - Network Platforms,REJECTED,1,T1;X1,false
+greenhouse,cloudflare,8174207,"Senior Software Engineer, R2 Gateway",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,7276690,"Senior Software Engineer, R2 Metadata",REJECTED,1,T2;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8243201,Senior Software Engineer - Security Platform,REJECTED,1,T1;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8184838,"Senior Software Engineer, Security Rules",REJECTED,2,T2;T3;X1;X3,false
+greenhouse,cloudflare,6578726,"Senior Software Engineer, Workers Runtime",REJECTED,0,X1,false
+greenhouse,cloudflare,8204256,"Senior Software Engineer, Zero Trust Client",REJECTED,1,T1;X1,false
+greenhouse,cloudflare,8346149,Senior Software Engineer - ZTC,REJECTED,0,X1,false
+greenhouse,cloudflare,8169689,"Senior Solutions Architect, APJC (Developer Platform) - India Market",REJECTED,0,X1;X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8186045,"Senior Solutions Engineer, Cloudflare One (SASE/SSE)",REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8264043,"Senior Specialist Solutions Engineer, Cloudflare One - Russian or Hebrew speaking",REJECTED,0,X1;X3;X5,false
+greenhouse,cloudflare,8244876,Senior Strategic Partnerships Manager,REJECTED,0,X1;X5,false
+greenhouse,cloudflare,8066589,Senior Systems Engineer,REJECTED,1,T5;X1;X3;X5,false
+greenhouse,cloudflare,8239181,Senior Systems Engineer,REJECTED,0,X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8087792,Senior Systems Engineer,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7560174,"Senior Systems Engineer, AI Gateway",REJECTED,2,T4;T5;X1;X5,false
+greenhouse,cloudflare,8222091,Senior Systems Engineer - Application Security,REJECTED,1,T3;X1;X3;X5,false
+greenhouse,cloudflare,7093840,"Senior Systems Engineer, Basin Pipelines",REJECTED,2,T2;T3;X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8030240,"Senior Systems Engineer, Basin Platform",REJECTED,1,T2;X1;X5,false
+greenhouse,cloudflare,8278262,"Senior Systems Engineer, Browser Isolation",REJECTED,0,X1,false
+greenhouse,cloudflare,8079117,"Senior Systems Engineer, Cloudflare Tunnel",REJECTED,1,T2;X1;X5,false
+greenhouse,cloudflare,8273693,Senior Systems Engineer - Developer Tooling,REJECTED,1,T1;X1,false
+greenhouse,cloudflare,8082544,Senior Systems Engineer - Go-To-Market Data Team,REJECTED,2,T2;T3;X1,false
+greenhouse,cloudflare,8104955,"Senior Systems Engineer, Identity & Access Management",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8236549,"Senior Systems Engineer, MCP Server Portals",REJECTED,1,T5;X1;X3;X5,false
+greenhouse,cloudflare,8338018,"Senior Systems Engineer, SDKs, Terraform, & Code Generation",REJECTED,1,T1;X1;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7764827,"Senior Systems Engineer, Workers AI",REJECTED,0,X1,false
+greenhouse,cloudflare,8234073,Senior Talent Acquisition Business Partner - APAC,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8016569,"Senior Talent Acquisition Partner, G&A",REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8255561,Senior Technical Program Manager,REJECTED,2,T3;T5;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7774534,Senior Territory Account Executive,REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8202094,Senior Territory Account Executive (Atlanta),REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8181043,Senior Territory Account Executive - Beijing,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8326536,"Senior Territory Account Executive, Bengaluru",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8211848,"Senior Territory Account Executive - Birmingham, AL",REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8203740,"Senior Territory Account Executive, Central Eastern Europe - Digital Natives",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8203752,"Senior Territory Account Executive, Central Eastern Europe - Digital Natives",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8224943,"Senior Territory Account Executive (Digital Native), ANZ (Based in Brisbane/Sydney/Melbourne)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7830335,"Senior Territory Account Executive, Digital Native (Hong Kong)",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8355420,"Senior Territory Account Executive, iGaming (ASEAN)",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,cloudflare,8155990,"Senior Territory Account Executive, Israel - Digital Natives",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8141364,"Senior Territory Account Executive, Korea",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8258919,"Senior Territory Account Executive, North Africa",REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8285060,Senior Territory Account Executive (NYC),REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8109303,Senior Territory Account Executive- OH,REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8179461,"Senior Territory Account Executive, Oman",REJECTED,1,T5;X1;X3;X4,false
+greenhouse,cloudflare,8202060,Senior Territory Account Executive (Phoenix),REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8202081,Senior Territory Account Executive (Pittsburgh),REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8262821,"Senior Territory Account Executive, San Francisco",REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,7807860,"Senior Territory Account Executive, Seattle",REJECTED,1,T5;X1;X4,false
+greenhouse,cloudflare,8323918,Senior Territory Account Executive - Shanghai,REJECTED,1,T5;X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8203700,"Senior Territory Account Executive, the Baltics",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7558153,Senior Threat Intelligence Engineer,REJECTED,2,T1;T4;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8159463,Senior Zip System Specialist(Contract Role),REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8274879,Services Sales Manager - Professional Services,REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8274068,"Services Sales Manager, Professional Services",REJECTED,0,X1;X4,false
+greenhouse,cloudflare,8283875,"Services Sales Manager, Professional Services, Sydney",REJECTED,0,X1;X3;X4,false
+greenhouse,cloudflare,8212060,Software Engineer,REJECTED,1,T1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8312256,"Software Engineer, Agentic Commerce",REJECTED,0,X3,false
+greenhouse,cloudflare,8264687,"Software Engineer, Agentic Discovery",REJECTED,2,T3;T4;X3,false
+greenhouse,cloudflare,8188899,"Software Engineer, CDN Configuration Group",REJECTED,0,X3,false
+greenhouse,cloudflare,8088751,"Software Engineer, Cloudflare Network Interconnect",REJECTED,0,,false
+greenhouse,cloudflare,7302931,"Software Engineer, Deploy at Scale",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8195746,Software Engineer - Egress (Go/Rust),REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8158920,"Software Engineer, FL",REJECTED,0,X3,false
+greenhouse,cloudflare,8245197,Software Engineer Intern (2027),REJECTED,1,T1;X2;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8199958,"Software Engineer Intern (2027) - Austin, TX",REJECTED,1,T1;X2;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8245211,"Software Engineer Intern (2027) - London, UK",REJECTED,1,T1;X2;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8360609,Software Engineer - Load Balancing,REJECTED,2,T2;T3,false
+greenhouse,cloudflare,7446310,"Software Engineer, Network Performance & Reliability (Argo)",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,6972536,Software Engineer - Platforms & Productivity,REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8155463,"Software Engineer, R2 Gateway",REJECTED,0,X5,false
+greenhouse,cloudflare,8159348,"Software Engineer, Rulesets",REJECTED,0,X3,false
+greenhouse,cloudflare,8160660,"Software Engineer, Security Rules",REJECTED,2,T2;T3;X3,false
+greenhouse,cloudflare,7309174,"Software Engineer (Threat Intelligence), Cloudforce One",REJECTED,2,T2;T3;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7377424,"Software Engineer, Workers Deploy & Config",REJECTED,1,T2;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8189858,"Solutions Architect, AI/Cloudflare Developer Platform",REJECTED,0,X4;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8303150,"Sr. Director, Developer GTM",REJECTED,1,T2;X1;X4,false
+greenhouse,cloudflare,8239323,Sr. Product Manager - Dashboards & Configuration (Integrity & Trust),REJECTED,0,X1,false
+greenhouse,cloudflare,8248873,Sr. Technical Program Manager,REJECTED,1,T5;X1;X5,false
+greenhouse,cloudflare,7053411,Staff/Principal Software Engineer - Security Platform,REJECTED,1,T1;X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8157281,Staff Software Engineer - Integrated Network Strategy,REJECTED,1,T5;X1,false
+greenhouse,cloudflare,8304122,Strategic Partnerships Lead / Director - AEO/GEO Analytics,REJECTED,2,T4;T5;X1;X5,false
+greenhouse,cloudflare,8188127,Strategy & M&A Lead,REJECTED,0,X1,false
+greenhouse,cloudflare,8214726,Supply Chain Program Manager - Rack Integration,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8241822,"System Engineer, Behavioral Analysis",REJECTED,1,T3;X5,false
+greenhouse,cloudflare,8207864,System Engineer - Network Systems,REJECTED,2,T1;T2;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8276155,"Systems Engineer, Browser Isolation",REJECTED,0,,false
+greenhouse,cloudflare,8158016,Systems Engineer - Database Platform,REJECTED,1,T1,false
+greenhouse,cloudflare,8022909,Systems Engineer (Data Intelligence & Analytics Team),REJECTED,3,T1;T2;T3;X3,false
+greenhouse,cloudflare,8050813,"Systems Engineer, Data Intelligence & Analytics Team",REJECTED,3,T1;T2;T3;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8275392,"Systems Engineer, DNS",REJECTED,0,,false
+greenhouse,cloudflare,8175620,"Systems Engineer, Growth Engineering",REJECTED,3,T1;T4;T5,false
+greenhouse,cloudflare,7742773,"Systems Engineer, MAPS",REJECTED,1,T3;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8207326,"Systems Engineer, MCP Portals",REJECTED,1,T5;X3;X5,false
+greenhouse,cloudflare,8142261,"Systems Engineer, Network Automation",REJECTED,2,T1;T2;X3,false
+greenhouse,cloudflare,8187404,"Systems Engineer, Network Protocols & Distributed Systems",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8130936,"Systems Engineer, SSL/TLS Team",REJECTED,2,T2;T3;X5,false
+greenhouse,cloudflare,8336674,"Systems Engineer, WARP",REJECTED,1,T2;X3,false
+greenhouse,cloudflare,8324908,Systems Reliability Engineer - Core,REJECTED,3,T1;T2;T3;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8161030,Technical Accounting Analyst (Infrastructure),REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8220734,Technical Account Manager,REJECTED,0,X1;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8245695,Technical Account Manager,REJECTED,0,X1;X3,false
+greenhouse,cloudflare,8359552,Technical Support Engineer,REJECTED,1,T2;X3,false
+greenhouse,cloudflare,8164649,"Technical Support Engineer, Application Performance",REJECTED,1,T1;X5,false
+greenhouse,cloudflare,8229993,"Technical Support Engineer, Application Services",REJECTED,2,T1;T2;X3,false
+greenhouse,cloudflare,8330121,Technical Support Engineer - Developer Platform,REJECTED,1,T2;X3,false
+greenhouse,cloudflare,8245501,Technical Support Engineer - Developer Platform,REJECTED,1,T2;X3,false
+greenhouse,cloudflare,8329741,"Technical Support Engineer, Developer Platform",REJECTED,2,T1;T2;X5,false
+greenhouse,cloudflare,8329758,"Technical Support Engineer, Zero Trust",REJECTED,1,T2,false
+greenhouse,cloudflare,8229998,"Technical Support Engineer, Zero Trust",REJECTED,1,T2;X3,false
+greenhouse,cloudflare,8109271,Territory Account Executive,REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,6528593,Territory Account Executive,REJECTED,1,T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,7804941,Territory Account Executive (AI & Digital Natives),REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8168940,"Territory Account Executive, Digital Native (Indonesia)",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8233344,"Territory Account Executive, Montreal",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8329671,"Territory Account Executive, Philippines",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8045309,"Territory Account Executive, Qatar",REJECTED,1,T5;X3;X4,false
+greenhouse,cloudflare,8335468,"Territory Account Executive, Saskatchewan / Manitoba",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,7857793,"Territory Account Executive, Saudi Arabia - Startups",REJECTED,1,T5;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8279346,"Territory Account Executive, Toronto",REJECTED,0,X3;X4,false
+greenhouse,cloudflare,8345223,"Territory Sales Director, West (Los Angeles/Phoenix)",REJECTED,0,X1;X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172404,"Trust & Safety Investigator II, Singapore",REJECTED,0,LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8172411,"Vice President, Cloudflare One GTM",REJECTED,0,X1;X4,false
+greenhouse,cloudflare,8190563,VoidZero Developer Relations Engineer,REJECTED,0,X3,false
+greenhouse,cloudflare,8212088,"VP, Global Head of Trust & Safety",REJECTED,0,X1,false
+greenhouse,cloudflare,8245503,"Vulnerability Defense Software Engineer, Cloudforce One",REJECTED,2,T2;T3;X5,false
+greenhouse,cloudflare,8204353,"Workday Analyst, People Operations",REJECTED,0,X4;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8158104,Workday Integration Specialist,REJECTED,1,T5;X5;LOC_AMBIGUOUS,false
+greenhouse,cloudflare,8256449,Workplace Coordinator,REJECTED,0,X3,false
+greenhouse,cloudflare,8332823,Workplace Operations Manager,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8257324,Accounts Payable Analyst,REJECTED,0,,false
+greenhouse,datadog,7194969,AI Research Engineer - Datadog AI Research (DAIR),REJECTED,4,T1;T3;T4;T5;X3,false
+greenhouse,datadog,6652564,AI Research Scientist - Datadog AI Research (DAIR),REJECTED,3,T3;T4;T5;X3,false
+greenhouse,datadog,6572669,AI Research Scientist - Datadog AI Research (DAIR),REJECTED,3,T3;T4;T5,false
+greenhouse,datadog,8181440,Applied Science Intern,REJECTED,1,T4;X2;X3,false
+greenhouse,datadog,8301102,Associate Customer Success Manager - Boston,REJECTED,0,X1,false
+greenhouse,datadog,8301113,Associate Customer Success Manager - Denver,REJECTED,0,X1,false
+greenhouse,datadog,6512326,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8354556,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7463765,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,5798241,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6009777,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,1694375,Commercial Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,6512321,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6512586,Commercial Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8200728,Commercial Account Executive (Benelux),REJECTED,0,X3;X4,false
+greenhouse,datadog,1497543,Commercial Account Executive - Boston,REJECTED,0,X4,false
+greenhouse,datadog,5283132,Commercial Account Executive (DACH),REJECTED,0,X3;X4,false
+greenhouse,datadog,7919037,Commercial Account Executive (Hong Kong and Taiwan Market),REJECTED,0,X3;X4,false
+greenhouse,datadog,8245889,Commercial Account Executive - Israel,REJECTED,0,X3;X4,false
+greenhouse,datadog,8147489,Commercial Account Executive - LATAM (Portuguese Speaking) - Boston,REJECTED,0,X4,false
+greenhouse,datadog,7858788,Commercial Account Executive - LATAM (Portuguese Speaking) - Denver,REJECTED,0,X4,false
+greenhouse,datadog,7329207,Commercial Account Executive - LATAM (Spanish Speaking) - Boston,REJECTED,0,X4,false
+greenhouse,datadog,7792997,Commercial Account Executive - Sao Paulo (Portuguese Speaking),REJECTED,0,X3;X4,false
+greenhouse,datadog,6427176,Commercial Account Executive UKI/Nordics,REJECTED,0,X3;X4,false
+greenhouse,datadog,8243071,Commercial Customer Success Manager (Key Accounts) - DACH,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,7232590,Commercial Customer Success Manager (Key Accounts) - Denver or San Francisco,REJECTED,0,X1;X5,false
+greenhouse,datadog,8131949,Commercial & Mid-Market Sales Engineer,REJECTED,0,X3;X4,false
+greenhouse,datadog,8130580,Commercial & Mid-Market Sales Engineer,REJECTED,1,T1;X3;X4,false
+greenhouse,datadog,8326311,Commercial Sales Engineer,REJECTED,0,X3;X4,false
+greenhouse,datadog,8238655,Commercial Sales Engineer,REJECTED,0,X3;X4,false
+greenhouse,datadog,8053714,Commercial Sales Engineer 2 (AMER - West),REJECTED,0,X4,false
+greenhouse,datadog,8080601,Commercial Sales Engineer 2 (Sao Paulo),REJECTED,0,X3;X4,false
+greenhouse,datadog,7683226,Commercial Sales Engineer (AMER - West),REJECTED,0,X4,false
+greenhouse,datadog,7452669,Commercial Sales Engineer - Boston,REJECTED,0,X4,false
+greenhouse,datadog,8211090,Commercial Sales Engineer (Sao Paulo),REJECTED,0,X3;X4,false
+greenhouse,datadog,8238495,Compensation Program Manager,REJECTED,0,X1,false
+greenhouse,datadog,8263113,Compensation Specialist,REJECTED,3,T1;T2;T5;X5,false
+greenhouse,datadog,8238444,"Compensation Specialist, Executive",REJECTED,0,,false
+greenhouse,datadog,8246307,Content Optimization Specialist,REJECTED,1,T4;X5,false
+greenhouse,datadog,8170070,Curriculum Manager (EMEA),REJECTED,0,X1;X3,false
+greenhouse,datadog,6009779,Customer Success Associate,REJECTED,0,X3,false
+greenhouse,datadog,5486716,Customer Success Associate,REJECTED,0,X3,false
+greenhouse,datadog,7172466,Customer Success Associate - Boston,REJECTED,0,,false
+greenhouse,datadog,8222279,Customer Success Associate (Commercial Accounts),REJECTED,0,X3,false
+greenhouse,datadog,8206923,Customer Success Manager,REJECTED,0,X1;X3,false
+greenhouse,datadog,8206747,Customer Success Manager,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8330344,Customer Success Manager (Key Accounts),REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8330644,Customer Success Manager (Key Accounts ) - Nordics,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8301039,Deal Desk Analyst,REJECTED,0,X3,false
+greenhouse,datadog,7982644,Deal Desk Analyst - Dublin,REJECTED,0,X3,false
+greenhouse,datadog,8335262,"Delivery Manager, Web",REJECTED,0,X1;X5,false
+greenhouse,datadog,8139662,Developer Advocate - Service Management,REJECTED,1,T1;X4;X5,false
+greenhouse,datadog,8161455,Developer Advocate - Service Management EMEA,REJECTED,1,T1;X3;X4;X5,false
+greenhouse,datadog,8103045,Developer Engagement Lead,REJECTED,1,T5;X1,false
+greenhouse,datadog,8059382,"Director, Commercial Sales",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8098863,"Director, Engineering",REJECTED,0,X1;X3,false
+greenhouse,datadog,8359339,"Director, Engineering - Graphing and Visualization",REJECTED,1,T5;X1,false
+greenhouse,datadog,8303221,"Director, Enterprise Sales",REJECTED,0,X1;X4,false
+greenhouse,datadog,8196248,"Director, Enterprise Sales",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8136510,"Director, Enterprise Sales Engineering - US Central",REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8314112,"Director, Enterprise Sales (SLED)",REJECTED,0,X1;X4,false
+greenhouse,datadog,8289964,"Director, Key Accounts",REJECTED,0,X1,false
+greenhouse,datadog,8346056,"Director, People Business Partner",REJECTED,0,X1,false
+greenhouse,datadog,8336601,"Director, Product Design",REJECTED,0,X1,false
+greenhouse,datadog,8263229,"Director, Recruiting Operations",REJECTED,1,T5;X1;X4,false
+greenhouse,datadog,8172864,"Director, Sales Engineering - ASEAN",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,7658810,"Director, Technical Account Management",REJECTED,0,X1;X3,false
+greenhouse,datadog,8010585,"Director, Technical Program Management - Technical Solutions Operations",REJECTED,0,X1;X4,false
+greenhouse,datadog,7966795,"Distinguished Architect, AI",REJECTED,1,T4;X5,false
+greenhouse,datadog,8051616,Engineering Compensation Partner,REJECTED,0,,false
+greenhouse,datadog,8098939,"Engineering Manager I, Commercial Audit",REJECTED,1,T1;X1,false
+greenhouse,datadog,6677658,Enterprise Account Executive - Denmark,REJECTED,0,X3;X4,false
+greenhouse,datadog,6836442,Enterprise Account Executive - UKI,REJECTED,0,X3;X4,false
+greenhouse,datadog,7599334,Enterprise Account Executive (UKI) - Public Sector,REJECTED,0,X3;X4,false
+greenhouse,datadog,7435209,Enterprise Customer Success Manager,REJECTED,0,X1;X3,false
+greenhouse,datadog,7436312,Enterprise Customer Success Manager,REJECTED,0,X1;X3,false
+greenhouse,datadog,8282212,Enterprise Customer Success Manager - Boston/New York,REJECTED,0,X1,false
+greenhouse,datadog,8147903,Enterprise Customer Success Manager - Denver,REJECTED,0,X1,false
+greenhouse,datadog,8147740,Enterprise Customer Success Manager (French Speaking),REJECTED,0,X1;X3,false
+greenhouse,datadog,8035351,Enterprise Customer Success Manager (German Speaking),REJECTED,0,X1;X3,false
+greenhouse,datadog,6430289,Enterprise Sales Engineer,REJECTED,0,X3;X4;X5,false
+greenhouse,datadog,6703351,Enterprise Sales Engineer,REJECTED,1,T1;X3;X4,false
+greenhouse,datadog,8238472,Enterprise Sales Engineer - Netherlands,REJECTED,0,X3;X4;X5,false
+greenhouse,datadog,7857714,Enterprise Sales Engineer - Rockies,REJECTED,0,X4;X5,false
+greenhouse,datadog,7487353,Enterprise Sales Engineer - UK/Ireland,REJECTED,0,X3;X4;X5,false
+greenhouse,datadog,7410254,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7405831,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7465857,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,6925405,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7536154,Enterprise Sales Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7463138,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7466155,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7703288,Enterprise Sales Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7405822,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,7426707,Enterprise Sales Executive,REJECTED,0,X4,false
+greenhouse,datadog,6185452,Enterprise Sales Executive (Benelux),REJECTED,0,X3;X4,false
+greenhouse,datadog,7426680,Enterprise Sales Executive (FED),REJECTED,0,X4,false
+greenhouse,datadog,7421284,Enterprise Sales Executive (FED),REJECTED,0,X4,false
+greenhouse,datadog,7426752,Enterprise Sales Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,6379544,Enterprise Sales Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,7453039,Enterprise Sales Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,7412010,Enterprise Sales Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,5925905,Enterprise Sales Executive (Sweden),REJECTED,0,X3;X4,false
+greenhouse,datadog,8237332,Enterprise Security Sales Specialist,REJECTED,0,X4,false
+greenhouse,datadog,7129425,Enterprise Security Sales Specialist,REJECTED,0,X4,false
+greenhouse,datadog,8243668,Enterprise Security Sales Specialist,REJECTED,0,X4,false
+greenhouse,datadog,7132132,Enterprise Security Sales Specialist,REJECTED,0,X4,false
+greenhouse,datadog,8256245,Enterprise Security Sales Specialist,REJECTED,0,X4,false
+greenhouse,datadog,8242795,Event Marketing Manager - Global Sponsorships (NAMER/LATAM),REJECTED,1,T5;X1,false
+greenhouse,datadog,8163359,Executive Assistant II,REJECTED,0,X3,false
+greenhouse,datadog,8096323,Executive Assistant II - Paris,REJECTED,0,X3;X5,false
+greenhouse,datadog,8230270,Executive Assistant II - San Francisco,REJECTED,0,X5,false
+greenhouse,datadog,7703553,Field CTO (Japan),REJECTED,0,X3,false
+greenhouse,datadog,7526356,Field CTO (Japan),REJECTED,0,X3,false
+greenhouse,datadog,8300636,Field Enablement Manager,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8174661,Field Enablement Manager (EMEA),REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8003181,Forward Deployed Engineering Manager - Datadog for Startups,REJECTED,2,T4;T5;X1;X4;X5,false
+greenhouse,datadog,8267437,"FP&A Analyst, Cloud Finance",REJECTED,2,T2;T5;X4,false
+greenhouse,datadog,8312438,FP&A Analyst GTM,REJECTED,0,X4,false
+greenhouse,datadog,8204554,FP&A Analyst R&D,REJECTED,1,T5,false
+greenhouse,datadog,8242859,Front Desk Associate - Amsterdam,REJECTED,0,X3,false
+greenhouse,datadog,8314006,Group Product Manager - Code Security,REJECTED,0,X1,false
+greenhouse,datadog,8171303,GTM Strategy/Operations Associate,REJECTED,3,T1;T2;T5;X4;X5,false
+greenhouse,datadog,8247250,GTM Strategy & Operations Senior Associate,REJECTED,2,T2;T5;X1;X4;X5,false
+greenhouse,datadog,8054420,Head of Competitive Intelligence,REJECTED,0,X1;X5,false
+greenhouse,datadog,7729887,"Head of Enterprise Sales, Japan",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,7730200,"Head of Enterprise Sales, Japan",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8328266,Immigration and Mobility Program Lead,REJECTED,0,X1,false
+greenhouse,datadog,8188800,"Incident and Escalation Manager, EMEA",REJECTED,1,T1;X1;X3,false
+greenhouse,datadog,8347905,Incident and Escalations Manager 2 - NYC,REJECTED,1,T1;X1;X4,false
+greenhouse,datadog,8263146,Incident and Escalations Manager 3 - US-West,REJECTED,1,T1;X1;X4,false
+greenhouse,datadog,8091967,Indirect Tax Manager,REJECTED,0,X1,false
+greenhouse,datadog,8129799,IT Support Technician Intern,REJECTED,0,X2;X3,false
+greenhouse,datadog,7579684,Key Accounts Executive,REJECTED,0,,false
+greenhouse,datadog,7409247,Key Accounts Executive,REJECTED,0,,false
+greenhouse,datadog,7409236,Key Accounts Executive,REJECTED,0,,false
+greenhouse,datadog,8282537,Learning Technology Specialist,REJECTED,0,X5,false
+greenhouse,datadog,8189660,Legal Operations Manager,REJECTED,1,T5;X1;X4,false
+greenhouse,datadog,7409198,Major Account Manager,REJECTED,0,X1,false
+greenhouse,datadog,7630041,Major Account Manager,REJECTED,0,X1,false
+greenhouse,datadog,8126000,Major Account Manager,REJECTED,0,X1,false
+greenhouse,datadog,8125958,Major Account Manager,REJECTED,0,X1,false
+greenhouse,datadog,8230620,"Manager, Accounts Payable",REJECTED,1,T5;X1;X5,false
+greenhouse,datadog,8223858,"Manager, Business Recruiting - Enterprise Sales",REJECTED,0,X1;X4,false
+greenhouse,datadog,8306557,"Manager, Business Recruiting - GTM Ecosystems",REJECTED,0,X1;X4,false
+greenhouse,datadog,8172091,"Manager, Commercial Sales",REJECTED,0,X1;X4,false
+greenhouse,datadog,8211078,"Manager, Commercial Sales Engineering (Sao Paulo)",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8146986,"Manager, Customer Success - Boston",REJECTED,0,X1;X5,false
+greenhouse,datadog,8250109,"Manager, Customer Success (San Francisco or Denver)",REJECTED,0,X1;X5,false
+greenhouse,datadog,8285495,"Manager, Global Entity Management",REJECTED,0,X1,false
+greenhouse,datadog,8030598,"Manager I, Applied AI - Distilled Models",REJECTED,2,T4;T5;X1;X3,false
+greenhouse,datadog,7560494,"Manager I, Applied Science - Frontier Agentic Models",REJECTED,2,T4;T5;X1,false
+greenhouse,datadog,8259839,"Manager I, Engineering - Anomaly Detection",REJECTED,3,T1;T3;T4;X1,false
+greenhouse,datadog,8358479,"Manager I, Engineering - Client SDKs (Mobile & Browser)",REJECTED,0,X1;X3,false
+greenhouse,datadog,8213715,"Manager I, Engineering - Code Intelligence",REJECTED,1,T4;X1,false
+greenhouse,datadog,7959705,"Manager I, Engineering - Husky",REJECTED,0,X1;X3,false
+greenhouse,datadog,8261223,"Manager I, Engineering - Language Platform",REJECTED,0,X1;X3,false
+greenhouse,datadog,8260933,"Manager I, Engineering - Language Platform",REJECTED,0,X1;X3,false
+greenhouse,datadog,8310668,"Manager I, Engineering - Reference Tables Access",REJECTED,0,X1,false
+greenhouse,datadog,8102794,"Manager I, Engineering - Sensitive Data Scanner",REJECTED,0,X1;X3,false
+greenhouse,datadog,8350419,"Manager I, Engineering - Zero Trust Networking",REJECTED,0,X1,false
+greenhouse,datadog,8282140,"Manager II, Developer Advocacy",REJECTED,0,X1,false
+greenhouse,datadog,8212114,"Manager II, Engineering - AI DBM",REJECTED,1,T2;X1,false
+greenhouse,datadog,8261861,"Manager II, Engineering - Datadog Agent SDLC",REJECTED,0,X1,false
+greenhouse,datadog,7496237,"Manager II, Premier Support Engineering - EMEA",REJECTED,0,X1;X3,false
+greenhouse,datadog,7939294,"Manager II, Services Architect",REJECTED,0,X1;X3,false
+greenhouse,datadog,8233540,"Manager II, Technical Enablement Management",REJECTED,0,X1;X3,false
+greenhouse,datadog,8226522,"Manager II, Technical Enablement Management",REJECTED,0,X1;X3,false
+greenhouse,datadog,8128810,"Manager, Internal Product Analytics",REJECTED,2,T2;T3;X1,false
+greenhouse,datadog,8083563,"Manager I, Premier Support Engineering - Denver",REJECTED,0,X1,false
+greenhouse,datadog,7800409,"Manager, Mid Market - Brazil",REJECTED,0,X1;X3,false
+greenhouse,datadog,8191288,"Manager, Mid Market Sales",REJECTED,0,X1;X4,false
+greenhouse,datadog,8305959,"Manager, Mid-Market Sales (South EMEA)",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8238132,"Manager, Revenue Accounting",REJECTED,2,T2;T5;X1;X4,false
+greenhouse,datadog,8345094,"Manager, Sales Development",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8345039,"Manager, Sales Development",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8263060,"Manager, Sales Development - Denver",REJECTED,0,X1;X4,false
+greenhouse,datadog,8303622,"Manager, Sales Development - LATAM (Spanish Speaking)",REJECTED,0,X1;X4,false
+greenhouse,datadog,8047666,"Manager, Sales Field Enablement, APJ",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8024670,"Manager, Strategic Sourcing, AI Infrastructure & Services",REJECTED,0,X1,false
+greenhouse,datadog,6523631,Mid Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6522009,Mid Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6665385,Mid Market Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7785319,Mid Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6163246,Mid Market Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,8311586,Mid Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8334237,Mid-Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8334003,Mid-Market Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8096105,Mid Market Account Executive - Benelux,REJECTED,0,X3;X4,false
+greenhouse,datadog,6798820,Mid-Market Account Executive - Boston,REJECTED,0,X4,false
+greenhouse,datadog,7530418,Mid-Market Account Executive (CEE),REJECTED,0,X3;X4,false
+greenhouse,datadog,7476847,Mid-Market Account Executive (DACH),REJECTED,0,X3;X4,false
+greenhouse,datadog,8334294,Mid-Market Account Executive (France),REJECTED,0,X3;X4,false
+greenhouse,datadog,8243549,Mid Market Account Executive (Mexico),REJECTED,0,X3;X4,false
+greenhouse,datadog,8334261,Mid-Market Account Executive - Nordics,REJECTED,0,X3;X4,false
+greenhouse,datadog,8334273,Mid-Market Account Executive - UKI,REJECTED,0,X3;X4,false
+greenhouse,datadog,8175708,Office Operations Associate,REJECTED,0,X3;X4,false
+greenhouse,datadog,7868711,Partner Manager - Channels,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8167729,Partner Marketing Manager - LATAM,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8234190,People Business Partner,REJECTED,0,,false
+greenhouse,datadog,7728298,People Solutions Coordinator (NYC),REJECTED,0,,false
+greenhouse,datadog,8196977,"Principal Copywriter, Brand Editorial",REJECTED,0,X1,false
+greenhouse,datadog,8219989,Principal GSI Partner Manager - Accenture (EMEA),REJECTED,0,X1;X3,false
+greenhouse,datadog,8203733,Principal GSI Partner Manager - Accenture (EMEA),REJECTED,0,X1;X3,false
+greenhouse,datadog,7582679,Principal Partner Manager - Channels (GSI),REJECTED,0,X1,false
+greenhouse,datadog,7584250,Principal Partner Manager - Channels (GSI),REJECTED,0,X1,false
+greenhouse,datadog,8082007,Principal Partner Manager - Channels (UKI),REJECTED,0,X1;X3,false
+greenhouse,datadog,7984983,Principal Partner Program Manager - Resellers,REJECTED,0,X1;X5,false
+greenhouse,datadog,8267546,Product Manager II - Agent Observability,REJECTED,1,T5;X1,false
+greenhouse,datadog,8282552,Product Operations Manager,REJECTED,1,T2;X1;X4;X5,false
+greenhouse,datadog,8259180,Product Solutions Architect - FinOps,REJECTED,2,T1;T2;X4,false
+greenhouse,datadog,7555575,"Product Strategy and Corporate Development Lead, AI",REJECTED,0,X1,false
+greenhouse,datadog,8011158,"Product Strategy and Corporate Development Lead, AI",REJECTED,0,X1,false
+greenhouse,datadog,8094924,"Program Manager, AI and Developer Community Content and Events",REJECTED,0,X1;X5,false
+greenhouse,datadog,8226352,"Program Manager, Recruiting Enablement",REJECTED,0,X1,false
+greenhouse,datadog,8096400,"Recruiter, Enterprise Sales",REJECTED,0,X3;X4,false
+greenhouse,datadog,7927485,"Recruiter, GTM",REJECTED,0,X4,false
+greenhouse,datadog,8329276,Recruiter II,REJECTED,0,X3;X4,false
+greenhouse,datadog,7650367,"Recruiter II, Business Recruiting",REJECTED,0,X3;X4,false
+greenhouse,datadog,8237641,"Recruiter II, Technical Solutions",REJECTED,0,X4,false
+greenhouse,datadog,8239749,"Recruiter, Tech Recruiting",REJECTED,0,X4,false
+greenhouse,datadog,8247346,Recruiting Coordinator,REJECTED,0,,false
+greenhouse,datadog,8247329,Recruiting Coordinator (12-Month Fixed Term Contract),REJECTED,0,X3,false
+greenhouse,datadog,8237428,Recruiting Operations Program Manager,REJECTED,0,X1;X4,false
+greenhouse,datadog,8210153,Regional Director - Enterprise Sales,REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8210323,Regional Director - Enterprise Sales,REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8284998,"Regional Manager, Sales Engineering - AI Accounts",REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8284995,"Regional Manager, Sales Engineering - Key Accounts (East)",REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8231877,"Regional Manager, Sales Engineering - Key Accounts (West)",REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8003531,"Regional Manager, Sales Engineering - Public Sector",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,8113562,"Regional Manager, Sales Engineering - Public Sector",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8048106,"Regional Manager, Sales Engineering - UK",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,8240769,Research Manager - Foundation & World Models,REJECTED,2,T4;T5;X1;X3,false
+greenhouse,datadog,8279173,Research Manager - Post-Training for Agents,REJECTED,3,T3;T4;T5;X1,false
+greenhouse,datadog,8203657,Research Science Intern (PhD),REJECTED,1,T4;X2,false
+greenhouse,datadog,6741571,Sales Development Representative - Boston,REJECTED,0,X4,false
+greenhouse,datadog,8139396,Sales Development Representative (LATAM - Portuguese Speaking),REJECTED,0,X4,false
+greenhouse,datadog,7003239,Sales Development Representative (LATAM - Spanish Speaking),REJECTED,0,X4,false
+greenhouse,datadog,8287316,Sales Development Representative - Summer 2027 Graduates (Boston),REJECTED,0,X4,false
+greenhouse,datadog,8285486,Sales Development Representative - Summer 2027 Graduates (Denver),REJECTED,0,X4,false
+greenhouse,datadog,8258855,Sales Engineer,REJECTED,0,X3;X4,false
+greenhouse,datadog,8323909,Sales Engineer,REJECTED,0,X3;X4,false
+greenhouse,datadog,8185903,Sales Engineer 2 (Customer Success) - Denver,REJECTED,0,X4,false
+greenhouse,datadog,8088095,Sales Engineer - Enterprise,REJECTED,0,X3;X4;X5,false
+greenhouse,datadog,8365206,Senior AI Research Engineer - GPU Systems & Kernels,REJECTED,3,T1;T4;T5;X1;X3,false
+greenhouse,datadog,8364908,Senior AI Research Engineer - LLM Training & Inference Infrastructure,REJECTED,3,T1;T4;T5;X1;X3,false
+greenhouse,datadog,8231811,Senior Business Systems Analyst,REJECTED,0,X1,false
+greenhouse,datadog,8113116,Senior Capture Manager,REJECTED,0,X1;X5,false
+greenhouse,datadog,7905276,Senior Commercial Counsel,REJECTED,0,X1;X3,false
+greenhouse,datadog,8180459,Senior Compliance Specialist,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8247435,Senior Contracts Manager,REJECTED,0,X1;X5,false
+greenhouse,datadog,8197674,Senior Deal Desk Analyst,REJECTED,0,X1,false
+greenhouse,datadog,8273655,Senior Deal Desk Analyst - Dublin,REJECTED,0,X1;X3,false
+greenhouse,datadog,8349721,Senior Demand Generation Marketing Manager – Integrated Campaigns,REJECTED,1,T5;X1,false
+greenhouse,datadog,8262004,Senior Design Manager - AI Monitoring & Management,REJECTED,1,T4;X1,false
+greenhouse,datadog,8223855,Senior Design Manager - Design Systems,REJECTED,0,X1,false
+greenhouse,datadog,7985840,Senior Developer Advocate - Modern App Development,REJECTED,1,T1;X1;X4;X5,false
+greenhouse,datadog,7583609,"Senior Director, Product Management - Platforms",REJECTED,0,X1,false
+greenhouse,datadog,8279776,Senior Enablement Program Associate - Technical Solutions Enablement,REJECTED,1,T5;X1,false
+greenhouse,datadog,8148092,"Senior Enablement Program Manager, Sales Engineering",REJECTED,1,T3;X1;X4,false
+greenhouse,datadog,8128764,"Senior Enablement Program Manager, Support Engineering",REJECTED,1,T3;X1,false
+greenhouse,datadog,8170639,Senior Field Enablement Manager,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8324702,"Senior Field Marketing Manager - Public Sector, Federal & Defense",REJECTED,0,X1,false
+greenhouse,datadog,8002771,Senior Financial Systems Analyst,REJECTED,3,T1;T2;T5;X1;X4;X5,false
+greenhouse,datadog,8221667,"Senior Group Manager, Experience Design",REJECTED,0,X1,false
+greenhouse,datadog,8263526,Senior Incident and Escalations Manager,REJECTED,1,T1;X1;X3;X4;X5,false
+greenhouse,datadog,8238714,"Senior Manager, Business Recruiting",REJECTED,0,X1;X3,false
+greenhouse,datadog,8281102,"Senior Manager, Product Design - Security",REJECTED,0,X1,false
+greenhouse,datadog,8279650,"Senior Manager, Product Design - Security",REJECTED,0,X1;X3,false
+greenhouse,datadog,7960450,"Senior Manager, Product Solutions Architecture",REJECTED,0,X1;X5,false
+greenhouse,datadog,8267561,"Senior Network Engineer, Office Technology",REJECTED,2,T1;T5;X1,false
+greenhouse,datadog,7976683,Senior Partner Manager - Channels,REJECTED,0,X1;X3,false
+greenhouse,datadog,8164588,Senior Partner Manager - Channels (Security),REJECTED,0,X1;X3,false
+greenhouse,datadog,7582681,Senior Partner Manager - Channels (Security),REJECTED,0,X1;X3,false
+greenhouse,datadog,8166231,Senior Partner Manager - Channels (Security),REJECTED,0,X1;X3,false
+greenhouse,datadog,8139190,Senior Partner Marketing Manager,REJECTED,0,X1;X3,false
+greenhouse,datadog,8127916,Senior Partner Marketing Manager - Cloud & Channel,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8094179,Senior Partner Solutions Architect (Pan-EMEA GSI),REJECTED,1,T1;X1;X3;X4,false
+greenhouse,datadog,8281450,Senior Payroll Specialist,REJECTED,0,X1;X3,false
+greenhouse,datadog,7947683,Senior Platform Product Manager - AI SDLC Trusted Throughput,REJECTED,0,X1;X5,false
+greenhouse,datadog,8028422,Senior Product Manager - Application Performance Monitoring,REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8092004,Senior Product Manager - Bits Agent Builder,REJECTED,1,T4;X1,false
+greenhouse,datadog,8335047,"Senior Product Manager, Chat, Video, and Collaboration Integrations",REJECTED,1,T4;X1,false
+greenhouse,datadog,8226275,Senior Product Manager - Feature Flagging,REJECTED,1,T5;X1;X5,false
+greenhouse,datadog,8115033,Senior Product Manager - Journey Monitoring,REJECTED,1,T2;X1;X5,false
+greenhouse,datadog,8113654,Senior Product Marketing Manager,REJECTED,0,X1,false
+greenhouse,datadog,8121553,Senior Product Marketing Manager - Incident Response,REJECTED,0,X1,false
+greenhouse,datadog,8244033,Senior Public Relations Manager (EMEA),REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,8221611,Senior Recruiter - Enterprise,REJECTED,0,X1;X4,false
+greenhouse,datadog,8236080,"Senior Recruiter, Enterprise Sales",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8334640,Senior Sales Engineer,REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,8238455,Senior Sales Engineer - AI Accounts,REJECTED,0,X1;X4,false
+greenhouse,datadog,8144628,Senior Sales Engineer - FED,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,7516279,Senior Sales Engineer - Key Accounts,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8238457,Senior Sales Engineer - Majors (Central),REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,7917340,Senior Sales Engineer - Majors (East),REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,7904634,Senior Sales Engineer - Majors (UK/Nordics/Netherlands),REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,8126596,Senior Sales Engineer - Majors (West),REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8142150,Senior Sales Engineer - Paris,REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,7811662,"Senior Sales Engineer, Public Sector Japan",REJECTED,0,X1;X3;X4;X5,false
+greenhouse,datadog,8030214,Senior Sales Engineer - Public Sector (UK),REJECTED,1,T1;X1;X3;X4,false
+greenhouse,datadog,8141240,Senior Security Sales Engineer,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8141243,Senior Security Sales Engineer,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,7554877,Senior Security Sales Engineer,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,7996907,Senior Services Architect,REJECTED,1,T1;X1,false
+greenhouse,datadog,3851935,Senior Software Engineer,REJECTED,2,T1;T3;X1;X5,false
+greenhouse,datadog,8248968,Senior Software Engineer - Autonomous Ops & Maintenance (ATOM),REJECTED,0,X1;X3;X5,false
+greenhouse,datadog,3851927,Senior Software Engineer - Distributed Systems,REJECTED,1,T3;X1;X5,false
+greenhouse,datadog,4599111,Senior Software Engineer - Distributed Systems,REJECTED,1,T3;X1;X3,false
+greenhouse,datadog,7558666,Senior Sourcer,REJECTED,0,X1;X5,false
+greenhouse,datadog,7560815,Senior Sourcer,REJECTED,0,X1;X5,false
+greenhouse,datadog,8237240,"Senior Sourcer, Enterprise Sales",REJECTED,0,X1;X3;X4,false
+greenhouse,datadog,8214090,Senior Sponsorship Sales Manager - Global Conferences,REJECTED,0,X1;X4;X5,false
+greenhouse,datadog,8100001,"Senior Staff Product Designer, Design Lab",REJECTED,0,X1;X5,false
+greenhouse,datadog,8314268,Senior Strategic Sourcing Analyst,REJECTED,0,X1,false
+greenhouse,datadog,8204629,Senior Talent Planning Analyst,REJECTED,3,T2;T3;T5;X1;X5,false
+greenhouse,datadog,8141670,Senior Technical Program Manager,REJECTED,0,X1,false
+greenhouse,datadog,8247686,Senior Technology Partner Engineer,REJECTED,1,T1;X1;X5,false
+greenhouse,datadog,8257217,Senior Technology Partner Manager,REJECTED,2,T3;T4;X1;X5,false
+greenhouse,datadog,8350101,Senior Video Editor,REJECTED,0,X1,false
+greenhouse,datadog,8128182,Services Architect 3 - Paris/London,REJECTED,1,T1;X3,false
+greenhouse,datadog,8114161,Software Engineering Intern,REJECTED,0,X2;X3,false
+greenhouse,datadog,8114186,Software Engineering Intern,REJECTED,0,X2;X3,false
+greenhouse,datadog,8052118,Software Engineering Intern (Summer),REJECTED,0,X2,false
+greenhouse,datadog,7536402,"Solution Architect, Datadog for Startups",REJECTED,0,,false
+greenhouse,datadog,8329282,Sourcer II,REJECTED,0,X3;X5,false
+greenhouse,datadog,8128450,Staff Engineer - Cloud Networks,REJECTED,0,X1,false
+greenhouse,datadog,7989348,"Staff Product Designer, APM",REJECTED,0,X1;X5,false
+greenhouse,datadog,8337954,"Staff Product Manager, Metering and Attribution",REJECTED,0,X1,false
+greenhouse,datadog,8174592,Staff Product Manager - Self Improving Software,REJECTED,1,T5;X1,false
+greenhouse,datadog,8261937,Staff Research Scientist - Foundation & World Models,REJECTED,2,T4;T5;X1,false
+greenhouse,datadog,8261934,Staff Research Scientist - Post-Training for Agents,REJECTED,3,T3;T4;T5;X1,false
+greenhouse,datadog,8202699,Staff Software Engineer - Frontend,REJECTED,1,T5;X1,false
+greenhouse,datadog,7134079,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7117086,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7057036,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7055008,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7439145,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8157360,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7131495,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7131363,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7131386,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7131396,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7131445,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7155024,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7142205,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,7131726,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8184643,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6522720,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,6522865,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,8247540,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6522747,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,7131404,Strategic Account Executive,REJECTED,0,X3;X4,false
+greenhouse,datadog,6522736,Strategic Account Executive,REJECTED,0,X4,false
+greenhouse,datadog,5511968,Strategic Account Executive (DACH),REJECTED,0,X3;X4,false
+greenhouse,datadog,8021535,Strategic Account Executive (FED),REJECTED,0,X4,false
+greenhouse,datadog,7645709,Strategic Account Executive (FED),REJECTED,0,X3;X4,false
+greenhouse,datadog,8155867,Strategic Account Executive (Higher Education),REJECTED,0,X3;X4,false
+greenhouse,datadog,7442122,Strategic Account Executive (Hong Kong Market),REJECTED,0,X3;X4,false
+greenhouse,datadog,7297575,Strategic Account Executive - Israel,REJECTED,0,X3;X4,false
+greenhouse,datadog,8247518,Strategic Account Executive (Malaysia Market),REJECTED,0,X3;X4,false
+greenhouse,datadog,8255788,Strategic Account Executive (Philippines Market),REJECTED,0,X3;X4,false
+greenhouse,datadog,7439569,"Strategic Account Executive, Public Sector Japan, FED",REJECTED,0,X3;X4,false
+greenhouse,datadog,7439149,"Strategic Account Executive, Public Sector Japan, FED",REJECTED,0,X3;X4,false
+greenhouse,datadog,7439573,"Strategic Account Executive, Public Sector Japan, SLED",REJECTED,0,X3;X4,false
+greenhouse,datadog,7439152,"Strategic Account Executive, Public Sector Japan, SLED",REJECTED,0,X3;X4,false
+greenhouse,datadog,7338800,Strategic Account Executive (Saudi Arabia),REJECTED,0,X3;X4,false
+greenhouse,datadog,7314667,Strategic Account Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,7453034,Strategic Account Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,6430945,Strategic Account Executive (SLED),REJECTED,0,X4,false
+greenhouse,datadog,5622381,Strategic Account Executive (UKI),REJECTED,0,X3;X4,false
+greenhouse,datadog,7591735,Strategic Account Executive (UKI) - Public Sector,REJECTED,0,X3;X4,false
+greenhouse,datadog,7515110,Strategic Account Executive (Vietnam Market),REJECTED,0,X3;X4,false
+greenhouse,datadog,8257306,Strategic Finance Analyst,REJECTED,1,T5;X4,false
+greenhouse,datadog,8360403,Talent Engagement Marketing Manager,REJECTED,0,X1;X3,false
+greenhouse,datadog,8026835,Technical Account Manager 2 - Boston,REJECTED,1,T1;X1,false
+greenhouse,datadog,8357178,Technical Account Manager 2 - New York,REJECTED,1,T1;X1,false
+greenhouse,datadog,8318034,Technical Account Manager 2 - San Francisco,REJECTED,1,T1;X1,false
+greenhouse,datadog,8026831,Technical Account Manager 2 - West,REJECTED,1,T1;X1,false
+greenhouse,datadog,8350824,Technical Account Manager 3 - Denver,REJECTED,1,T1;X1,false
+greenhouse,datadog,8046392,Technical Account Manager - East,REJECTED,1,T1;X1,false
+greenhouse,datadog,8355189,Technical Escalations Engineer 2 (Alerting) - EMEA,REJECTED,0,X3;X4,false
+greenhouse,datadog,8351509,Technical Escalations Engineer 2 (Web Platform),REJECTED,1,T5;X3;X4,false
+greenhouse,datadog,8095826,Technical Escalations Engineer II (Revenue and Cost Management) - APJ,REJECTED,0,X3;X4,false
+greenhouse,datadog,8138482,Technical Escalations Engineer II (RUM) - APJ,REJECTED,0,X3;X4,false
+greenhouse,datadog,8144018,Technical Program Manager II,REJECTED,0,X1,false
+greenhouse,datadog,8268065,"Technical Program Manager, Technical Solutions",REJECTED,0,X1;X5,false
+greenhouse,datadog,8096181,"Technical Support Engineer 2, Premier - Sao Paulo",REJECTED,0,X3,false
+greenhouse,datadog,8097533,"Technical Support Engineer 3, Premier - Sao Paulo",REJECTED,0,X3,false
+greenhouse,datadog,6761448,Technical Support Engineer II,REJECTED,0,X3,false
+greenhouse,datadog,6759702,Technical Support Engineer II,REJECTED,0,X3,false
+greenhouse,datadog,8335703,"Vice President, People Business Partner",REJECTED,0,X1,false
+greenhouse,datadog,8346246,Video Script Writer,REJECTED,0,X5,false
+greenhouse,datadog,8243782,"VP, Investor Relations",REJECTED,0,X1;X4;X5,false
+lever,palantir,6ed76ce8-4156-4b60-b120-403538bd66cd,Administrative Business Partner,REJECTED,0,X3,false
+lever,palantir,0ccbe620-a3ef-41d1-a5c4-68e56b3c91d0,American Tech Fellowship,REJECTED,0,LOC_AMBIGUOUS,false
+lever,palantir,10dfc8bc-99ad-4ca2-ab76-853cb90a92c2,Backend Software Engineer - Application Development,REJECTED,0,X3,false
+lever,palantir,ab7e3425-81d5-4705-a7b5-cd60c8a45cdb,Backend Software Engineer - Application Development,REJECTED,0,,false
+lever,palantir,9aadca04-df88-4b46-95d8-c3b2628b30b0,Backend Software Engineer - Data Connectors,REJECTED,0,,false
+lever,palantir,1345438c-ebfc-4fa5-b545-30c1414f317c,Backend Software Engineer - Defense,REJECTED,0,,false
+lever,palantir,a8174f9c-6f46-46b4-8e15-d1ff9e37c9eb,Backend Software Engineer - Defense,REJECTED,0,,false
+lever,palantir,d33e0c31-ac7e-4f57-ba74-36f2df6ae2f5,Backend Software Engineer - Defense,REJECTED,0,,false
+lever,palantir,6fe5515f-f677-4d98-8ac2-1775a425f5e7,Backend Software Engineer - Infrastructure,REJECTED,0,,false
+lever,palantir,f70cdff7-c62f-4b73-a136-909e5e3d1891,Backend Software Engineer - Infrastructure,REJECTED,0,X3,false
+lever,palantir,aaee4d20-7f1b-48b1-ad23-d52ffbf42a49,"Backend Software Engineer - Infrastructure, Foundations",REJECTED,0,X3,false
+lever,palantir,fb2d3222-dbd8-4e03-8d39-47b820e9509c,"Backend Software Engineer - Infrastructure, Foundations",REJECTED,0,,false
+lever,palantir,f163223b-db5d-4c6d-b73f-0a2eaf85583f,Commercial Administrative Business Partner,REJECTED,0,,false
+lever,palantir,45241c61-11af-45b5-86a0-a5302c028d6d,Commercial Contracts Specialist,REJECTED,0,,false
+lever,palantir,9675791e-59c3-4677-ac62-0c80c38da2eb,Commercial Contracts Specialist,REJECTED,0,,false
+lever,palantir,4d3986f0-4c01-4327-a0e4-e7d9bc7bc0c3,Compliance Analyst,REJECTED,0,,false
+lever,palantir,c6f9eaaf-b397-476f-8b7d-c511cfb7e5c6,Compliance Analyst,REJECTED,0,,false
+lever,palantir,2a41a2e2-55a4-4641-a3bf-101b7616dd63,Contract Operations,REJECTED,0,X4,false
+lever,palantir,2bc07b65-3f3a-4565-8d7c-d015bed92166,Contract Operations,REJECTED,0,X4,false
+lever,palantir,9d0cf52c-089a-41fd-93ee-3d501c8c14d8,Contract Operations,REJECTED,0,X4,false
+lever,palantir,bf3792b7-f485-47a3-ad8c-97c2d793207b,Contract Operations,REJECTED,0,X4,false
+lever,palantir,1a581b97-ce5b-4b4c-84b0-dd54cf8cfe14,Corporate Counsel,REJECTED,0,,false
+lever,palantir,1ef0cb77-03a2-4b60-b61d-ace924ef06e7,Corporate Counsel,REJECTED,0,,false
+lever,palantir,9804d4d1-bd2f-42d5-ae3e-3e3e51aa3830,Corporate Counsel,REJECTED,0,,false
+lever,palantir,1b690123-1766-4e75-a0ef-0f58afa864b4,Data Engineer - Talent Acquisition Operations,REJECTED,3,R1;T5;X4,false
+lever,palantir,16a1b500-13fe-4c22-ad89-372093b462da,Deal Team - Business Affairs,REJECTED,0,,false
+lever,palantir,2add8e90-c65a-4684-8c0d-6dfa7a541871,Deal Team - Business Affairs,REJECTED,0,,false
+lever,palantir,a7a77fc5-9f68-4ded-aad7-4814d96cb316,Deal Team - Business Affairs,REJECTED,0,,false
+lever,palantir,bc803bd5-7793-452d-9ae5-9301ee24615a,Defensive Security Analyst,REJECTED,0,X4,false
+lever,palantir,2e193bdf-e668-49c1-ba32-66cc1aa131a4,Deployment Strategist,REJECTED,0,X3;X4,false
+lever,palantir,79c3f906-622b-4261-8fc6-8af0028caa27,Deployment Strategist,REJECTED,0,X3;X4,false
+lever,palantir,9ace479e-a9e4-4610-a553-122d3831863a,Deployment Strategist,REJECTED,2,T1;T2;X3;X4,false
+lever,palantir,b81be534-e1d6-4946-8121-1e1360d4d030,Deployment Strategist,REJECTED,0,X3;X4,false
+lever,palantir,bc087dba-1e41-49e0-83bd-36832122363d,Deployment Strategist,REJECTED,0,X4,false
+lever,palantir,e0ab8226-b928-4e3a-bf87-08fe7b1ea595,Deployment Strategist,REJECTED,0,X4,false
+lever,palantir,e65e0d73-1d91-4696-809f-7810ecd474d1,Deployment Strategist,REJECTED,0,X3;X4,false
+lever,palantir,6940fc9a-b79c-4935-a90f-1c6a02e54fb1,Deployment Strategist - Germany Forward Deployed,REJECTED,0,X4,false
+lever,palantir,e5b8c2f0-aa26-4615-ba92-f4b5c175c112,Deployment Strategist - Intel,REJECTED,0,X4,false
+lever,palantir,ba8fdce3-7f60-45f6-8323-d74cc18c4320,Deployment Strategist - Japan Commercial,REJECTED,0,X3;X4,false
+lever,palantir,fa93a1f8-dc95-40d0-b5ca-f2aebaab0806,Deployment Strategist - Japan Forward Deployed,REJECTED,0,X4,false
+lever,palantir,2bfdcb53-7abd-42a4-9eaf-ebe07450f798,Deployment Strategist - Japan Government,REJECTED,0,X3;X4,false
+lever,palantir,1a53939d-8ffa-4570-b31a-6d0bc53fdb59,Deployment Strategist - Korea Forward Deployed,REJECTED,0,X4,false
+lever,palantir,2f3a0a57-8f77-44d2-99c3-18aef115374f,Deployment Strategist - UK Government,REJECTED,0,X3;X4,false
+lever,palantir,30c2563d-9a16-4dd7-81e8-b6f646384199,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,44d3394e-003e-4609-b864-ff141e233635,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,4775e970-ade8-4a0d-8145-9255dc4cbac9,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,5f39f83b-ef08-4ee8-afda-a2c77440598f,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,6f5cf287-1d3e-4c10-abf6-18cf4c955ded,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,802add74-04cf-479c-9479-ff3043940e29,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,e2a3c133-7964-4e64-ba17-84a8b0b19506,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,ead4e034-e6e1-4993-86d1-ad9b8e2933a5,Deployment Strategist - US Government,REJECTED,0,X4,false
+lever,palantir,8c95f750-9d42-456e-91fd-464ad87e4b83,Deployment Strategist - Warp Speed,REJECTED,0,X4,false
+lever,palantir,774cf5c9-bf6a-4d77-bf60-d50ef1beb1a0,"Deployment Strategist, Internship",REJECTED,2,T1;T2;X2;X3;X4,false
+lever,palantir,a49d4181-a289-435a-b581-7f5af0497c8e,"Deployment Strategist, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,69ab7e24-8f5d-426e-84f7-6d3b2d4a7efd,"Deployment Strategist, Internship - Warp Speed",REJECTED,0,X2;X4,false
+lever,palantir,d5f11334-3a73-4094-b7e0-d05b54e475b8,"Deployment Strategist, New Grad - Commercial",REJECTED,0,X3;X4,false
+lever,palantir,5d8286d6-992a-404b-94af-99c173d40299,"Deployment Strategist, New Grad - Intel, US Government",REJECTED,0,X4,false
+lever,palantir,37780e70-c7af-45e1-9be7-071df201c387,"Deployment Strategist, New Grad - Warp Speed",REJECTED,0,X4,false
+lever,palantir,51ea4a3b-7764-4c87-96e4-310e19c856d5,DevOps Engineer,REJECTED,0,,false
+lever,palantir,c3f40e41-6258-4233-a7f9-091bf67df30b,DevOps Engineer,REJECTED,0,,false
+lever,palantir,3d06b4bc-6a7b-4f73-b5c5-4544354e3d0f,Edge Infrastructure Engineer,REJECTED,0,X3,false
+lever,palantir,4c13fdb2-308e-4185-bb6b-105d7bf38d92,Finance Operator,REJECTED,0,X4,false
+lever,palantir,bd7766c4-6aea-4b37-8d47-a8864bb9bd69,Finance Operator Intern,REJECTED,0,X2;X4,false
+lever,palantir,636fc05c-d348-4a06-be51-597cb9e07488,Forward Deployed AI Engineer,REJECTED,3,R3;T4;X4,false
+lever,palantir,ff1029bd-bb6d-4d78-a03e-5f9744d0b798,Forward Deployed AI Engineer,REJECTED,3,R3;T4;X3;X4,false
+lever,palantir,00c2c97b-8514-4617-9883-e53e486b6dcd,Forward Deployed Enablement Engineer - Customer Success,REJECTED,0,X3;X4,false
+lever,palantir,4cba9c95-d16f-440d-83e7-2352480f689f,Forward Deployed Enablement Engineer - Customer Success,REJECTED,0,X4,false
+lever,palantir,a90eb029-19cc-413c-bd51-b8411053d7d4,Forward Deployed Enablement Engineer - Customer Success,REJECTED,0,X4,false
+lever,palantir,96a0ce26-cf84-4fa8-934b-acc4363620b2,Forward Deployed Engineer - Mixed Reality,REJECTED,0,X4,false
+lever,palantir,72e51928-07f0-4be0-aae5-0ae6956a4846,Forward Deployed Infrastructure Engineer - UK Government,REJECTED,1,T4;X3;X4,false
+lever,palantir,0fccbe95-2520-4df3-8600-7897656c06a2,Forward Deployed Infrastructure Engineer - US Government,REJECTED,1,T4;X4,false
+lever,palantir,74748e0e-a0bc-4c53-a636-ef14e36d9b5e,Forward Deployed Infrastructure Engineer - US Government,REJECTED,1,T4;X4,false
+lever,palantir,b57f08e9-546c-4b9b-8d21-db0ebbc11363,Forward Deployed Infrastructure Engineer - US Government,REJECTED,1,T4;X4,false
+lever,palantir,3db7e40a-28e0-4ad1-96c5-93de5bc96aa9,"Forward Deployed Infrastructure Engineer, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,8f362a1f-1eff-4327-94c1-ff46e2101c69,"Forward Deployed Infrastructure Engineer, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,cadc0eb2-2703-43e4-8e4f-41edf5b071c6,"Forward Deployed Infrastructure Engineer, New Grad - UK Government",REJECTED,1,T4;X3;X4,false
+lever,palantir,33243fb5-6907-40c7-930c-968b25d825d0,"Forward Deployed Infrastructure Engineer, New Grad - US Government",REJECTED,1,T4;X4,false
+lever,palantir,5a28f3a5-8655-47f2-ab19-a79b8a319da8,"Forward Deployed Infrastructure Engineer, New Grad - US Government",REJECTED,1,T4;X4,false
+lever,palantir,701a9307-0619-45d3-b077-cabe9897cd12,"Forward Deployed Infrastructure Engineer, New Grad - US Government",REJECTED,1,T4;X4,false
+lever,palantir,91117724-9389-48dc-912f-98e48d4d45d8,"Forward Deployed Infrastructure Engineer, New Grad - US Government",REJECTED,1,T4;X4,false
+lever,palantir,5a99fe16-1bda-4313-ace2-a11ea6e58f0c,Forward Deployed Reliability Engineer,REJECTED,0,X3;X4,false
+lever,palantir,689e6869-01bc-40f1-b580-adb33a020065,Forward Deployed Reliability Engineer,REJECTED,0,X4,false
+lever,palantir,22053072-4c22-49c4-8299-28e107ceeb98,Forward Deployed Security Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,a194220b-684a-4b4e-b918-1f70154b464c,Forward Deployed Site Reliability Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,1bb19522-3936-4adc-9ced-c3df8b5900b9,Forward Deployed Software Engineer,REJECTED,0,X3;X4,false
+lever,palantir,5168e8fd-fec1-4fea-b7a1-81bdaea65850,Forward Deployed Software Engineer,REJECTED,1,T4;X3;X4,false
+lever,palantir,7ea66860-ae93-4139-9388-b7284cb33f37,Forward Deployed Software Engineer,REJECTED,0,X4,false
+lever,palantir,98b81271-9e15-40b7-8dce-0c62f24702f9,Forward Deployed Software Engineer,REJECTED,0,X3;X4,false
+lever,palantir,dab396d4-2f14-4796-aac0-0d82883dccf0,Forward Deployed Software Engineer,REJECTED,0,X4,false
+lever,palantir,27bf5707-96fa-460e-8a5b-53bc192ca87b,Forward Deployed Software Engineer  - Edge Autonomous Systems,REJECTED,0,X4,false
+lever,palantir,909875b4-1940-41bd-b08d-a269c7235100,Forward Deployed Software Engineer - AUS Government,REJECTED,0,X3;X4,false
+lever,palantir,491a0133-b580-45c3-9fd4-2314faf82fb9,Forward Deployed Software Engineer - Germany Forward Deployed,REJECTED,0,X4,false
+lever,palantir,34b3a697-6e22-4751-befd-0b7921abbd5f,Forward Deployed Software Engineer - Intel,REJECTED,0,X4,false
+lever,palantir,8aba5995-653d-4805-96e8-24488e6abf37,Forward Deployed Software Engineer - Japan Forward Deployed,REJECTED,0,X4,false
+lever,palantir,12e94938-55cb-4ad9-9c05-405ebc9ef430,Forward Deployed Software Engineer - Japan Government,REJECTED,0,X3;X4,false
+lever,palantir,a39bf84c-6648-4871-bd07-9b882d401c4c,Forward Deployed Software Engineer - Korea Forward Deployed,REJECTED,0,X4,false
+lever,palantir,3d0d9d92-0321-4459-a17d-fa1a76636a43,Forward Deployed Software Engineer - Tactical Edge,REJECTED,0,X4,false
+lever,palantir,57a3f928-e7d3-4037-8196-b38e2f867152,Forward Deployed Software Engineer - UK Government,REJECTED,0,X3;X4,false
+lever,palantir,289ad049-7b4e-41e3-8a39-146fbeb6fb64,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,29630180-0f10-4826-801f-12e226d3c7f1,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,5b0f37e6-8569-4a62-9e38-c5a4edc67dcf,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,84131e3f-455e-47fc-9c11-898d95f09048,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,a2e9ab0f-4dd1-4744-92b9-edc7ae393c58,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,ce8ca664-60dc-4f9a-8986-3c96673bcfdf,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,d83fac1c-353e-4b77-a586-3276b1090b6e,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,e82b696e-a085-4bbf-8bcb-6d2c4f8cf2f7,Forward Deployed Software Engineer - US Government,REJECTED,0,X4,false
+lever,palantir,be4ab5cb-9caa-4c2a-97b9-c73805fca4fc,Forward Deployed Software Engineer - US Government - Federal Health and Civilian,REJECTED,1,T3;X4,false
+lever,palantir,e7100322-be11-40c8-9dba-7a21b7302c08,Forward Deployed Software Engineer - US Government - Federal Health and Civilian,REJECTED,1,T3;X4,false
+lever,palantir,13f99633-43b5-4459-8e84-25073f257c18,Forward Deployed Software Engineer - Warp Speed,REJECTED,0,X4,false
+lever,palantir,1b6f1d82-d459-4dea-8bc2-8d2ffe6f881a,"Forward Deployed Software Engineer, Internship",REJECTED,1,T1;X2;X3;X4,false
+lever,palantir,395a4483-fc3d-4b77-a500-501923fd0976,"Forward Deployed Software Engineer, Internship - AUS Government",REJECTED,0,X2;X3;X4,false
+lever,palantir,2ad0ab10-34c3-410d-883b-8052864a95cd,"Forward Deployed Software Engineer, Internship - Commercial",REJECTED,1,T4;X2;X3;X4,false
+lever,palantir,4d29249a-d7e8-4c39-880d-3b35d7b2f6f6,"Forward Deployed Software Engineer, Internship - Commercial",REJECTED,1,T4;X2;X4,false
+lever,palantir,d5486403-c050-4920-b2e0-91b69b61ebb2,"Forward Deployed Software Engineer, Internship - Commercial",REJECTED,1,T4;X2;X4,false
+lever,palantir,ac0dc094-2480-43c2-8495-26ade227ff4f,"Forward Deployed Software Engineer, Internship - France",REJECTED,0,X2;X4,false
+lever,palantir,26e23f5d-083b-45aa-b223-1a6e43d960bf,"Forward Deployed Software Engineer, Internship - UK Government",REJECTED,1,T4;X2;X3;X4,false
+lever,palantir,315f695d-04d1-4a9a-848e-cb2bec7a997e,"Forward Deployed Software Engineer, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,e0010393-c300-446f-bf67-fa2ef067f16f,"Forward Deployed Software Engineer, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,e6ff8bf2-135e-474d-ad37-24f490ae1dd2,"Forward Deployed Software Engineer, Internship - US Government",REJECTED,0,X2;X4,false
+lever,palantir,b3d81928-6c26-432f-8a0a-36602c2eefcb,"Forward Deployed Software Engineer, Internship - Warp Speed",REJECTED,0,X2;X4,false
+lever,palantir,2aa14e4f-d406-486e-9aa8-6ff3358d70a0,"Forward Deployed Software Engineer, New Grad - Commercial",REJECTED,1,T4;X3;X4,false
+lever,palantir,2e6b0ac8-83e9-4be5-a3aa-cf319f751728,"Forward Deployed Software Engineer, New Grad - Commercial",REJECTED,1,T4;X4,false
+lever,palantir,341d5cae-a473-4813-9a6c-0f67fcc1b253,"Forward Deployed Software Engineer, New Grad - Commercial",REJECTED,1,T4;X3;X4,false
+lever,palantir,e500bcf3-19d8-4d3c-b340-4d76e4a55b40,"Forward Deployed Software Engineer, New Grad - Commercial",REJECTED,1,T4;X4,false
+lever,palantir,fbca0358-083a-4222-bdbb-3bd729b48382,"Forward Deployed Software Engineer, New Grad - Intel, US Government",REJECTED,0,X4,false
+lever,palantir,b4aa51a2-bc43-4d67-bf55-12db7feefb3a,"Forward Deployed Software Engineer, New Grad - UK Government",REJECTED,1,T4;X3;X4,false
+lever,palantir,cbe90327-3e6e-451c-a54c-1d3cbcef5aeb,"Forward Deployed Software Engineer, New Grad - US Government",REJECTED,0,X4,false
+lever,palantir,d1ac83d0-e923-42a5-8e6d-58dd0cab25ca,"Forward Deployed Software Engineer, New Grad - US Government",REJECTED,0,X4,false
+lever,palantir,66b495eb-aaf9-4bf9-a759-41854534add7,"Forward Deployed Software Engineer, New Grad - Warp Speed",REJECTED,0,X4,false
+lever,palantir,2da4be12-bc7a-4950-87db-e9d68d955ff7,Full Stack Software Engineer - Application Development,REJECTED,0,,false
+lever,palantir,c44510a1-9537-4c52-ae81-51546979fe47,Full Stack Software Engineer - Application Development,REJECTED,0,X3,false
+lever,palantir,b72abc17-293d-47e0-a094-c1ab0016b794,Incident Management Engineer,REJECTED,0,,false
+lever,palantir,12d13a31-5764-4678-8835-809f0deae49b,Industrial Security Specialist,REJECTED,0,,false
+lever,palantir,1e77a5e8-9843-4516-a186-7c24f0ff07a0,Information Security Engineer - Infrastructure Security,REJECTED,0,,false
+lever,palantir,4bfef5e0-6689-4db8-9ffe-ab6df6836845,Information Security Engineer - Infrastructure Security,REJECTED,0,,false
+lever,palantir,2127f3af-1fb3-4aa3-9aa1-eb06967e0166,Information Security Engineer - Insider Risk,REJECTED,0,,false
+lever,palantir,b0e1823a-fbe7-4c9d-a4d3-a1e738db2589,Information Security Engineer - Insider Risk,REJECTED,0,,false
+lever,palantir,ef725594-42dd-4f0d-ba8e-df8179dbc6cb,"Information Security Engineer, Internship",REJECTED,0,X2,false
+lever,palantir,83d6d24a-5f37-4094-9818-f8ed7ca4898c,Intellectual Property Counsel,REJECTED,0,X3,false
+lever,palantir,20f220d8-02bb-404f-bbf1-1022ff3df6b7,International Accountant,REJECTED,0,X3,false
+lever,palantir,ff2c33a1-f707-4fc2-b003-4ba878812edf,International Tax Manager,REJECTED,0,X1,false
+lever,palantir,18383723-04a2-44ae-ae58-1166a76f0859,Legal Operations Specialist,REJECTED,0,X4,false
+lever,palantir,3c0c9552-f4ae-4467-b032-5809d2d62724,Legal Operations Specialist,REJECTED,0,X4,false
+lever,palantir,bd500579-5e1c-441f-b42f-66822d07dbba,Legal Operations Specialist,REJECTED,0,X4,false
+lever,palantir,7fa0ceca-c30e-48de-9b27-f98469c374f3,Meritocracy Fellowship,REJECTED,0,,false
+lever,palantir,74aed644-d963-4c5d-b7a0-149bc35f9c50,Mixed Reality Developer,REJECTED,0,,false
+lever,palantir,7dc7e7c3-39bf-4f4e-a8eb-e38a4a0af238,Mobility Tax Analyst,REJECTED,0,,false
+lever,palantir,d879b190-b6a1-41e1-9eca-bf94d36037e1,Mobility Tax Analyst,REJECTED,0,X3,false
+lever,palantir,61eaa54c-e1b7-4064-afad-f7df3d48d652,Neurodivergent Fellowship,REJECTED,1,T4,false
+lever,palantir,fd952b52-7b9c-4056-a3dd-0bc41fcfe603,Neurodivergent Fellowship,REJECTED,1,T4,false
+lever,palantir,62d74def-2134-427d-baa0-4783f2187266,Operations Analyst - US Government,REJECTED,0,X4,false
+lever,palantir,b14585f4-9a68-49e8-97af-3f03f2a6c357,Operations Analyst - US Government,REJECTED,0,X4,false
+lever,palantir,5f3f9547-2aea-4ac2-995d-e8fa53b16e39,Operations Analyst - US Government Security,REJECTED,0,X4,false
+lever,palantir,a468565d-8502-4baf-8788-b7ffe233b725,Operations Analyst - US Government Security,REJECTED,0,X4,false
+lever,palantir,99ab8dbd-fd69-4216-8c2a-09a202a1cb17,People Partner,REJECTED,0,,false
+lever,palantir,0492e9c4-9ba9-4da0-896f-75be5151bae9,Physical Security Manager,REJECTED,0,X1,false
+lever,palantir,721fe5ca-73b8-4223-826e-93a528194821,Platform Engineer - Identity Infrastructure,REJECTED,0,,false
+lever,palantir,a80afc2b-2564-4a98-84c2-34cdcc0402df,Platform Engineer - Identity Infrastructure,REJECTED,0,,false
+lever,palantir,cf08f44c-bf75-45ed-9fab-f4836e51013e,Platform Engineer - Identity Infrastructure,REJECTED,0,,false
+lever,palantir,a753a9e7-a361-426b-9c25-3cf2488c1730,Platform Intelligence Engineer,REJECTED,2,T1;T3,false
+lever,palantir,95e0d2b0-437a-4096-a5c6-0f247f426c90,Privacy & Civil Liberties Engineer - New Grad,REJECTED,0,,false
+lever,palantir,09846827-b931-4a9f-bd64-c3bb8860187b,"Privacy and Civil Liberties Software Engineer, Internship",REJECTED,0,X2,false
+lever,palantir,26032bad-d713-429d-8b04-2de7db93b5c3,Procurement Operations Analyst,REJECTED,0,X4,false
+lever,palantir,66955c3b-c530-4c4a-9d48-63b4aad61b9c,Procurement Operations Analyst,REJECTED,0,X4,false
+lever,palantir,2d8b7eaa-5c08-44ef-a0f0-5a96cee2794d,Product Designer,REJECTED,0,X3,false
+lever,palantir,c2d11af1-5b84-4be0-92ac-36113fb8f2b5,Product Designer - US Government,REJECTED,0,,false
+lever,palantir,dc02f308-bbcc-4163-b4fb-3f68efb2ce24,Product Designer - US Government,REJECTED,0,,false
+lever,palantir,1a935143-e857-480c-bc5a-ad625d754eb6,"Product Designer, Internship",REJECTED,0,X2,false
+lever,palantir,44129013-01e0-4699-8fc1-7a189bb37b63,"Product Designer, Internship",REJECTED,0,X2;X3,false
+lever,palantir,8f7bbffa-92aa-4d25-9586-943b3322a27d,"Product Designer, Internship - US Government",REJECTED,0,X2,false
+lever,palantir,9db71277-3a9a-481b-a2a3-25c3125b0e8a,"Product Designer, Internship - US Government",REJECTED,0,X2,false
+lever,palantir,fa060d94-f85d-4d02-be58-b81787fe57e5,"Product Designer, Internship - US Government",REJECTED,0,X2,false
+lever,palantir,4c0fb3a1-8256-4d14-9a27-23727235752e,"Product Designer, New Grad",REJECTED,0,,false
+lever,palantir,76161763-bafa-4ebb-a2ce-2a25e315b7d7,"Product Designer, New Grad",REJECTED,0,X3,false
+lever,palantir,25378ba0-db78-4c70-8174-a05ce514fc65,"Product Designer, New Grad - US Government",REJECTED,0,,false
+lever,palantir,32295454-6629-4f47-b11e-bbd7f5d41acb,"Product Designer, New Grad - US Government",REJECTED,0,,false
+lever,palantir,5f7a90e7-f927-47bf-90ed-52d17c58ae02,"Product Designer, New Grad - US Government",REJECTED,0,,false
+lever,palantir,c80690ca-704b-46c2-9d95-e4f6e98ce4e2,Production Engineer - Database Operations,REJECTED,0,X3;X4,false
+lever,palantir,1198d36e-8163-4205-9492-effd3c86896c,Regulatory Attorney,REJECTED,0,,false
+lever,palantir,484908de-c32a-4259-be91-6b1f8738c14a,Regulatory Attorney,REJECTED,0,,false
+lever,palantir,58367f3e-1be8-4452-9282-c0d0deb69afc,Regulatory Attorney,REJECTED,0,X3,false
+lever,palantir,14dbdeb9-1537-4ccf-83ac-608287efa00f,Revenue Accounting Manager,REJECTED,0,X1;X3;X4,false
+lever,palantir,678d05bc-ea79-45ad-bdce-7a06a7cd9a54,Revenue Accounting Manager,REJECTED,0,X1;X4,false
+lever,palantir,d770616f-1422-4420-972c-f95c31ca58e7,Revenue Accounting Manager,REJECTED,0,X1;X4,false
+lever,palantir,24060586-7ba8-47c0-bfc1-f1dd5b82d8bd,Sales,REJECTED,0,X4,false
+lever,palantir,d505f854-d339-448b-bf7e-46e2f32cff78,Sales Finance Operations Analyst,REJECTED,0,X4,false
+lever,palantir,8704b8c0-80b3-48b1-a82c-939994a0316c,Security Systems Engineer,REJECTED,0,,false
+lever,palantir,98c244fc-444b-43ba-b152-30227191170b,Security Systems Engineer,REJECTED,0,,false
+lever,palantir,a9788f77-d6d2-4ef9-9d57-7002d587b84f,Security Systems Engineer,REJECTED,0,,false
+lever,palantir,fdbc68df-8817-49dc-96f3-18a53f4fcd4c,Security Systems Engineer,REJECTED,0,,false
+lever,palantir,7177acab-5c64-4005-9b28-93f33b3e172a,Senior Backend Software Engineer - Application Development,REJECTED,0,X1,false
+lever,palantir,a92b55d0-1d36-4884-8e65-f456450b3a74,Senior Backend Software Engineer - Application Development,REJECTED,0,X1;X3,false
+lever,palantir,2cd25c0b-088d-4a5c-9b96-1165a33fe652,Senior Backend Software Engineer - Infrastructure,REJECTED,0,X1;X3,false
+lever,palantir,b5ad6660-8145-4be5-97e2-3799f2912f5b,Senior Backend Software Engineer - Infrastructure,REJECTED,0,X1,false
+lever,palantir,4e7d0732-f477-4c7a-aac9-abd62f8c9987,Senior Front End Software Engineer - Application Development,REJECTED,0,X1;X3,false
+lever,palantir,d2a87a1d-63f4-4dcd-b0d0-f6be91fed4d3,Senior Front End Software Engineer - Application Development,REJECTED,0,X1,false
+lever,palantir,144f32bc-21e5-42bd-9710-7165a22d51e1,Senior Identity Security Engineer,REJECTED,0,X1,false
+lever,palantir,146aba99-2a9a-44ee-9fb3-42dd1e211221,Senior Identity Security Engineer,REJECTED,0,X1,false
+lever,palantir,bb7af139-064c-4a59-a784-9ba8c4324d21,Senior Identity Security Engineer,REJECTED,0,X1,false
+lever,palantir,4c956604-f861-4140-a7d2-3e39fc834c1c,"Senior Manager, Corporate Accounting",REJECTED,0,X1;X4,false
+lever,palantir,b0ae5f2e-ef97-437b-b2e1-a3098ecc154f,"Senior Manager, Corporate Accounting",REJECTED,0,X1;X4,false
+lever,palantir,5b4f55a5-e883-445e-853d-7e0d40eec055,Senior Revenue Accountant,REJECTED,0,X1;X3,false
+lever,palantir,ee898794-f9cc-45f1-8a40-9a49e7db62bd,Senior Revenue Accountant,REJECTED,0,X1,false
+lever,palantir,88f8f593-af1f-4d27-9042-454c24a64d3f,Senior Software Engineer - Autonomous Systems,REJECTED,0,X1,false
+lever,palantir,bba1ecbc-e56d-48b0-b33a-aefcbffbd655,Senior Software Engineer - Autonomous Systems,REJECTED,0,X1,false
+lever,palantir,d40d5d19-8f9e-4e6b-b4d3-b7457c90adec,Senior Software Engineer - Autonomous Systems,REJECTED,0,X1,false
+lever,palantir,d7030550-f80f-422c-965f-3120db433dea,Senior Software Engineer - Autonomous Systems,REJECTED,0,X1,false
+lever,palantir,8a95dba1-b814-4243-be14-eba1df340ceb,Senior Software Engineer - Observability,REJECTED,0,X1,false
+lever,palantir,39c57909-ae76-4c86-9290-9fb50c689c4f,"Senior Software Engineer, Network Infrastructure",REJECTED,0,X1,false
+lever,palantir,55005ee7-4e06-4520-b569-f6e8f26745cb,"Senior Software Engineer, Network Infrastructure",REJECTED,0,X1,false
+lever,palantir,89a77547-8b74-45b2-8590-f04b16e19a59,"Senior Software Engineer, Network Infrastructure",REJECTED,0,X1,false
+lever,palantir,26176860-7b27-412a-9959-d8b8705acf53,"Senior Software Engineer, Substrate",REJECTED,0,X1,false
+lever,palantir,68d690cf-fc8a-4755-9b69-abe13f93d262,"Senior Software Engineer, Substrate",REJECTED,0,X1,false
+lever,palantir,b80d45be-7fe8-4a11-b159-65551320c61f,"Senior Software Engineer, Substrate",REJECTED,0,X1;X3,false
+lever,palantir,c38bb622-6f8e-43a1-8ae7-32291da328a8,"Senior Software Engineer, Substrate",REJECTED,0,X1,false
+lever,palantir,211f99dc-269e-4f25-84d3-d73dea782080,Site Reliability Engineer - US Government,REJECTED,0,,false
+lever,palantir,2da72708-a7b0-4178-9cb2-6b009eb6e07f,Site Reliability Operations Analyst,REJECTED,0,X3;X4,false
+lever,palantir,5174e95b-2e0a-46f8-8db7-e2c837a0ac94,Site Reliability Operations Analyst - Commercial,REJECTED,0,X4,false
+lever,palantir,98bbe55b-f591-4272-a486-d82404d2c576,Site Reliability Operations Analyst - UK Government,REJECTED,0,X3;X4,false
+lever,palantir,8f308f3e-43d2-49c9-accd-cc7af0f1565c,Software Engineer - Apollo Platform,REJECTED,0,,false
+lever,palantir,afea07a8-2721-45e6-a9ca-6580f3f9783c,Software Engineer - Apollo Platform,REJECTED,0,,false
+lever,palantir,f75cb0d2-6608-450b-848e-0f27937c930d,Software Engineer - Apollo Platform,REJECTED,0,X3,false
+lever,palantir,832e4652-5088-4e5b-aeac-1e82ec3ebad4,Software Engineer - Apollo Systems,REJECTED,0,,false
+lever,palantir,e47d4410-2542-47d8-b558-b5295fc28821,Software Engineer - Apollo Systems,REJECTED,0,,false
+lever,palantir,6b4b087c-4fc6-476d-9e72-e1bc6ac6c62a,"Software Engineer - Applied AI, Defense Applications",REJECTED,0,,false
+lever,palantir,ca222ecd-b659-4e3e-aee5-d85655c7bbc8,"Software Engineer - Applied AI, Defense Applications",REJECTED,0,,false
+lever,palantir,3b4ae28e-c4f2-4654-83b4-64366bfe72fa,Software Engineer - Core Interfaces,REJECTED,0,,false
+lever,palantir,cf76738e-3030-42fa-92ac-a9446df956fc,Software Engineer - Core Interfaces,REJECTED,0,,false
+lever,palantir,c288bb43-3c63-4557-bd96-600ef0d1b7a6,Software Engineer - Defense Applications,REJECTED,0,,false
+lever,palantir,f7dbfdf1-0bb1-4c11-ac15-6a139cee3410,Software Engineer - Defense Applications,REJECTED,0,,false
+lever,palantir,3c84af24-b7aa-483e-b2c3-e1d83494fe15,Software Engineer - Developer Productivity,REJECTED,0,,false
+lever,palantir,397fb983-47b7-4a53-a7df-f080f43f7720,Software Engineer - Edge,REJECTED,1,T3,false
+lever,palantir,67110929-adea-41c3-851a-8882e222d9e4,Software Engineer - Edge AI Systems,REJECTED,1,T4,false
+lever,palantir,cd2423c6-da68-430c-8be5-0ae7eea36497,Software Engineer - Environment Platform,REJECTED,0,,false
+lever,palantir,d5d83a8f-cb96-41cc-9612-c7224fbb2fbc,Software Engineer - Environment Platform,REJECTED,0,,false
+lever,palantir,71ed917e-850a-484b-9454-fa66bdf24540,Software Engineer - Frontend Developer Productivity,REJECTED,0,,false
+lever,palantir,8aec0fba-0ac9-48a5-8f54-f2d8465d6698,Software Engineer - Mission Manager,REJECTED,0,X1,false
+lever,palantir,c0b60d64-1244-4270-9d55-14115c97c24b,Software Engineer - Mission Manager,REJECTED,0,X1,false
+lever,palantir,e168a922-a2f0-45d0-912c-678d66e15118,Software Engineer - Mission Manager,REJECTED,0,X1,false
+lever,palantir,4056c8f6-0e6a-43f7-b387-4a97bd3dbb19,Software Engineer – Query Engines,REJECTED,1,T3;X3,false
+lever,palantir,a576c5ef-2a51-4522-9c98-bca5ac2abbb3,Software Engineer – Query Engines,REJECTED,1,T3,false
+lever,palantir,130ee501-bd22-4d44-b651-39581ef97743,"Software Engineer, Intern - Connectivity Platform and Product",REJECTED,0,X2,false
+lever,palantir,eb496d6a-a960-43d3-a09b-e3843052f54e,"Software Engineer, Intern - Connectivity Platform and Product",REJECTED,0,X2,false
+lever,palantir,3531977a-9b2f-40a0-a486-4eeb38e75fc1,"Software Engineer, Internship",REJECTED,1,T3;X2;X3,false
+lever,palantir,373eb939-6f57-4836-8479-be79a5e07249,"Software Engineer, Internship",REJECTED,1,T3;X2,false
+lever,palantir,76a60923-bb49-40f5-b061-7c7eb1299602,"Software Engineer, Internship",REJECTED,1,T3;X2;X3,false
+lever,palantir,7d69cf8a-06fd-4f05-bd84-27149db29c4d,"Software Engineer, Internship",REJECTED,1,T3;X2,false
+lever,palantir,bdcfb29f-4f27-42de-933f-7f83a359b9f0,"Software Engineer, Internship",REJECTED,1,T3;X2,false
+lever,palantir,e27af7ab-41fc-40c9-b31d-02c6cb1c505c,"Software Engineer, Internship",REJECTED,1,T3;X2,false
+lever,palantir,45e4617d-d658-4b30-8dc9-378ca84a027a,"Software Engineer, Internship - Data Connectors",REJECTED,2,T1;T3;X2,false
+lever,palantir,8bcf4f33-0a79-4248-bbfd-49ac4be9dd8e,"Software Engineer, Internship - Defense Tech",REJECTED,1,T3;X2,false
+lever,palantir,a483f41b-0da9-42ea-8ed6-cbf6eb93cc6d,"Software Engineer, Internship - Defense Tech",REJECTED,1,T3;X2,false
+lever,palantir,f17e98d0-046a-4e6e-9d65-ed0b12dd0ff7,"Software Engineer, Internship - Defense Tech",REJECTED,1,T3;X2,false
+lever,palantir,b229baac-494b-4a0d-9a13-2e38806e06f3,"Software Engineer, Internship - Infrastructure",REJECTED,1,T3;X2,false
+lever,palantir,f221738b-e97c-4ce3-a12a-17ada2b855e4,"Software Engineer, Internship - Infrastructure",REJECTED,1,T3;X2,false
+lever,palantir,fd3603a9-7016-45c6-9c8d-04c9279ab85e,"Software Engineer, Internship - Infrastructure",REJECTED,0,X2;X3,false
+lever,palantir,373367a9-3160-49d8-b7af-2efec062fad1,"Software Engineer, Internship - Production Infrastructure",REJECTED,0,X2,false
+lever,palantir,37964982-9b4c-471e-a1d8-fb8f45d7f116,"Software Engineer, Internship - Production Infrastructure",REJECTED,0,X2,false
+lever,palantir,3ab9e715-1ea9-4c6c-ad50-7340eac14e86,"Software Engineer, Internship - Production Infrastructure",REJECTED,0,X2,false
+lever,palantir,3e59369e-1392-42f2-8d03-86648e87e963,"Software Engineer, Internship - Query Engines",REJECTED,1,T3;X2;X3,false
+lever,palantir,da774f81-c98c-4dcf-9b9c-949fd7d90a13,"Software Engineer, Internship - Query Engines",REJECTED,1,T3;X2,false
+lever,palantir,40840cef-bbd7-4557-bb21-cbdcf4be616e,"Software Engineer, Internship - Sovereign AI Systems",REJECTED,0,X2;X3,false
+lever,palantir,cd64bcd4-50bb-4aeb-a135-4e0487ffd312,"Software Engineer, Internship - Sovereign AI Systems",REJECTED,0,X2,false
+lever,palantir,2458ba08-de79-4e8f-b553-060f9568727e,"Software Engineer, New Grad",REJECTED,1,T3;X3,false
+lever,palantir,94984771-0704-446c-88c6-91ce748f6d92,"Software Engineer, New Grad",REJECTED,1,T3,false
+lever,palantir,c34b424e-caf2-455a-b104-ae1096ccca29,"Software Engineer, New Grad",REJECTED,1,T3,false
+lever,palantir,d372c805-d0cd-4a10-9522-fbecc78d6f3e,"Software Engineer, New Grad",REJECTED,1,T3;X3,false
+lever,palantir,0a838e66-1ab0-4fc4-b4d3-4671c0352278,"Software Engineer, New Grad - Defense",REJECTED,1,T3,false
+lever,palantir,18d901fc-93bb-4d18-9f04-c72031e20d79,"Software Engineer, New Grad - Defense",REJECTED,1,T3,false
+lever,palantir,f362d7aa-360d-4059-ab38-f482742693b3,"Software Engineer, New Grad - Defense",REJECTED,1,T3,false
+lever,palantir,4abf26b4-795c-420a-bf22-1ab98db268b4,"Software Engineer, New Grad - Infrastructure",REJECTED,1,T3,false
+lever,palantir,7d75bed5-45d8-4876-840a-2d92ea79c98d,"Software Engineer, New Grad - Infrastructure",REJECTED,1,T3,false
+lever,palantir,9265acce-12cd-4179-8c50-55d15963532b,"Software Engineer, New Grad - Infrastructure",REJECTED,0,X3,false
+lever,palantir,15844944-fb69-4b57-9531-e988650b20c6,"Software Engineer, New Grad - Production Infrastructure",REJECTED,0,,false
+lever,palantir,4d5a144e-87ea-45e2-a68c-3fad590629af,"Software Engineer, New Grad - Production Infrastructure",REJECTED,0,,false
+lever,palantir,e1a6c138-98bf-45e2-97f7-2c70371cc38a,"Software Engineer, New Grad - Production Infrastructure",REJECTED,0,,false
+lever,palantir,0f7d1e01-1f74-4786-944d-910208d390fa,"Software Engineer, New Grad - Query Engines",REJECTED,1,T3;X3,false
+lever,palantir,90329118-d9b7-4b96-acdf-13377e3196ac,"Software Engineer, New Grad - Query Engines",REJECTED,1,T3,false
+lever,palantir,40d0499b-e2ec-42cc-8a19-c454ed510195,Support Engineer,REJECTED,0,X3,false
+lever,palantir,838bce97-415d-4cdc-95ea-904005feb131,Support Engineer,REJECTED,0,,false
+lever,palantir,4186c7e2-1fc4-4049-81fb-fa98efb9d1de,Talent Coordinator,REJECTED,0,,false
+lever,palantir,a114f925-b5cb-4076-bf68-c77310754aec,Talent Coordinator,REJECTED,0,X3,false
+lever,palantir,133e2f49-685b-4234-b118-8d8e6851fb2e,Talent Program and Events Strategist,REJECTED,0,,false
+lever,palantir,4bf39879-251f-43bd-be2a-c33a2663622d,Talent Program Manager,REJECTED,0,X1;X3,false
+lever,palantir,484658a9-d6da-4d5f-9ab3-7c9f6ae3cd71,Talent Strategist,REJECTED,0,X3,false
+lever,palantir,ef824a5d-0932-4f96-9347-2e66cd5a7b83,Talent Strategist,REJECTED,0,,false
+lever,palantir,fef637bd-60f6-4603-b749-14e609c473a5,Talent Strategist,REJECTED,0,,false
+lever,palantir,b5362bc1-8a07-44e2-9ddc-cb4236aa0f20,Technical Program Manager - Security,REJECTED,0,X1,false
+lever,palantir,b908b3e4-81f9-47b3-9088-ee8dd3932003,Technical Program Manager - Security,REJECTED,0,X1,false
+lever,palantir,7eb0dedb-37ee-4175-b29f-10a9e4340076,Technical Program Manager (TPM),REJECTED,0,X1,false
+lever,palantir,bd16f7ad-3bee-48fd-9902-b3ee9698b608,Technical Program Manager (TPM) - Defense,REJECTED,0,X1,false
+lever,palantir,95a76f41-97a4-4696-ade3-9c5a47a569c7,Technical Writer,REJECTED,0,,false
+lever,palantir,b11a97bd-ac86-4cf8-a008-ffe1772a190a,Technical Writer,REJECTED,0,,false
+lever,palantir,c9426c38-9c6f-44bc-acad-bb2e6ed315f6,Technical Writer,REJECTED,0,X3,false
+lever,palantir,4255e21c-d0f2-4f57-b5db-1f65830d6425,Web Application Developer - Defense,REJECTED,0,,false
+lever,palantir,6a82fd06-5754-46c2-8214-9ca4cd89fb9d,Web Application Developer - Defense,REJECTED,0,,false
+lever,palantir,96e4295f-3af7-48e5-a2c8-74622eaf5587,Web Application Developer - Defense,REJECTED,0,,false
+lever,palantir,a3eaa0ef-3378-495f-8308-edbd9a93d26c,Web Design Engineer,REJECTED,0,,false
+lever,palantir,e6be4159-c8d1-481d-ad15-13274861b795,Workplace Operations Analyst,REJECTED,0,X3;X4,false
+lever,palantir,75cc1c09-8ebd-44c8-b3bc-d122cd1fecb3,"Year at Palantir - Forward Deployed Software Engineer, Internship - Commercial",REJECTED,0,X2;X4,false
+lever,palantir,e6789b17-62fb-4226-a079-f8c17ff19e2d,"Year at Palantir - Forward Deployed Software Engineer, Internship - Commercial",REJECTED,0,X2;X4,false
+lever,palantir,5c4c65c5-77da-4d36-856c-4ade87631019,"Year at Palantir - Forward Deployed Software Engineer, Internship - USG",REJECTED,0,X2;X4,false
+lever,palantir,5c7bb70c-83ea-43e7-8055-0c8f319f4333,"Year at Palantir - Forward Deployed Software Engineer, Internship - USG",REJECTED,0,X2;X4,false
+lever,palantir,655f9937-a4ce-4e7d-80e2-a6659af07329,"Year at Palantir - Software Engineer, Internship",REJECTED,0,X2,false
