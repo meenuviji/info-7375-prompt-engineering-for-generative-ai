@@ -14,7 +14,7 @@ Transcripts read:
 - `transcripts/mcp_20261126T011510667170Z.jsonl`: the `mcp_client.py` demo, the only transcript
   in which the tool was actually called.
 
-## (a) What it declares versus what it does
+## (a) What it declared versus what it does
 
 ### Declared (the `tools/list` reply in the newest transcript, matching lines 45–57)
 

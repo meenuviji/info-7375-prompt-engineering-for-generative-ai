@@ -82,3 +82,7 @@ Inspecting the full-corpus decision diffs shows why the two changes were separat
 
 ### 3. Why Persistence Is Configuration, Not Learning
 Behavior that persists across sessions is not proof that anything was trained. In this agent, every behavior change came from a file (`FILTER.md`), a setting (the threshold), or a prompt (`prompts/justify_claims.md`). No model weights changed.
+
+## Limit of the held-out set
+
+Held-out set B (n = 30) contains 0 postings I judged relevant, so it can only measure false keeps; false rejects and recall cannot be measured on it. Every set B result above has this limit.

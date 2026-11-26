@@ -30,3 +30,6 @@ Reviewing the 69 candidate rule matches reveals four recurring false-friend patt
 3. **Restrict `R5` (`Associate` / `New Grad`):** Require `R5` to co-occur with a target data/analytics/AI title token (`R1`–`R4`) rather than awarding standalone title points to generic `Associate` or `New Grad` titles.
 4. **Disambiguate `T3` (`pipeline`) and `T5` (`forecasting`):** Require data-engineering context for `pipeline` (e.g., `data pipeline`, `ETL`, `ELT`, `ingestion`, `Airflow`, `dbt`, `Kafka`, `Spark`) and exclude sales/finance context (`sales pipeline`, `quota`, `attainment`, `revenue`, `guidance`, `FP&A`).
 5. **Check Experience Requirements in Description (`X5`):** Reject roles requiring `3+` or `5+` years of industry experience or PhD-only research requirements (`AI Research Scientist` / `DAIR`) even when `Senior`/`Manager` is absent from the title.
+## What this sample can show
+
+These counts come from a sample: 35 judged rejects, 4 kept, and the close calls in set A. They are sample estimates with the interval above, not measured rates for all postings.
