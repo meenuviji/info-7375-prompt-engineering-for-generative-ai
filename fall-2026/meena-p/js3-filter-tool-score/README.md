@@ -111,19 +111,19 @@ unless marked UTC.
 
 ## Deliverables
 
-Status as of this README draft (2026-11-25):
+Status as of 2026-11-25, commit `6be02b2`:
 
 | Deliverable | What it is | Status |
 |---|---|---|
-| `FILTER.md` | the filter contract, written by me before any code | committed. Its header says v1, but its content changed in `4923b21`; the code calls that content v3 |
+| `FILTER.md` | the filter contract, written by me before any code | committed (`6be02b2`). The Version line says v3 (sections 1–3 are the v3 rules) and names the version each entry point uses. The change log has rows for v1, v2, v3 and the v2 + threshold 4 experiment. **The Decision cells for v2, v3 and the experiment say "pending my decision"** |
 | `audit/` | `AUDIT_REPORT_DRAFT.md` (computed), `AUDIT_REPORT.md` (my interpretation), `RULE_CHANGE_v2.md` (computed) | committed |
 | `shortlist/` | `claims.csv` (9 claims with my labels), `SHORTLIST.md` | `claims.csv` labeled. **`SHORTLIST.md` still contains template placeholders** |
-| `transcripts/` | MCP JSONL transcripts, both directions | 3 committed (see above) |
-| `evaluations/` | `EVAL_OWN_SERVER.md`, `EVAL_OTHER_SERVER.md` (MCP fetch reference server) | both drafts committed. My trust decision is written in `EVAL_OTHER_SERVER.md`; **`EVAL_OWN_SERVER.md` still says "To be written by me"** |
+| `transcripts/` | MCP JSONL transcripts, both directions | 7 committed: the `mcp_client.py` demo (`…011510…`); two Claude Code sessions with no tool call (`…011603…`, `…011605…`); four `mcp_client.py` verification runs after the FILTER.md change-log edit (`…015428…`, `…015704…`, `…015813…`, `…015903…`, committed in `6be02b2`) |
+| `evaluations/` | `EVAL_OWN_SERVER.md`, `EVAL_OTHER_SERVER.md` (MCP fetch reference server) | both committed. My trust decision is written in `EVAL_OTHER_SERVER.md`; **`EVAL_OWN_SERVER.md` still says "To be written by me"** |
 | `SCORE_REPORT.md` | number origins, set B experiments, my interpretation | committed. The empty draft "Interpretation" heading is still above mine |
-| `SIGNOFF.md` | sign-off | **not written yet** |
-| `FRICTIONAL.md` | Frictional reflection | **not written yet** |
-| `SOURCES.md` | provenance of data, references, and who wrote what | draft |
+| `SIGNOFF.md` | sign-off | committed (`6b9af0f`) |
+| `FRICTIONAL.md` | Frictional reflection | committed (`6b9af0f`) |
+| `SOURCES.md` | provenance of data, references, and who wrote what | committed (`6b9af0f`) |
 
 ## Code map
 
