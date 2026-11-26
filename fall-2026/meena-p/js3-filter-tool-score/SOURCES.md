@@ -104,3 +104,5 @@ Build decisions I made when Claude Code asked (2026-11-25):
   - the new rule set is named v3, and v1/v2 are kept
 - **Score report:** Change 1 is threshold 5 → 4, and Change 2 compares filter v2 with v1 as they
   are.
+
+- FILTER.md change-log Decision text for v2, v3 and the threshold-4 experiment: wording suggested by Claude (claude.ai chat), reviewed and accepted by me as my decisions.
