@@ -23,7 +23,7 @@ V3_CLOSE_CALL_SCORE = 4      # hand-set in FILTER.md v1 (4923b21): no exclusion 
 V3_CLOSE_CALL_BOUNDARY_RULES = frozenset({"X3", "X5"})  # hand-set in FILTER.md v1 (4923b21): or score >= 5
                                                         # rejected by a single X3 or X5
 # sha256 of the FILTER.md text v3 implements. The MCP tool refuses to score if FILTER.md changes.
-V3_FILTER_MD_SHA256 = "37feae45fdac8d2cab5f8e0fbd9e58bc0ec28d2132d6e30c532d78e5986d7f91"  # FILTER.md at commit 4923b21
+V3_FILTER_MD_SHA256 = "251bc4448bbeac598253a7434b664aad72f42aea62fc2455905276dbe3280095"  # FILTER.md rules from 4923b21; Version line + change log updated 2026-11-25
 
 # --- Labeling-set sampling ----------------------------------------------------------
 # Set in the JS3 build instructions (2026-11-25), not in FILTER.md.

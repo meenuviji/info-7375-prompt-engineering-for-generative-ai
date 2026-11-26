@@ -2,6 +2,7 @@
 Transcripts go to pytest's tmp_path, never to transcripts/."""
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -54,7 +55,9 @@ def test_valid_call_matches_filter_v3(demo):
     expected = filter_v3.evaluate(p.title, p.location, p.description)
     assert (sc["decision"], sc["score"], sc["rules_fired"], sc["close_call"]) == \
            (expected.decision, expected.score, list(expected.rules_fired), expected.close_call)
-    assert sc["rule_set"] == "v3" and sc["filter_md_version"] == "v1 (2026-11-25)"
+    filter_md = (Path(__file__).resolve().parent.parent / "FILTER.md").read_text(encoding="utf-8")
+    version_line = re.search(r"^Version:\s*(.+)$", filter_md, re.MULTILINE).group(1).strip()
+    assert sc["rule_set"] == "v3" and sc["filter_md_version"] == version_line
 
 
 def test_unknown_posting_id_is_tool_error_not_path(demo):
