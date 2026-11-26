@@ -1,69 +1,65 @@
 # FILTER.md — Job-Search Agent 3
 
-Version: v1 — 2026-11-25
-Written by Meena Periasamy before any JS3 code (refined from an initial structure drafted with Claude).
-
-Persona (fictional, for GitHub): Jordan Lee, an entry-level / new-grad Data Engineer, Data Scientist, BI Analyst, and AI/ML Engineer looking for individual-contributor roles in the US or remote.
+Version: v1 (2026-11-25)
+Written by Meena Periasamy before any JS3 code. Persona: Jordan Lee — entry-level / new-grad Data Engineer, Data Scientist, BI Analyst, or AI/ML Engineer; individual contributor; US or remote.
 
 ## 1. The filter
 
-A posting is **kept** when no exclusion rule matches its title and its score meets or exceeds the threshold. A posting whose title matches at least one role rule (or entry-level signal) but lacks description text is marked **CANNOT_TELL** — never silently rejected.
+A posting is relevant when: at least one core role rule (`R1`–`R4`) matches the title, no exclusion rule (`X1`–`X5`) matches the title, location, or description, and the total score is greater than or equal to the keep threshold (`5`).
 
-**Matching method for every rule:** whole word or whole phrase, case-insensitive, using word boundaries (`\b...\b`). Substring matching is prohibited because it causes false positives such as `"AI"` matching `"Maintenance"` or `"ML"` matching `"HTML"` (Wrong Version W1).
-
-### 1.1 Role rules (title only)
-| ID | Words or phrases | Reason |
+### 1.1 Role rules (matched against the title)
+| ID | Rule (exact words, how matched: whole word? case?) | Reason (one line) |
 |---|---|---|
-| R1 | data engineer, data engineering, analytics engineer | Core data-pipeline and warehousing roles matching my engineering focus. |
-| R2 | data scientist, data science | Core modeling, experimentation, and statistical analysis roles. |
-| R3 | machine learning, ML, AI engineer, applied AI | Applied ML and AI engineering roles building production models and retrieval systems. |
-| R4 | business intelligence, BI engineer, BI analyst, data analyst | Analytics and BI roles focused on SQL, metrics, and decision support. |
-| R5 | new grad, university grad, early career, associate, junior, entry level | Entry-level role titles suitable for a December 2026 graduate. |
+| R1 | Whole-word, case-insensitive match for `"data engineer"` or `"analytics engineer"` | Matches core data and analytics engineering individual-contributor titles. |
+| R2 | Whole-word, case-insensitive match for `"data scientist"` or `"applied scientist"` | Matches core data science and applied science modeling titles. |
+| R3 | Whole-word, case-insensitive match for `"ai engineer"`, `"ml engineer"`, or `"machine learning engineer"` | Matches core AI and machine learning engineering titles. |
+| R4 | Whole-word, case-insensitive match for `"bi analyst"`, `"business intelligence analyst"`, `"data analyst"`, or `"product analyst"` | Matches core business intelligence and quantitative analytics titles. |
+| R5 | Whole-word, case-insensitive match for `"new grad"`, `"new graduate"`, `"entry level"`, `"entry-level"`, `"junior"`, `"early career"`, or `"associate"` — **only scores if at least one of `R1`–`R4` also matches** | Rewards explicit early-career seniority signals without letting non-data `"Associate"` or `"New Grad"` roles pass on their own. |
 
-### 1.2 Topic rules (description only; each rule counts at most once)
-| ID | Words or phrases | Reason |
+### 1.2 Topic rules (matched against the description text)
+| ID | Rule | Reason |
 |---|---|---|
-| T1 | python, pandas, pyspark | Primary programming ecosystem required for data and ML workflows. |
-| T2 | sql, snowflake, bigquery, postgresql, redshift | Core relational querying and cloud data warehouse stack. |
-| T3 | pipeline, pipelines, ETL, ELT, airflow, dbt, kafka | Signals genuine data-engineering and orchestration responsibilities. |
-| T4 | machine learning, deep learning, pytorch, tensorflow, scikit-learn, NLP, RAG | Signals hands-on model training, evaluation, or retrieval engineering. |
-| T5 | time series, forecasting, tableau, power bi, dashboard, dashboards | Matches my forecasting and BI visualization specialization. |
+| T1 | Whole-word, case-insensitive match for `"python"` or `"pyspark"` | Core programming language requirement across data, analytics, and ML roles. |
+| T2 | Whole-word, case-insensitive match for `"sql"`, `"bigquery"`, `"snowflake"`, `"redshift"`, or `"postgres"` | Core querying and cloud data warehouse requirement. |
+| T3 | Whole-word, case-insensitive match for `"etl"`, `"elt"`, `"airflow"`, `"dbt"`, `"kafka"`, `"spark"`, or `"data pipeline"` / `"data pipelines"` (must NOT match standalone `"pipeline"` unless preceded by `"data"`, `"etl"`, `"elt"`, `"ml"`, or `"ingestion"`) | Captures real data/ML pipeline engineering while avoiding B2B `"sales pipeline"` false friends. |
+| T4 | Whole-word, case-insensitive match for `"machine learning"`, `"deep learning"`, `"pytorch"`, `"tensorflow"`, `"scikit-learn"`, `"llm"`, or `"rag"` | Captures applied ML, statistical modeling, and AI engineering work. |
+| T5 | Whole-word, case-insensitive match for `"tableau"`, `"power bi"`, `"looker"`, `"dashboards"`, `"a/b testing"`, `"experimentation"`, or `"time series"` / `"demand forecasting"` (must NOT match standalone `"forecasting"` in sales quota or corporate FP&A contexts) | Captures BI visualization, experimentation, and statistical forecasting while excluding sales/finance forecasting false friends. |
 
-### 1.3 Exclusion rules (title only)
-| ID | Words | Reason |
+### 1.3 Exclusion rules
+| ID | Rule (e.g. seniority words, location) | Reason |
 |---|---|---|
-| X1 | senior, sr, staff, principal, distinguished, director, head, manager, vp, vice president | Persona targets entry-level / early-career IC roles; management and senior tracks are out of scope. Applied strictly to the title because descriptions frequently say "collaborate with senior engineers" (Wrong Version W4). |
-| X2 | intern, internship, co-op | Persona is seeking full-time post-graduation roles rather than student internships. |
+| X1 | Title whole-word, case-insensitive match for `"senior"`, `"sr"`, `"staff"`, `"principal"`, `"lead"`, `"manager"`, `"director"`, `"head"`, `"vp"`, `"vice president"`, or `"chief"` | Excludes mid-level, senior, and people-management roles outside an entry-level IC scope. |
+| X2 | Title whole-word, case-insensitive match for `"intern"`, `"internship"`, `"co-op"`, `"coop"`, or `"year at palantir"` | Excludes temporary student internships and gap-year programs. |
+| X3 | Location field does NOT contain a US state/city, `"united states"`, `"usa"`, `"u.s."`, or US-eligible `"remote"` (rejects explicit non-US locations such as `"Singapore"`, `"London"`, `"Dublin"`, `"Toronto"`, `"APJ"`, `"EMEA"`, `"Central Eastern Europe"`, `"SAARC"` when US-remote is absent) | Enforces the US or US-remote geographic constraint. |
+| X4 | Title whole-word, case-insensitive match for `"account executive"`, `"sales"`, `"business development"`, `"recruiter"`, `"accounting"`, `"finance"`, `"financial systems"`, `"investor relations"`, `"gtm"`, `"operations"`, `"forward deployed"`, `"deployment strategist"`, `"developer advocate"`, `"solutions architect"`, `"customer engineer"`, `"escalations"`, or `"security analyst"` | Excludes sales, recruiting, finance, GTM/bizops, and customer-facing solutions false friends. |
+| X5 | Description regex match for minimum industry experience of 3+ years (e.g., `"\b([3-9]|1[0-9])\+?\s+years?\s+of\s+(industry\s+|professional\s+|relevant\s+)?experience"`), or `"phd required"` / `"doctorate required"` | Catches experienced or PhD-only research postings (such as DAIR research tracks) that omit `"Senior"` from the title. |
 
-### 1.4 Score and threshold
-- **Base role score:** `3` if at least one role rule (`R1`–`R5`) matches the title; `0` otherwise.
-- **Topic score:** `+1` for each distinct topic rule (`T1`–`T5`) that matches the description (capped at `4` points so verbose descriptions cannot inflate rankings, Wrong Version W2).
-- **Exclusions:** If any exclusion rule (`X1`–`X2`) matches the title, the posting is **REJECTED** regardless of score.
-- **Keep threshold:** **Score ≥ 5** (requires a relevant title match plus at least two distinct technical topic matches in the description).
-- **Close call window:** **Score 4** (one topic short of threshold) or **Score 5** (right on the threshold boundary).
-- Every weight and threshold here is hand-set by Meena Periasamy; none was fitted on data (see `SCORE_REPORT.md`).
+### 1.4 Threshold and scoring
+- Score formula: `score = 2 * count(R1..R4 matched) + 1 * matched(R5) + 1 * count(T1..T5 matched)`; any match on `X1`–`X5` immediately sets decision to `REJECTED` regardless of score.
+- Keep if score ≥ `5` (with no exclusion rules triggered and at least one of `R1`–`R4` matched).
+- "Close call" means: a posting with no `X1`–`X5` exclusion triggered whose score is `4` (1 point below the threshold of `5`), or a posting with score ≥ `5` rejected by a single boundary rule (`X3` or `X5`).
 
 ## 2. Evidence rules (for claims in the shortlist)
-- **Supported:** A sentence in the posting's own text explicitly states the claim in equivalent terms, and that exact sentence is quoted verbatim.
-- **Contradicted:** A sentence in the posting explicitly states the opposite of the claim (for example, the claim asserts remote work while the posting states on-site only).
-- **Insufficient:** No sentence in the posting directly establishes the claim, or a sentence mentions a keyword in passing without supporting the specific claim (for example, "partner with our ML team" does not support "this role builds ML models").
-- **The agent must say "I cannot tell"** when the posting has no description text, or when no quoted sentence contains the claim's key concept or requirement.
+- **Supported:** The posting's `title`, `location`, or `description` explicitly states the claim in plain text or an exact technical synonym (e.g., `"Bachelor's in Computer Science"` supports degree requirement; `"New York, NY"` supports US location).
+- **Contradicted:** The posting text explicitly states a value that conflicts with the persona constraint or claim (e.g., `"5+ years of production data engineering experience"` contradicts entry-level eligibility; `"Dublin, Ireland"` without remote contradicts US location).
+- **Insufficient:** The posting text does not mention the attribute at all (e.g., visa sponsorship, exact salary band, or remote eligibility is omitted from the posting) or a required input field (`description` or `location`) is blank/truncated.
+- **The agent must say "I cannot tell" when:** A required field is missing/ambiguous (such as Cloudflare `"Hybrid"` with no city/country listed in the description, or an empty description preventing `T1`–`T5`/`X5` evaluation) or a claim requires guessing beyond the literal text.
 
 ## 3. Expected sources
-- **Boards and providers:** `cloudflare` and `datadog` (Greenhouse), and `palantir` (Lever), read from JS2's saved raw responses (or a single allow-listed fetch with `?content=true` if raw bodies lack descriptions).
-- **Fields read:** `title`, `location`, and description (`content` with HTML tags stripped for Greenhouse; `descriptionPlain` for Lever).
-- **Missing-field handling:**
-  - Missing `title` → skip posting and record in skipped count.
-  - Missing `description` → topic rules cannot fire; if a role rule matched the title and no exclusion fired, label **CANNOT_TELL** rather than rejecting for low score (Wrong Version W3).
-  - Missing `location` → record as `"unknown"`, never inferred.
+- Boards and providers: `cloudflare` (Greenhouse), `datadog` (Greenhouse), and `palantir` (Lever).
+- Fields the filter reads: `title`, `location`, and `description` (plain text stripped of HTML tags).
+- When a field is missing:
+  - Missing `title`: mark `CANNOT_TELL` (cannot evaluate `R1`–`R5`, `X1`, `X2`, `X4`).
+  - Missing or ambiguous `location` (e.g., `"Hybrid"` with no country/city in `description`): mark `CANNOT_TELL` rather than guessing US eligibility.
+  - Missing `description`: `T1`–`T5` and `X5` cannot fire; if `X1`–`X4` reject via `title`/`location`, mark `REJECTED`, otherwise mark `CANNOT_TELL` (`"insufficient"`), never `"rejected for no topic match"`.
 
 ## 4. Wrong versions my tests must catch
-- **W1 (Substring matching):** Matching `"AI"` inside `"Maintenance"` or `"ML"` inside `"HTML"` instead of enforcing `\b...\b` word boundaries.
-- **W2 (Raw keyword frequency ranking):** Summing repeated occurrences of `"data"` or `"python"` so a 1,500-word posting outranks a concise 300-word posting with stronger role alignment.
-- **W3 (Silent rejection on missing text):** Rejecting a title-matched posting when its description body is empty/null instead of returning `CANNOT_TELL`.
-- **W4 (Body-level seniority exclusion):** Applying exclusion keywords like `"senior"` to the description text, causing `"work alongside senior engineers"` to reject an entry-level posting.
+1. **Substring matching instead of whole-word boundaries:** Matching `"ai"` inside `"maintenance"` or `"email"`, `"r"` inside `"engineer"`, or `"sr"` inside `"isr"`, causing non-technical postings to trigger `R3`/`T1` falsely.
+2. **Unbounded keyword frequency / length bias:** Summing raw occurrences of `"python"` or `"sql"` across a 1,500-word description so a long non-data posting outranks a concise 250-word entry-level Data Engineer posting (each rule `T1`–`T5` must contribute at most `+1` regardless of repetition).
+3. **Unanchored false-friend matching on `"pipeline"`, `"forecasting"`, or `"associate"`:** Counting `"sales pipeline"` as `T3` (`pipeline`), `"revenue/quota forecasting"` as `T5` (`forecasting`), or `"GTM Strategy/Operations Associate"` as `R5` without requiring a core data/AI title (`R1`–`R4`).
+4. **Silent rejection on missing description or ambiguous `"Hybrid"` location:** Treating an empty description as `0` topic points (`REJECTED`) or assuming `"Hybrid"` means US-based instead of returning `CANNOT_TELL`.
 
 ## 5. Change log
-| Version | Date | Change | Measured on | Result | Decision |
+| Version | Date | Rule added / cut / rejected | Measured on | Result | Decision |
 |---|---|---|---|---|---|
-| v1 | 2026-11-25 | Initial hand-authored filter before code | — | — | Baseline |
+| v1 | 2026-11-25 | initial (R1–R5, T1–T5, X1–X5, threshold 5) | Set A (39 rows) | 35/35 rejects agreed (0% FN rate, Wilson upper bound 0.114); 3/4 keeps were FP due to missing location/experience/domain exclusions and standalone R5/T3/T5 false friends | Baseline established; harden R5, T3, T5 and add X3–X5 |
