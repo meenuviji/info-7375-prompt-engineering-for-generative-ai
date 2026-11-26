@@ -77,8 +77,11 @@ class FilterResult:
     close_call: bool
 
 
-def evaluate(title: str, description: str, version: str = "v1") -> FilterResult:
-    """version selects the FILTER.md rule set; v1 stays the default so v1 results reproduce."""
+def evaluate(title: str, description: str, version: str = "v1", keep_threshold: int | None = None) -> FilterResult:
+    """version selects the FILTER.md rule set; v1 stays the default so v1 results reproduce.
+    keep_threshold overrides cfg.KEEP_THRESHOLD for one-setting experiments (score_report.py);
+    the close-call band is not moved with it."""
+    threshold = cfg.KEEP_THRESHOLD if keep_threshold is None else keep_threshold
     roles = fired(ROLE_RE_BY_VERSION[version], title)
     exclusions = fired(EXCLUSION_RE, title)
     has_description = bool((description or "").strip())
@@ -93,5 +96,5 @@ def evaluate(title: str, description: str, version: str = "v1") -> FilterResult:
         return FilterResult(cfg.REJECTED, score, rules, False)
     if roles and not has_description:
         return FilterResult(cfg.CANNOT_TELL, score, rules, False)
-    decision = cfg.KEPT if score >= cfg.KEEP_THRESHOLD else cfg.REJECTED
+    decision = cfg.KEPT if score >= threshold else cfg.REJECTED
     return FilterResult(decision, score, rules, score in cfg.CLOSE_CALL_SCORES)
