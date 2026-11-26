@@ -108,6 +108,7 @@ unless marked UTC.
 | `mcp_client.py` demo, 2026-11-26 01:15:10 UTC: initialize, tools/list, three tools/call | `transcripts/mcp_20261126T011510667170Z.jsonl` | `7610235` |
 | Claude Code 2.1.332 connected to the server, 2026-11-26 01:16:03 and 01:16:05 UTC: initialize and tools/list only, **no tool call** | `transcripts/mcp_20261126T011603062737Z.jsonl`, `…011605838379Z.jsonl` | `7610235`, `3bc6d20` |
 | `score_report.py` (threshold 5→4; filter v2→v1; set B only) | `SCORE_REPORT_DRAFT.md` | `f833e98` |
+| `mcp_client.py` verification after the FILTER.md change-log edit, 2026-11-26 01:54:28, 01:57:04, 01:58:13 and 01:59:03 UTC. Each run: initialize, tools/list, three tools/call; the valid call scored posting 8275927 (REJECTED, score 7) | `transcripts/mcp_20261126T015428028516Z.jsonl`, `…015704100359Z.jsonl`, `…015813862053Z.jsonl`, `…015903889975Z.jsonl` | `6be02b2` |
 
 ## Deliverables
 

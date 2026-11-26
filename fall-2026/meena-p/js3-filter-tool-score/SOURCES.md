@@ -62,21 +62,23 @@ below were mine, given when Claude Code stopped to ask.
 | `prompts/justify_claims.md` | its "operating rules" section. The task text in it is mine |
 | `notes/recon_2026-11-25.md`, `notes/shortlist_draft_2026-11-25.md` | raw Claude Code responses, saved unedited |
 | `evaluations/EVAL_OWN_SERVER.md`, `evaluations/EVAL_OTHER_SERVER.md` | the evaluation drafts, sections (a)–(c). The trust decisions are mine |
-| `transcripts/mcp_20261126T011510667170Z.jsonl` | written by `mcp_server.py` during the `mcp_client.py` demo |
+| `transcripts/mcp_20261126T011510667170Z.jsonl`, `…015428…`, `…015704…`, `…015813…`, `…015903…` | written by `mcp_server.py` during the `mcp_client.py` demo and four verification runs |
+| `FILTER.md` Version line and change-log rows for v2, v3 and the v2 + threshold 4 experiment, plus the dated note appended to my v1 row (`6be02b2`) | drafted by Claude Code from the code and measured results; diff approved by me before it was applied. The Decision cells were left as "pending my decision" |
 | `README.md`, `SOURCES.md` | drafts |
 
-Not written by Claude Code: `FILTER.md`, `notes/tests_after_build.txt`, and the two Claude Code
+Not written by Claude Code: `FILTER.md` sections 1–4 and my v1 change-log row, `notes/tests_after_build.txt`, and the two Claude Code
 client transcripts (`…011603…`, `…011605…`), which `mcp_server.py` wrote while Claude Code was
 connected as a client.
 
 ### Written or decided by me (Meena Periasamy)
 
-Status as of 2026-11-25:
+Status as of 2026-11-25, commit `0bb2fa5`:
 
 | Item | Status |
 |---|---|
 | `FILTER.md` edits, including the rewrite committed in `4923b21` | committed |
-| v2 decision: remove "associate" from R5 | made 2026-11-25. Measured in `audit/RULE_CHANGE_v2.md`; never applied to FILTER.md |
+| v2 decision: remove "associate" from R5 | made 2026-11-25. Measured in `audit/RULE_CHANGE_v2.md`; never applied to FILTER.md sections 1–3. Recorded as the v2 row of the FILTER.md change log (`6be02b2`) |
+| Decision cells in the FILTER.md change log for v2, v3 and the v2 + threshold 4 experiment | not yet written ("pending my decision") |
 | All verdicts in `labels/` (set A: 39, set B: 30) | committed in `31f260c` |
 | `my_label` / `my_reason` in `shortlist/claims.csv` | committed in `a59923c` |
 | `audit/AUDIT_REPORT.md` interpretation | committed |
@@ -84,8 +86,8 @@ Status as of 2026-11-25:
 | Trust decision in `evaluations/EVAL_OTHER_SERVER.md` | written |
 | Trust decision in `evaluations/EVAL_OWN_SERVER.md` | not yet written ("To be written by me") |
 | `SCORE_REPORT.md` interpretation | committed |
-| `SIGNOFF.md` | not yet written |
-| `FRICTIONAL.md` | not yet written |
+| `SIGNOFF.md` | committed in `6b9af0f` |
+| `FRICTIONAL.md` | committed in `6b9af0f` |
 
 Build decisions I made when Claude Code asked (2026-11-25):
 - **Filter numbers:** follow FILTER.md, keep at score ≥ 5 with close calls at 4–5. The build
