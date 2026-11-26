@@ -1,0 +1,10 @@
+posting_id,title,claim_id,claim,quoted_sentence,agent_answer,my_label,my_reason
+8275927,Data Scientist,C1,Requires Python,Strong experience in scientific computing using Python,supported,supported,
+8275927,Data Scientist,C2,Involves building ML models,"Define, implement, and train statistical, machine learning, deep learning and generative AI models.",supported,supported,
+8275927,Data Scientist,C3,Is an entry-level role,NO SENTENCE FOUND,I cannot tell,supported,
+8109620,Data Analyst,C4,Requires SQL,"Expert-level proficiency in writing and optimizing complex SQL queries is mandatory, with a proven ability to performance-tune complex queries and manage analysis workflows against large, petabyte-scale datasets (Candidates will be assessed on advanced SQL skills including window functions and common table expressions (CTEs))",supported,supported,
+8109620,Data Analyst,C5,Involves building data pipelines,"Take initiative to gather requirements, define, build, and maintain pipelines and metrics",supported,supported,
+8109620,Data Analyst,C6,Is open to remote work,NO SENTENCE FOUND,I cannot tell,supported,
+1b690123-1766-4e75-a0ef-0f58afa864b4,Data Engineer - Talent Acquisition Operations,C7,Is a data engineering role,"As a Data Engineer, you will help to build and maintain the data foundations, reporting workflows, and automations that support Recruiting and Hiring Operations.",supported,supported,
+1b690123-1766-4e75-a0ef-0f58afa864b4,Data Engineer - Talent Acquisition Operations,C8,Involves building dashboards,"This role will work cross-functionally with Hiring Operations, Recruiters, Data, Security, Privacy, and other technical and non technical partners to turn complex recruiting processes into reliable datasets, dashboards, and operational tools.",supported,supported,
+1b690123-1766-4e75-a0ef-0f58afa864b4,Data Engineer - Talent Acquisition Operations,C9,Requires Python,NO SENTENCE FOUND,I cannot tell,supported,
